@@ -479,11 +479,32 @@ function renderExamSelector() {
   const params = new URLSearchParams(window.location.search);
   const forcedExamId = params.get("exam");
   const selectedId = forcedExamId && catalog.some((item) => item.id === forcedExamId) ? forcedExamId : catalog[0].id;
+  const selectedExam = catalog.find((item) => item.id === selectedId);
+
+  if (forcedExamId && selectedExam) {
+    host.innerHTML = `
+      <div class="exam-selector__card exam-selector__card--simple">
+        <h3>${selectedExam.label}</h3>
+        <p><strong>Cómo usarlo:</strong></p>
+        <ul class="checklist checklist--compact">
+          <li>Lee el texto o pregunta.</li>
+          <li>Marca una respuesta o escribe la tuya.</li>
+          <li>Pulsa <strong>Corregir este ejercicio</strong>.</li>
+        </ul>
+        <div class="exam-actions">
+          <a class="button button--ghost" href="./#examenes-online">Volver al índice</a>
+        </div>
+      </div>
+    `;
+
+    loadExam(selectedId);
+    return;
+  }
 
   host.innerHTML = `
     <div class="exam-selector__card">
-      <h3>Examen online</h3>
-      <p class="meta">Esta página carga un solo examen por URL. Si más adelante hay varios, podrás cambiar entre ellos sin volver al índice.</p>
+      <h3>Elegir examen</h3>
+      <p class="meta">Elige un examen y pulsa el botón para verlo.</p>
       <div class="exam-selector__controls">
         <select id="exam-select">
           ${catalog
@@ -493,7 +514,7 @@ function renderExamSelector() {
             )
             .join("")}
         </select>
-        <button class="button button--primary" id="exam-load-button" type="button">Cargar examen</button>
+        <button class="button button--primary" id="exam-load-button" type="button">Ver examen</button>
         <a class="button button--ghost" href="./#examenes-online">Volver al índice</a>
       </div>
     </div>
@@ -598,7 +619,7 @@ function renderQuestion(question) {
               <div class="exam-bool-row">
                 <p><strong>${String.fromCharCode(65 + index)}.</strong> ${item.label}</p>
                 <div class="exam-bool-controls">
-                  <label><input type="radio" name="${question.id}__${index}" value="true" /> V / T</label>
+                  <label><input type="radio" name="${question.id}__${index}" value="true" /> V</label>
                   <label><input type="radio" name="${question.id}__${index}" value="false" /> F</label>
                 </div>
                 ${
@@ -673,20 +694,17 @@ function renderExamMeta(exam) {
     return;
   }
 
+  const catalogItem = (window.examCatalog || []).find((item) => item.id === exam.id);
+
   metaHost.innerHTML = `
-    <div class="exam-meta__card">
-      <div class="exam-meta__grid">
-        <div>
-          <span class="pill">${(window.examCatalog || []).find((item) => item.id === exam.id)?.status || "Examen online"}</span>
-          <h3>${exam.title}</h3>
-          <p>${exam.subtitle}</p>
-          ${exam.introHtml || ""}
-        </div>
-        <div>
-          <h4>Fuentes de este examen</h4>
-          <div class="exam-meta__sources">${sourceLinksHTML(exam.sourceLinks)}</div>
-        </div>
-      </div>
+    <div class="exam-meta__card exam-meta__card--simple">
+      <span class="pill">${catalogItem?.status || "Examen online"}</span>
+      <h3>${exam.title}</h3>
+      <p class="meta">Puntuación automática: ${catalogItem?.autoPoints ?? "—"} puntos · Comparación manual: ${catalogItem?.manualPoints ?? "—"} puntos.</p>
+      <details>
+        <summary>Ver fuentes y notas</summary>
+        <div class="exam-meta__sources">${sourceLinksHTML(exam.sourceLinks)}</div>
+      </details>
     </div>
   `;
 }
@@ -768,8 +786,8 @@ function gradeQuestion(question, article) {
                 value === null
                   ? "Sin responder."
                   : isCorrect
-                    ? `Correcto (${item.correct ? "V/T" : "F"}).`
-                    : `Incorrecto. La respuesta correcta es ${item.correct ? "V/T" : "F"}.`
+                    ? `Correcto (${item.correct ? "V" : "F"}).`
+                    : `Incorrecto. La respuesta correcta es ${item.correct ? "V" : "F"}.`
               }
             </span>
             ${item.solution ? `<div class="meta">Solución oficial: ${item.solution}</div>` : ""}
@@ -927,10 +945,15 @@ function loadExam(examId) {
   }
 
   currentExam = exam;
+  document.title = `${exam.title} · ESO Adultos Málaga`;
   renderExamMeta(exam);
 
   runner.innerHTML = `
     <div class="exam-blocks">
+      <section class="exam-summary exam-summary--start">
+        <h3>Aquí empieza el examen</h3>
+        <p>Ve ejercicio por ejercicio. Cuando termines uno, pulsa <strong>Corregir este ejercicio</strong>.</p>
+      </section>
       ${exam.sections.map(renderExamSection).join("")}
       <section class="exam-summary">
         <h3>Resultado del examen</h3>

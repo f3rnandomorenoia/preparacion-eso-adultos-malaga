@@ -60,6 +60,36 @@ a {
   border-bottom: 1px solid rgba(49, 94, 251, 0.08);
 }
 
+.exam-page .hero {
+  background: linear-gradient(180deg, #f5f8ff 0%, #fbfcff 100%);
+}
+
+.exam-page .hero__inner {
+  padding: 0.75rem 0 1rem;
+}
+
+.exam-page .hero__inner--compact {
+  padding-bottom: 0.9rem;
+}
+
+.exam-page .topbar {
+  padding: 0.2rem 0 0.9rem;
+}
+
+.exam-page h1 {
+  font-size: clamp(1.9rem, 6vw, 2.8rem);
+  margin-bottom: 0.5rem;
+}
+
+.exam-page .lead {
+  max-width: 720px;
+  font-size: 1rem;
+}
+
+.exam-page .section {
+  padding-top: 1.25rem;
+}
+
 .topbar {
   display: flex;
   align-items: center;
@@ -491,11 +521,33 @@ h3 {
   padding: 1.35rem;
 }
 
+.exam-selector__card--simple,
+.exam-meta__card--simple,
+.exam-summary--start {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+}
+
+.exam-selector__card--simple h3,
+.exam-meta__card--simple h3,
+.exam-summary--start h3 {
+  margin-bottom: 0.5rem;
+}
+
 .exam-selector__controls {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
   align-items: center;
+}
+
+.exam-meta details {
+  margin-top: 0.75rem;
+}
+
+.exam-meta summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--primary-dark);
 }
 
 .exam-selector select,
@@ -634,6 +686,16 @@ h3 {
   align-items: center;
 }
 
+.exam-bool-controls label {
+  min-width: 72px;
+  justify-content: center;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  font-weight: 700;
+}
+
 .exam-actions {
   margin-top: 1rem;
 }
@@ -721,6 +783,10 @@ h3 {
 
   .hero__inner {
     padding-bottom: 3.25rem;
+  }
+
+  .exam-page .hero__inner {
+    padding-bottom: 0.75rem;
   }
 
   .footer__inner {
