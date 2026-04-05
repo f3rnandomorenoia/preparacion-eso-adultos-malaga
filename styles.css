@@ -461,6 +461,17 @@ h3 {
   gap: 1rem;
 }
 
+.exam-clarity {
+  margin-bottom: 1.5rem;
+}
+
+.exam-clarity__grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
 .exam-online-featured {
   display: grid;
   gap: 0.8rem;
@@ -753,7 +764,8 @@ h3 {
 }
 
 @media (max-width: 980px) {
-  .exam-meta__grid {
+  .exam-meta__grid,
+  .exam-clarity__grid {
     grid-template-columns: 1fr;
   }
 

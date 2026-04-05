@@ -7,7 +7,7 @@ const facts = [
   },
   {
     title: "Cómo se organiza",
-    text: "La ESO para personas adultas en Andalucía se agrupa por ámbitos: comunicación, científico-tecnológico y social.",
+    text: "Dicho de forma sencilla: la prueba se divide en 3 exámenes distintos, uno por cada ámbito: comunicación, científico-tecnológico y social.",
     sourceLabel: "Junta · ESO personas adultas",
     source: "https://www.juntadeandalucia.es/educacion/portals/es/web/ced/educacion-permanente-eso",
   },
@@ -25,7 +25,7 @@ const facts = [
   },
   {
     title: "Ámbitos ya superados",
-    text: "Si ya tienes ámbitos aprobados o equivalencias reconocidas, no siempre tendrás que repetirlos. Antes de estudiar de cero, conviene comprobarlo.",
+    text: "Si ya tienes algún ámbito aprobado o convalidado, puede que no tengas que hacer ese examen otra vez. Antes de estudiar de cero, conviene comprobarlo.",
     sourceLabel: "Junta · FAQ oficial",
     source: "https://www.juntadeandalucia.es/educacion/portales/web/educacion-permanente/servicios/pruebas/obtencion-titulo-eso/preguntas-frecuentes",
   },
