@@ -417,6 +417,487 @@ function sourceGroupHTML(group) {
   `;
 }
 
+let currentExam = null;
+
+function getAllQuestions(exam) {
+  return exam.sections.filter((section) => section.type === "question");
+}
+
+function sourceLinksHTML(links = []) {
+  return links
+    .map(
+      (link) =>
+        `<a href="${link.url}" target="_blank" rel="noreferrer">${link.label} ↗</a>`,
+    )
+    .join("");
+}
+
+function renderExamSelector() {
+  const host = document.getElementById("exam-selector");
+  const catalog = window.examCatalog || [];
+
+  if (!host || !catalog.length) {
+    return;
+  }
+
+  host.innerHTML = `
+    <div class="exam-selector__card">
+      <h3>Elegir examen</h3>
+      <p class="meta">Voy metiendo los modelos uno a uno. Este primero sirve para validar el formato de trabajo antes de cargar el resto.</p>
+      <div class="exam-selector__controls">
+        <select id="exam-select">
+          ${catalog
+            .map(
+              (exam) =>
+                `<option value="${exam.id}">${exam.label}</option>`,
+            )
+            .join("")}
+        </select>
+        <button class="button button--primary" id="exam-load-button" type="button">Cargar examen</button>
+      </div>
+    </div>
+  `;
+
+  const select = document.getElementById("exam-select");
+  const button = document.getElementById("exam-load-button");
+
+  const loadSelected = () => {
+    loadExam(select.value);
+  };
+
+  button.addEventListener("click", loadSelected);
+  select.addEventListener("change", loadSelected);
+  loadSelected();
+}
+
+function renderReading(section) {
+  return `
+    <article class="exam-reading">
+      <h3>${section.title}</h3>
+      ${section.html}
+    </article>
+  `;
+}
+
+function renderQuestion(question) {
+  const header = `
+    <div class="exam-question__header">
+      <div>
+        <h3>Ejercicio ${question.number} · ${question.title}</h3>
+      </div>
+      <span class="exam-question__points">${question.points} puntos</span>
+    </div>
+  `;
+
+  const note = question.noteHtml ? `<div class="exam-inline-note">${question.noteHtml}</div>` : "";
+
+  let body = "";
+
+  if (question.kind === "mcqSingleWithOpen") {
+    body = `
+      <div class="exam-group">
+        <div class="exam-options">
+          ${question.options
+            .map(
+              (option, index) => `
+                <div class="exam-option">
+                  <label>
+                    <input type="radio" name="${question.id}__choice" value="${index}" />
+                    <span>${option}</span>
+                  </label>
+                </div>
+              `,
+            )
+            .join("")}
+        </div>
+        <div class="exam-fields">
+          <label for="${question.id}__open">${question.openLabel || "Tu respuesta"}</label>
+          <textarea id="${question.id}__open"></textarea>
+        </div>
+      </div>
+    `;
+  }
+
+  if (question.kind === "openText") {
+    body = `
+      <div class="exam-fields">
+        <label for="${question.id}__text">${question.openLabel || "Tu respuesta"}</label>
+        <textarea id="${question.id}__text"></textarea>
+      </div>
+    `;
+  }
+
+  if (question.kind === "openList") {
+    body = `
+      <div class="exam-subitems">
+        ${question.items
+          .map(
+            (item, index) => `
+              <div class="exam-subitem">
+                <label for="${question.id}__${index}">${item.label}</label>
+                <textarea id="${question.id}__${index}"></textarea>
+              </div>
+            `,
+          )
+          .join("")}
+      </div>
+    `;
+  }
+
+  if (question.kind === "booleanGroup" || question.kind === "booleanGroupWithJustification") {
+    body = `
+      <div class="exam-subitems">
+        ${question.items
+          .map(
+            (item, index) => `
+              <div class="exam-bool-row">
+                <p><strong>${String.fromCharCode(65 + index)}.</strong> ${item.label}</p>
+                <div class="exam-bool-controls">
+                  <label><input type="radio" name="${question.id}__${index}" value="true" /> V / T</label>
+                  <label><input type="radio" name="${question.id}__${index}" value="false" /> F</label>
+                </div>
+                ${
+                  question.kind === "booleanGroupWithJustification"
+                    ? `<label for="${question.id}__justification_${index}">Tu frase justificativa</label><textarea id="${question.id}__justification_${index}"></textarea>`
+                    : ""
+                }
+              </div>
+            `,
+          )
+          .join("")}
+      </div>
+    `;
+  }
+
+  if (question.kind === "multiChoiceGroup") {
+    body = `
+      <div class="exam-subitems">
+        ${question.items
+          .map(
+            (item, index) => `
+              <div class="exam-subitem">
+                <p><strong>${item.label}</strong></p>
+                <div class="exam-options">
+                  ${item.options
+                    .map(
+                      (option, optionIndex) => `
+                        <div class="exam-option">
+                          <label>
+                            <input type="radio" name="${question.id}__${index}" value="${optionIndex}" />
+                            <span>${option}</span>
+                          </label>
+                        </div>
+                      `,
+                    )
+                    .join("")}
+                </div>
+              </div>
+            `,
+          )
+          .join("")}
+      </div>
+    `;
+  }
+
+  return `
+    <article class="exam-question" id="${question.id}" data-question-id="${question.id}" data-kind="${question.kind}">
+      ${header}
+      ${question.promptHtml}
+      ${note}
+      ${body}
+      <div class="exam-actions">
+        <button class="button button--ghost exam-correct-button" type="button" data-question-id="${question.id}">Corregir este ejercicio</button>
+      </div>
+      <div class="exam-result" id="result-${question.id}" hidden></div>
+    </article>
+  `;
+}
+
+function renderExamSection(section) {
+  if (section.type === "reading") {
+    return renderReading(section);
+  }
+
+  return renderQuestion(section);
+}
+
+function renderExamMeta(exam) {
+  const metaHost = document.getElementById("exam-meta");
+
+  if (!metaHost) {
+    return;
+  }
+
+  metaHost.innerHTML = `
+    <div class="exam-meta__card">
+      <div class="exam-meta__grid">
+        <div>
+          <span class="pill">${(window.examCatalog || []).find((item) => item.id === exam.id)?.status || "Examen online"}</span>
+          <h3>${exam.title}</h3>
+          <p>${exam.subtitle}</p>
+          ${exam.introHtml || ""}
+        </div>
+        <div>
+          <h4>Fuentes de este examen</h4>
+          <div class="exam-meta__sources">${sourceLinksHTML(exam.sourceLinks)}</div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function bindExamButtons(exam) {
+  document.querySelectorAll(".exam-correct-button").forEach((button) => {
+    button.addEventListener("click", () => {
+      const questionId = button.dataset.questionId;
+      const question = getAllQuestions(exam).find((item) => item.id === questionId);
+      const article = document.getElementById(questionId);
+      const result = document.getElementById(`result-${questionId}`);
+
+      if (!question || !article || !result) {
+        return;
+      }
+
+      result.hidden = false;
+      result.innerHTML = gradeQuestion(question, article);
+      updateExamSummary();
+    });
+  });
+
+  const finalButton = document.getElementById("exam-final-button");
+  if (finalButton) {
+    finalButton.addEventListener("click", updateExamSummary);
+  }
+}
+
+function gradeQuestion(question, article) {
+  if (question.kind === "mcqSingleWithOpen") {
+    const selected = article.querySelector(`input[name="${question.id}__choice"]:checked`);
+    const isCorrect = selected && Number(selected.value) === question.correctIndex;
+    return `
+      <p class="exam-feedback ${
+        !selected ? "exam-feedback--warn" : isCorrect ? "exam-feedback--ok" : "exam-feedback--bad"
+      }">
+        ${
+          !selected
+            ? "No has marcado ninguna opción."
+            : isCorrect
+              ? "La opción marcada es correcta."
+              : "La opción marcada no es correcta."
+        }
+      </p>
+      ${question.solutionHtml}
+    `;
+  }
+
+  if (question.kind === "openText") {
+    return question.solutionHtml;
+  }
+
+  if (question.kind === "openList") {
+    return `
+      <p class="exam-feedback exam-feedback--warn">Este ejercicio es de comparación manual: te muestro la solución oficial.</p>
+      <ul>
+        ${question.items.map((item) => `<li><strong>${item.label}</strong> ${item.solution}</li>`).join("")}
+      </ul>
+    `;
+  }
+
+  if (question.kind === "booleanGroup" || question.kind === "booleanGroupWithJustification") {
+    const rows = question.items
+      .map((item, index) => {
+        const selected = article.querySelector(`input[name="${question.id}__${index}"]:checked`);
+        const value = selected ? selected.value === "true" : null;
+        const isCorrect = value === item.correct;
+        return `
+          <li>
+            <strong>${String.fromCharCode(65 + index)}.</strong> ${item.label}<br />
+            <span class="${
+              value === null
+                ? "exam-feedback exam-feedback--warn"
+                : isCorrect
+                  ? "exam-feedback exam-feedback--ok"
+                  : "exam-feedback exam-feedback--bad"
+            }">
+              ${
+                value === null
+                  ? "Sin responder."
+                  : isCorrect
+                    ? `Correcto (${item.correct ? "V/T" : "F"}).`
+                    : `Incorrecto. La respuesta correcta es ${item.correct ? "V/T" : "F"}.`
+              }
+            </span>
+            ${item.solution ? `<div class="meta">Solución oficial: ${item.solution}</div>` : ""}
+          </li>
+        `;
+      })
+      .join("");
+
+    return `<ul>${rows}</ul>`;
+  }
+
+  if (question.kind === "multiChoiceGroup") {
+    const rows = question.items
+      .map((item, index) => {
+        const selected = article.querySelector(`input[name="${question.id}__${index}"]:checked`);
+        const value = selected ? Number(selected.value) : null;
+        const isCorrect = value === item.correctIndex;
+        return `
+          <li>
+            <strong>${item.label}</strong><br />
+            <span class="${
+              value === null
+                ? "exam-feedback exam-feedback--warn"
+                : isCorrect
+                  ? "exam-feedback exam-feedback--ok"
+                  : "exam-feedback exam-feedback--bad"
+            }">
+              ${
+                value === null
+                  ? "Sin responder."
+                  : isCorrect
+                    ? "Correcto."
+                    : "Incorrecto."
+              }
+            </span>
+            <div class="meta">Respuesta correcta: ${item.options[item.correctIndex]}</div>
+          </li>
+        `;
+      })
+      .join("");
+
+    return `<ul>${rows}</ul>`;
+  }
+
+  return `<p class="exam-feedback exam-feedback--warn">No se ha encontrado un corrector para este tipo de ejercicio.</p>`;
+}
+
+function countObjectiveAnswered(question, root) {
+  if (!question.includeInSummary) {
+    return { answered: 0, total: 0 };
+  }
+
+  if (question.kind === "booleanGroup" || question.kind === "multiChoiceGroup") {
+    const total = question.items.length;
+    const answered = question.items.filter((_, index) =>
+      root.querySelector(`input[name="${question.id}__${index}"]:checked`),
+    ).length;
+    return { answered, total };
+  }
+
+  return { answered: 0, total: 0 };
+}
+
+function scoreObjectiveQuestion(question, root) {
+  if (!question.includeInSummary) {
+    return { earned: 0, max: 0 };
+  }
+
+  if (question.kind !== "booleanGroup" && question.kind !== "multiChoiceGroup") {
+    return { earned: 0, max: 0 };
+  }
+
+  const pointsPerItem = question.pointsPerItem || 1;
+  const max = question.items.length * pointsPerItem;
+  const correct = question.items.filter((item, index) => {
+    const checked = root.querySelector(`input[name="${question.id}__${index}"]:checked`);
+    if (!checked) {
+      return false;
+    }
+
+    if (question.kind === "booleanGroup") {
+      return (checked.value === "true") === item.correct;
+    }
+
+    return Number(checked.value) === item.correctIndex;
+  }).length;
+
+  return { earned: correct * pointsPerItem, max };
+}
+
+function updateExamSummary() {
+  if (!currentExam) {
+    return;
+  }
+
+  const summary = document.getElementById("exam-summary-content");
+  if (!summary) {
+    return;
+  }
+
+  const questions = getAllQuestions(currentExam);
+  const objectiveTotals = questions.reduce(
+    (acc, question) => {
+      const score = scoreObjectiveQuestion(question, document);
+      const answered = countObjectiveAnswered(question, document);
+      acc.earned += score.earned;
+      acc.max += score.max;
+      acc.answered += answered.answered;
+      acc.totalItems += answered.total;
+      return acc;
+    },
+    { earned: 0, max: 0, answered: 0, totalItems: 0 },
+  );
+
+  const manualQuestions = questions.filter((question) => !question.includeInSummary);
+  const manualPoints = manualQuestions.reduce((sum, question) => sum + question.points, 0);
+
+  summary.innerHTML = `
+    <p>Cuando quieras ver tu resultado provisional, pulsa este botón. El cálculo automático solo cuenta los ejercicios cerrados del examen.</p>
+    <div class="exam-actions">
+      <button class="button button--primary" id="exam-final-button" type="button">Mostrar resultado del examen</button>
+    </div>
+    <div class="exam-summary__stats">
+      <div class="exam-stat">
+        <span class="meta">Puntuación automática</span>
+        <strong>${objectiveTotals.earned}/${objectiveTotals.max}</strong>
+      </div>
+      <div class="exam-stat">
+        <span class="meta">Ítems cerrados respondidos</span>
+        <strong>${objectiveTotals.answered}/${objectiveTotals.totalItems}</strong>
+      </div>
+      <div class="exam-stat">
+        <span class="meta">Comparación manual</span>
+        <strong>${manualPoints} puntos</strong>
+      </div>
+    </div>
+    <div class="exam-inline-note">
+      <p><strong>Ojo:</strong> quedan fuera del cálculo automático todos los ejercicios abiertos o con justificación escrita: ${manualQuestions
+        .map((question) => question.number)
+        .join(", ")}.</p>
+    </div>
+  `;
+
+  document.getElementById("exam-final-button")?.addEventListener("click", updateExamSummary, {
+    once: true,
+  });
+}
+
+function loadExam(examId) {
+  const exam = window.examData?.[examId];
+  const runner = document.getElementById("exam-runner");
+
+  if (!exam || !runner) {
+    return;
+  }
+
+  currentExam = exam;
+  renderExamMeta(exam);
+
+  runner.innerHTML = `
+    <div class="exam-blocks">
+      ${exam.sections.map(renderExamSection).join("")}
+      <section class="exam-summary">
+        <h3>Resultado del examen</h3>
+        <div id="exam-summary-content"></div>
+      </section>
+    </div>
+  `;
+
+  bindExamButtons(exam);
+  updateExamSummary();
+}
+
 function mount() {
   document.getElementById("facts-grid").innerHTML = facts.map(cardHTML).join("");
   document.getElementById("calendar-grid").innerHTML = calendar.map(dateHTML).join("");
@@ -425,6 +906,7 @@ function mount() {
   document.getElementById("exam-grid").innerHTML = examCards.map(examHTML).join("");
   document.getElementById("malaga-grid").innerHTML = malaga.map(malagaHTML).join("");
   document.getElementById("sources-grid").innerHTML = sourceGroups.map(sourceGroupHTML).join("");
+  renderExamSelector();
 }
 
 mount();

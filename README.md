@@ -7,6 +7,7 @@ Guía estática para preparar la prueba de Graduado en ESO para personas adultas
 - enlaces a recursos oficiales de la Junta de Andalucía
 - modelos de convocatorias anteriores y recursos complementarios
 - referencias locales de Málaga (IPEP Málaga y trámites)
+- exámenes online con corrección por ejercicio a partir de modelos oficiales
 
 ## Stack
 
@@ -15,6 +16,9 @@ Sitio estático puro:
 - `index.html`
 - `styles.css`
 - `app.js`
+- `exam-data.js`
+- `content/exams/` para notas y materiales estructurados del examen online
+- `scripts/` para extracción/verificación desde fuentes oficiales cuando haga falta ampliar más exámenes
 
 Sin build, sin dependencias, ideal para GitHub Pages.
 
