@@ -431,6 +431,16 @@ h3 {
   gap: 1rem;
 }
 
+.exam-online-featured {
+  display: grid;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.exam-online-featured .button {
+  width: fit-content;
+}
+
 .exam-index-card {
   background: var(--surface);
   border: 1px solid var(--line);
