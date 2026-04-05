@@ -432,6 +432,42 @@ function sourceLinksHTML(links = []) {
     .join("");
 }
 
+function buildExamUrl(examId) {
+  return `examen.html?exam=${encodeURIComponent(examId)}`;
+}
+
+function renderExamIndex() {
+  const host = document.getElementById("exam-index");
+  const catalog = window.examCatalog || [];
+
+  if (!host || !catalog.length) {
+    return;
+  }
+
+  host.innerHTML = catalog
+    .map((item) => {
+      const exam = window.examData?.[item.id];
+      return `
+        <article class="exam-index-card">
+          <div>
+            <span class="pill">${item.status || "Examen online"}</span>
+            <h3>${item.label}</h3>
+            <p>${exam?.subtitle || "Examen online con corrección por ejercicio y fuentes oficiales."}</p>
+          </div>
+          <div class="exam-index-card__meta">
+            <span class="exam-index-chip">${item.totalPoints} puntos</span>
+            <span class="exam-index-chip">Auto: ${item.autoPoints}</span>
+            <span class="exam-index-chip">Manual: ${item.manualPoints}</span>
+          </div>
+          <div class="exam-actions">
+            <a class="button button--primary" href="${buildExamUrl(item.id)}">Abrir examen aparte</a>
+          </div>
+        </article>
+      `;
+    })
+    .join("");
+}
+
 function renderExamSelector() {
   const host = document.getElementById("exam-selector");
   const catalog = window.examCatalog || [];
@@ -440,20 +476,25 @@ function renderExamSelector() {
     return;
   }
 
+  const params = new URLSearchParams(window.location.search);
+  const forcedExamId = params.get("exam");
+  const selectedId = forcedExamId && catalog.some((item) => item.id === forcedExamId) ? forcedExamId : catalog[0].id;
+
   host.innerHTML = `
     <div class="exam-selector__card">
-      <h3>Elegir examen</h3>
-      <p class="meta">Voy metiendo los modelos uno a uno. Este primero sirve para validar el formato de trabajo antes de cargar el resto.</p>
+      <h3>Examen online</h3>
+      <p class="meta">Esta página carga un solo examen por URL. Si más adelante hay varios, podrás cambiar entre ellos sin volver al índice.</p>
       <div class="exam-selector__controls">
         <select id="exam-select">
           ${catalog
             .map(
               (exam) =>
-                `<option value="${exam.id}">${exam.label}</option>`,
+                `<option value="${exam.id}" ${exam.id === selectedId ? "selected" : ""}>${exam.label}</option>`,
             )
             .join("")}
         </select>
         <button class="button button--primary" id="exam-load-button" type="button">Cargar examen</button>
+        <a class="button button--ghost" href="./#examenes-online">Volver al índice</a>
       </div>
     </div>
   `;
@@ -462,7 +503,11 @@ function renderExamSelector() {
   const button = document.getElementById("exam-load-button");
 
   const loadSelected = () => {
-    loadExam(select.value);
+    const examId = select.value;
+    const url = new URL(window.location.href);
+    url.searchParams.set("exam", examId);
+    window.history.replaceState({}, "", url);
+    loadExam(examId);
   };
 
   button.addEventListener("click", loadSelected);
@@ -898,14 +943,22 @@ function loadExam(examId) {
   updateExamSummary();
 }
 
+function setHTMLIfPresent(id, html) {
+  const element = document.getElementById(id);
+  if (element) {
+    element.innerHTML = html;
+  }
+}
+
 function mount() {
-  document.getElementById("facts-grid").innerHTML = facts.map(cardHTML).join("");
-  document.getElementById("calendar-grid").innerHTML = calendar.map(dateHTML).join("");
-  document.getElementById("ambitos-grid").innerHTML = ambitos.map(ambitoHTML).join("");
-  document.getElementById("steps-list").innerHTML = steps.map((step) => `<li>${step}</li>`).join("");
-  document.getElementById("exam-grid").innerHTML = examCards.map(examHTML).join("");
-  document.getElementById("malaga-grid").innerHTML = malaga.map(malagaHTML).join("");
-  document.getElementById("sources-grid").innerHTML = sourceGroups.map(sourceGroupHTML).join("");
+  setHTMLIfPresent("facts-grid", facts.map(cardHTML).join(""));
+  setHTMLIfPresent("calendar-grid", calendar.map(dateHTML).join(""));
+  setHTMLIfPresent("ambitos-grid", ambitos.map(ambitoHTML).join(""));
+  setHTMLIfPresent("steps-list", steps.map((step) => `<li>${step}</li>`).join(""));
+  setHTMLIfPresent("exam-grid", examCards.map(examHTML).join(""));
+  setHTMLIfPresent("malaga-grid", malaga.map(malagaHTML).join(""));
+  setHTMLIfPresent("sources-grid", sourceGroups.map(sourceGroupHTML).join(""));
+  renderExamIndex();
   renderExamSelector();
 }
 
