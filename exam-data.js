@@ -7,6 +7,14 @@ window.examCatalog = [
     manualPoints: 60,
     status: "Piloto verificado",
   },
+  {
+    id: "2024-06-com-in",
+    label: "Junio 2024 · Ámbito de comunicación (inglés)",
+    totalPoints: 100,
+    autoPoints: 40,
+    manualPoints: 60,
+    status: "Verificado",
+  },
 ];
 
 window.examData = {
@@ -398,6 +406,418 @@ window.examData = {
           { label: "22. -Can Esther speak French?", options: ["Yes, she can.", "Yes, Esther can.", "Yes, she can speak."], correctIndex: 0 },
           { label: "23. –“Serranitos” are delicious.", options: ["I am agree!", "I agree!", "I think that yes!"], correctIndex: 1 },
           { label: "24. Tim’s voice is … than Noel’s.", options: ["better and beautifuller", "more good and more beautiful", "better and more beautiful"], correctIndex: 2 },
+        ],
+      },
+    ],
+  },
+  "2024-06-com-in": {
+    id: "2024-06-com-in",
+    title: "Convocatoria junio 2024 · Ámbito de comunicación (opción inglés)",
+    subtitle: "Segundo examen online integrado a partir del pack oficial de la Junta con soluciones.",
+    sourceLinks: [
+      {
+        label: "Archivo oficial de convocatorias anteriores",
+        url: "https://www.juntadeandalucia.es/educacion/portales/web/educacion-permanente/servicios/pruebas/obtencion-titulo-eso/sobre-las-pruebas/modelos-de-convocatorias-anteriores",
+      },
+      {
+        label: "ZIP oficial junio 2024 (incluye soluciones)",
+        url: "https://www.juntadeandalucia.es/educacion/portales/documents/1454565/1624993/Pruebas%20convocatoria%20junio%202024%20%28incluye%20soluciones%29/1c4d10d9-36a0-8654-0095-1944e6c8dab7?version=1.1",
+      },
+      {
+        label: "Notas de extracción y verificación",
+        url: "content/exams/2024-06-com-in-notes.md",
+      },
+    ],
+    introHtml: `
+      <p>Esta versión convierte en web <strong>el examen oficial de junio de 2024</strong> del ámbito de comunicación, opción inglés.</p>
+      <p><strong>Cómo corrige:</strong> en preguntas tipo test o verdadero/falso te indica aciertos y fallos. En preguntas abiertas muestra la solución oficial o un modelo orientativo para comparar.</p>
+      <p><strong>Resultado final:</strong> la web calcula automáticamente <strong>40 puntos de ejercicios cerrados</strong>. Los otros <strong>60 puntos</strong> quedan para comparación manual porque el examen incluye respuestas abiertas, redacciones o justificaciones.</p>
+    `,
+    sections: [
+      {
+        type: "reading",
+        id: "reading-castellano",
+        title: "Texto base · Lengua castellana",
+        html: `
+          <p><strong>NORMAS DE USO DE LA BIBLIOTECA</strong></p>
+          <p><strong>1. Servicios bibliotecarios</strong></p>
+          <p><strong>1.1</strong> El acceso a los servicios de la biblioteca es libre y gratuito.</p>
+          <p><strong>1.2</strong> Los niños menores de 6 años permanecerán en la Sala de Adultos acompañados de sus padres o bien se dirigirán a la Sala Infantil, para garantizar el buen funcionamiento y el silencio preciso en las instalaciones.</p>
+          <p><strong>1.3</strong> Para hacer uso de los servicios de la biblioteca es necesario solicitar el carné de lector, cuya posesión implica la aceptación por parte del solicitante del reglamento que rige el funcionamiento de la Red de Lectura Pública de Andalucía.</p>
+          <p><strong>1.4</strong> Los menores de 14 años, para hacerse el carné, deberán ir acompañados de un adulto o bien presentar un formulario que la biblioteca proporciona, rellenado y firmado por los padres o tutor.</p>
+          <p><strong>1.5</strong> El carné de lector tendrá una validez de 5 años, pasados los cuales se podrá renovar. Este será de uso personal e intransferible, salvo en casos de circunstancias justificadas.</p>
+          <p><strong>1.6</strong> Una vez que los lectores han hecho uso de los libros, al finalizar su consulta en sala, los dejarán en lugares destinados para ello, siendo el personal de la biblioteca el encargado de colocarlos en su ubicación siguiendo un orden de clasificación en las estanterías.</p>
+          <p><strong>1.7</strong> El horario de la biblioteca será el establecido por norma general para el resto de las bibliotecas de la Red de Lectura Pública de Andalucía, con un máximo de 30 a 35 horas al público según población, y distribuidas de mañana de 10 a 14 h y tardes de 17 a 20 h en épocas ordinarias, y solo por las mañanas de 9 a 14 h en épocas festivas (verano, Navidad y Semana Santa).</p>
+          <p><strong>2. Servicio de préstamo</strong></p>
+          <p><strong>2.1</strong> El préstamo domiciliario de libros será de hasta 5 ejemplares, durante un máximo de 15 días, renovable una sola vez por un periodo de 10 días, siempre y cuando no estén reservados.</p>
+          <p><strong>2.2</strong> No podrán ser retirados en préstamo domiciliario ninguna publicación seriada (periódicos o revistas), así como cualquier otro material de referencia o de consulta (enciclopedias, atlas o diccionarios), con uso exclusivo en sala.</p>
+          <p><strong>2.3</strong> El retraso en la devolución de los libros dará lugar a la suspensión del derecho de préstamo por un tiempo equivalente a la demora.</p>
+          <p><strong>2.5</strong> En caso de deterioro o pérdida de los libros prestados, el usuario se hace responsable de su reposición; si la obra está agotada, se debe sustituir por otra de características similares. En tanto no se cumpla este requisito el usuario quedará suspendido del servicio de préstamo.</p>
+          <p><strong>2.6</strong> La biblioteca se reserva el derecho de avisar a aquellos usuarios que, por olvido, no hayan devuelto los libros en el plazo fijado.</p>
+          <p><strong>2.7</strong> No se podrán renovar aquellos libros que hayan sido reservados previamente por otro usuario.</p>
+          <p><strong>2.8</strong> Las renovaciones del préstamo se harán personalmente o a distancia, bien por teléfono o correo electrónico, dentro de las horas de apertura de la biblioteca.</p>
+          <p><strong>2.9</strong> El usuario tendrá derecho a solicitar la reserva de un libro prestado. La biblioteca avisará al usuario en el momento en que el ejemplar sea devuelto.</p>
+          <p><strong>2.10</strong> Las reservas se mantendrán cinco días a partir de su comunicación, transcurrido dicho plazo se pasará a la siguiente reserva del mismo o bien se colocará en la estantería correspondiente.</p>
+          <p class="meta">Texto adaptado extraído de vera.es</p>
+        `,
+      },
+      {
+        type: "question",
+        id: "q1",
+        number: 1,
+        title: "Tipo de texto",
+        points: 5,
+        kind: "mcqSingleWithOpen",
+        includeInSummary: false,
+        promptHtml: `<p>Indica a qué tipo de texto pertenece el que has leído. Justifica tu respuesta.</p>`,
+        options: ["Texto periodístico", "Texto científico", "Texto instructivo", "Texto literario"],
+        correctIndex: 2,
+        openLabel: "Tu justificación",
+        solutionHtml: `
+          <p><strong>Opción correcta:</strong> <strong>Texto instructivo</strong>.</p>
+          <p><strong>Justificación oficial:</strong> Se trata de un texto instructivo que recoge las normas de uso de la biblioteca y el procedimiento para hacer uso de sus servicios.</p>
+        `,
+      },
+      {
+        type: "question",
+        id: "q2",
+        number: 2,
+        title: "Verdadero o falso sobre las normas",
+        points: 5,
+        kind: "booleanGroup",
+        pointsPerItem: 1,
+        includeInSummary: true,
+        promptHtml: `<p>Indica si las siguientes afirmaciones son verdaderas [V] o falsas [F] según la información contenida en el texto.</p>`,
+        items: [
+          { label: "Está completamente prohibido que los niños permanezcan en la sala de adultos.", correct: false },
+          { label: "Los menores de 14 años necesariamente tienen que ir a la biblioteca acompañados de sus padres para solicitar el carné.", correct: false },
+          { label: "Al finalizar la consulta de un libro en la sala, el usuario debe colocarlo en su sitio exacto de la estantería.", correct: false },
+          { label: "El carné de la biblioteca tiene un coste de 5 euros.", correct: false },
+          { label: "Todas las bibliotecas de la red de lectura pública en Andalucía con población similar tienen los mismos horarios.", correct: true },
+        ],
+      },
+      {
+        type: "question",
+        id: "q3",
+        number: 3,
+        title: "Preguntas cortas de comprensión",
+        points: 5,
+        kind: "openList",
+        promptHtml: `<p>Contesta brevemente a las siguientes preguntas con la información del texto.</p>`,
+        items: [
+          { label: "A. ¿Cuál es el máximo de días que puedo tener un libro en préstamo?", solution: "<strong>25 días</strong>: 15 días de préstamo más una prórroga de 10, si el ejemplar no ha sido reservado." },
+          { label: "B. ¿Puedo llevarme a casa en préstamo un diccionario?", solution: "<strong>No</strong>, ese tipo de ejemplares de consulta solo puede utilizarse en la sala." },
+          { label: "C. ¿Qué pasa si me retraso en la devolución?", solution: "Se suspende el derecho de préstamo durante un tiempo <strong>equivalente al retraso</strong>." },
+          { label: "D. He perdido el libro que saqué en préstamo. ¿Qué debo hacer?", solution: "Debes <strong>reponer el ejemplar</strong>, o sustituirlo por otro de características similares si está agotado." },
+          { label: "E. ¿Puedo hacer uso de la biblioteca durante las vacaciones escolares de Navidad?", solution: "<strong>Sí</strong>, pero solo por las mañanas." },
+        ],
+      },
+      {
+        type: "question",
+        id: "q4",
+        number: 4,
+        title: "Reserva de libros en préstamo",
+        points: 5,
+        kind: "openText",
+        promptHtml: `<p>Explica cómo es el procedimiento de reserva de libros que están en préstamo.</p>`,
+        openLabel: "Escribe aquí tu respuesta",
+        solutionHtml: `<p><strong>Solución oficial:</strong> Cuando el libro que se quiere sacar está en préstamo se puede hacer una reserva, físicamente en la biblioteca, por correo electrónico o por teléfono. Cuando el libro sea devuelto, la biblioteca avisará al titular de la reserva y le guardará el ejemplar durante un máximo de 5 días.</p>`,
+      },
+      {
+        type: "question",
+        id: "q5",
+        number: 5,
+        title: "Redacción sobre piratería digital",
+        points: 10,
+        kind: "openText",
+        promptHtml: `
+          <p>Las descargas ilegales de libros en Internet están afectando de forma muy directa a las empresas editoriales de este país y a los escritores, que ven cómo se vulneran sus derechos de autor. Esto forma parte de un problema más amplio que afecta también a los creadores de música, películas y videojuegos. A pesar de que se trata de una práctica ilegal según la Ley de Propiedad Intelectual, muchos usuarios no tienen la percepción de que sea algo ilegítimo.</p>
+          <p>¿Qué opinas tú de la piratería digital de contenidos? ¿Qué consecuencias crees que tiene en la industria artística y en la cultura en general? ¿Se te ocurre alguna manera de luchar contra ella?</p>
+          <p class="meta">Redacta un texto de al menos 200 palabras en el que expreses tu punto de vista sobre el tema, argumentándolo de forma adecuada. En la puntuación se tendrán en cuenta, de forma proporcional, la expresión, la presentación, la ortografía, la estructura y la cohesión del texto.</p>
+        `,
+        openLabel: "Escribe aquí tu redacción",
+        solutionHtml: `<p><strong>Solución oficial:</strong> Respuesta libre.</p>`,
+      },
+      {
+        type: "question",
+        id: "q6",
+        number: 6,
+        title: "Léxico y relaciones semánticas",
+        points: 5,
+        kind: "openList",
+        promptHtml: `<p>Escribe palabras o expresiones que se relacionen con los términos subrayados en el texto en el sentido que se indica.</p>`,
+        items: [
+          { label: "A. Sinónimos de demora y de ubicación", solution: "<strong>Demora</strong>: atraso, retraso, tardanza, prórroga. <strong>Ubicación</strong>: situación, colocación, lugar, sitio." },
+          { label: "B. Antónimos de aceptación y de festivas", solution: "<strong>Aceptación</strong>: denegación, rechazo. <strong>Festivas</strong>: laborales, lectivas." },
+          { label: "C. Dos palabras de la familia léxica de tutor", solution: "Por ejemplo: <strong>tutoría, tutorial, tutorizar, cotutor, tutorización</strong>." },
+          { label: "D. Dos significados de la palabra polisémica obra", solution: "Por ejemplo: <strong>cosa hecha</strong>, <strong>producto intelectual</strong>, <strong>edificio en construcción</strong> o <strong>trabajo de albañilería</strong>." },
+          { label: "E. Dos palabras del texto que tengan hiato", solution: "Por ejemplo: <strong>Andalucía, estanterías, días, correo</strong>." },
+        ],
+      },
+      {
+        type: "question",
+        id: "q7",
+        number: 7,
+        title: "Pon las tildes que faltan",
+        points: 5,
+        kind: "openText",
+        promptHtml: `
+          <p>Coloca las tildes que faltan en el texto.</p>
+          <blockquote>Leer, al principio, es algo dificil, por lo que hay gente que empieza a apreciar un buen libro en una edad ya avanzada. Yo empece a leer con gusto a los nueve años, nunca me habia llamado la atencion ninguna novela o libro, pero tenia amigas a las que si que le gustaba, y decidi, con un poco de desgana, buscar un libro que pudiera gustarme.</blockquote>
+          <blockquote>Mi primera eleccion fue una sugerencia de mi madre, Torres de Malory, de Enid Blyton, una saga de siete libros en los que, basicamente, un grupo de niñas en un internado se meten en lios constantemente.</blockquote>
+        `,
+        openLabel: "Escribe aquí el texto corregido",
+        solutionHtml: `
+          <p><strong>Solución oficial:</strong></p>
+          <p>Leer, al principio, es algo <strong>difícil</strong>, por lo que hay gente que empieza a apreciar un buen libro en una edad ya avanzada. Yo <strong>empecé</strong> a leer con gusto a los nueve años, nunca me <strong>había</strong> llamado la <strong>atención</strong> ninguna novela o libro, pero <strong>tenía</strong> amigas a las que <strong>sí</strong> que le gustaba, y <strong>decidí</strong>, con un poco de desgana, buscar un libro que pudiera gustarme.</p>
+          <p>Mi primera <strong>elección</strong> fue una sugerencia de mi madre, Torres de Malory, de Enid Blyton, una saga de siete libros en los que, <strong>básicamente</strong>, un grupo de niñas en un internado se meten en <strong>líos</strong> constantemente.</p>
+        `,
+      },
+      {
+        type: "question",
+        id: "q8",
+        number: 8,
+        title: "Funciones sintácticas",
+        points: 5,
+        kind: "multiChoiceGroup",
+        pointsPerItem: 1,
+        includeInSummary: true,
+        promptHtml: `<p>Indica qué función sintáctica tienen los sintagmas marcados en cada oración.</p>`,
+        noteHtml: `<p class="meta">Nota: en esta versión web, los sintagmas que iban subrayados en el PDF aparecen resaltados dentro de cada oración.</p>`,
+        items: [
+          {
+            label: "A. Los servicios de la biblioteca son <strong>gratuitos</strong>.",
+            options: ["Atributo", "Complemento Directo", "Complemento Circunstancial de Modo"],
+            correctIndex: 0,
+          },
+          {
+            label: "B. El usuario devolverá el libro <strong>en el plazo marcado</strong>.",
+            options: ["Complemento Circunstancial de Tiempo", "Complemento Indirecto", "Complemento Directo"],
+            correctIndex: 0,
+          },
+          {
+            label: "C. Durante el verano <strong>el horario de la biblioteca</strong> será más reducido.",
+            options: ["Complemento Predicativo", "Sujeto", "Complemento Circunstancial de Lugar"],
+            correctIndex: 1,
+          },
+          {
+            label: "D. Un libro en mal estado fue retirado <strong>por el bibliotecario</strong>.",
+            options: ["Sujeto", "Complemento de Régimen", "Complemento Agente"],
+            correctIndex: 2,
+          },
+          {
+            label: "E. Solicité la reserva <strong>por teléfono</strong>.",
+            options: ["Complemento Circunstancial de Tiempo", "Complemento Circunstancial de Modo", "Complemento Indirecto"],
+            correctIndex: 1,
+          },
+        ],
+      },
+      {
+        type: "question",
+        id: "q9",
+        number: 9,
+        title: "Tipos de oraciones",
+        points: 5,
+        kind: "openList",
+        promptHtml: `<p>Escribe una oración que se ajuste a los siguientes tipos.</p>`,
+        items: [
+          { label: "A. Enunciativa afirmativa", solution: "Ejemplo oficial: <strong>Mi amiga Julia vendrá al cine conmigo.</strong>" },
+          { label: "B. Interrogativa directa parcial", solution: "Ejemplo oficial: <strong>¿Quién llegó tarde a la cita?</strong>" },
+          { label: "C. Exclamativa", solution: "Ejemplo oficial: <strong>¡Qué bonito es tu coche!</strong>" },
+          { label: "D. Imperativa", solution: "Ejemplo oficial: <strong>Sal a la calle ya.</strong>" },
+          { label: "E. Dubitativa", solution: "Ejemplo oficial: <strong>Quizás mañana llueva.</strong>" },
+        ],
+      },
+      {
+        type: "reading",
+        id: "reading-poema",
+        title: "Texto base · Conocimiento literario",
+        html: `
+          <div class="poem">
+            <p><strong>Recuerdo infantil</strong></p>
+            <p>Una tarde parda y fría<br>de invierno. Los colegiales<br>estudian. Monotonía<br>de lluvia tras los cristales.</p>
+            <p>Es la clase. En un cartel<br>se representa a Caín<br>fugitivo, y muerto Abel,<br>junto a una mancha carmín.</p>
+            <p>Con timbre sonoro y hueco<br>truena el maestro, un anciano<br>mal vestido, enjuto y seco,<br>que lleva un libro en la mano.</p>
+            <p>Y todo un coro infantil<br>va cantando la lección;<br>“mil veces ciento, cien mil,<br>mil veces mil, un millón”.</p>
+            <p>Una tarde parda y fría<br>de invierno. Los colegiales<br>estudian. Monotonía<br>de la lluvia en los cristales.</p>
+            <p class="meta"><em>Soledades, galerías y otros poemas</em>, Antonio Machado</p>
+          </div>
+        `,
+      },
+      {
+        type: "question",
+        id: "q10",
+        number: 10,
+        title: "Verdadero o falso sobre el poema",
+        points: 5,
+        kind: "booleanGroup",
+        pointsPerItem: 1,
+        includeInSummary: true,
+        promptHtml: `<p>Indica si son verdaderas [V] o falsas [F] las siguientes afirmaciones.</p>`,
+        items: [
+          { label: "El autor recuerda la monotonía de las clases de su infancia.", correct: true },
+          { label: "Se describe la actuación de un coro de niños en la iglesia.", correct: false },
+          { label: "En la clase hay un cartel con la imagen de un episodio bíblico.", correct: true },
+          { label: "Los versos son octosílabos, con rima consonante.", correct: true },
+          { label: "Es un texto del género narrativo porque cuenta una historia.", correct: false },
+        ],
+      },
+      {
+        type: "question",
+        id: "q11",
+        number: 11,
+        title: "Metáfora del poema",
+        points: 5,
+        kind: "openText",
+        promptHtml: `<p>Busca una metáfora en el texto y explica su significado.</p>`,
+        openLabel: "Escribe aquí tu respuesta",
+        solutionHtml: `
+          <p><strong>Solución oficial:</strong> El aspirante podía contestar una de las siguientes.</p>
+          <ul>
+            <li><strong>“mancha carmín”</strong>: hace referencia a la sangre sobre la que yace el cuerpo muerto de Abel.</li>
+            <li><strong>“truena el maestro”</strong>: la voz del maestro resuena con fuerza en la clase.</li>
+          </ul>
+        `,
+      },
+      {
+        type: "reading",
+        id: "reading-english",
+        title: "Texto base · Lengua extranjera (inglés)",
+        html: `
+          <p><strong>Ultra-processed food health warning</strong></p>
+          <p>Ultra-processed foods are the foods that have been through the most industrial processing and often have a long list of ingredients on the packet. It includes popular items like fizzy drinks, chicken nuggets and breakfast cereals.</p>
+          <p>Two studies regularly assessed the diets of more than one hundred thousand people and recorded what happened to their health. They showed people who ate the most ultra-processed foods tended to have the worst heart health and die earlier.</p>
+          <p>The studies are not definitive proof of harm and experts have expressed caution. More work is still needed to explain what it is about ultra-processing that might have a detrimental effect on our bodies.</p>
+          <p>“What we actually need to know is what’s behind these associations. Is it the ultra-processed foods? Is it the nutritional content of them? Is it some kind of additive that’s in them? I think we really need to find out a bit more about it.”, says Victoria Taylor, from the British Heart Foundation.</p>
+          <p>The authors of the two studies say there is now mounting evidence that ultra-processed foods may be harmful. And the research comes out soon after tests showing these types of foods make us eat more and put on weight.</p>
+          <p>But while the term ultra-processed might feel new, the health advice is very familiar. A diet rich in fruit, vegetables, fish, nuts and seeds also happens to be one full of unprocessed foods.</p>
+          <p class="meta">Texto adaptado de bbc.co.uk/learningenglish</p>
+          <div class="vocab-card">
+            <strong>Vocabulario:</strong>
+            <ul>
+              <li><strong>Recorded</strong>: anotaron</li>
+              <li><strong>Assessed</strong>: evaluaron</li>
+              <li><strong>Caution</strong>: cautela</li>
+              <li><strong>Detrimental</strong>: perjudicial</li>
+              <li><strong>Additive</strong>: aditivo alimentario</li>
+              <li><strong>Mounting</strong>: creciente</li>
+            </ul>
+          </div>
+        `,
+      },
+      {
+        type: "question",
+        id: "q12",
+        number: 12,
+        title: "True or false + frase justificativa",
+        points: 5,
+        kind: "booleanGroupWithJustification",
+        includeInSummary: false,
+        promptHtml: `<p>Indica si las siguientes afirmaciones son verdaderas (T) o falsas (F) y escribe la frase del texto que justifica tu respuesta.</p>`,
+        items: [
+          {
+            label: "Ultra-processed food often comes in a packet.",
+            correct: true,
+            solution: "“Ultra-processed foods […] often have a long list of ingredients on the packet.”",
+          },
+          {
+            label: "Experts are 100% sure that ultra-processed foods are harmful.",
+            correct: false,
+            solution: "“The studies are not definitive proof of harm and experts have expressed caution.”",
+          },
+          {
+            label: "Victoria Taylor knows the link between ultra-processed foods and early deaths is in the additives.",
+            correct: false,
+            solution: "“What we actually need to know is what’s behind these associations. […] Is it some kind of additive that’s in them?”",
+          },
+          {
+            label: "There is no evidence that ultra-processed foods make us fatter.",
+            correct: false,
+            solution: "“…tests showing these types of foods make us eat more and put on weight.”",
+          },
+          {
+            label: "Recommendations about a healthy diet are not new but the concept ‘ultra-processed foods’ is.",
+            correct: true,
+            solution: "“But while the term ultra-processed might feel new, the health advice is very familiar.”",
+          },
+        ],
+      },
+      {
+        type: "question",
+        id: "q13",
+        number: 13,
+        title: "Comprensión lectora en inglés · opción correcta",
+        points: 5,
+        kind: "multiChoiceGroup",
+        pointsPerItem: 1,
+        includeInSummary: true,
+        promptHtml: `<p>Marca la respuesta que mejor se ajuste a lo expresado en el texto.</p>`,
+        noteHtml: `<p class="meta">Nota: estas respuestas quedaron confirmadas visualmente al revisar las casillas marcadas en el solucionario rasterizado.</p>`,
+        items: [
+          {
+            label: "A. Examples of ultra-processed foods are…",
+            options: ["chicken, cereal and vegetables.", "sodas, cornflakes and nuggets.", "fish, nuts and vegetables."],
+            correctIndex: 1,
+          },
+          {
+            label: "B. According to two studies...",
+            options: ["people who ate the most ultra-processed foods die sooner.", "people who ate the most ultra-processed foods are in better health.", "100,000 people who ate ultra processed foods are unhealthy."],
+            correctIndex: 0,
+          },
+          {
+            label: "C. More work is still needed…",
+            options: ["to explain the nutritional content of ultra-processing.", "to process the effect of ultra-processed foods on our bodies.", "to understand why ultra-processed foods are unhealthy."],
+            correctIndex: 2,
+          },
+          {
+            label: "D. Victoria Taylor from the British Heart Foundation…",
+            options: ["associates ultra-processed foods with their effect on our bodies.", "needs to know the nutritional content of ultra-processed foods.", "wants to know the connection between ultra-processed foods and health."],
+            correctIndex: 2,
+          },
+          {
+            label: "E. A healthy diet…",
+            options: ["is full of natural foods.", "is familiar long-term advice.", "might feel new to people who eat ultra-processed foods."],
+            correctIndex: 0,
+          },
+        ],
+      },
+      {
+        type: "question",
+        id: "q14",
+        number: 14,
+        title: "Healthy diet writing",
+        points: 10,
+        kind: "openText",
+        promptHtml: `
+          <p>Lo que comemos influye enormemente en nuestro estado de salud. Un exceso de alimentos ultraprocesados puede ser peligroso y, por tanto, deben evitarse.</p>
+          <p>Escribe un texto en inglés de entre 50 y 70 palabras en el que describas una dieta saludable, nombrando qué alimentos deben consumirse más frecuentemente y cuáles menos. Puedes usar los verbos modales <em>should</em> y <em>ought to</em> para expresar consejos.</p>
+          <p class="meta">Expresiones que pueden ayudarte: <em>heart disease / intake / nutrition / to follow a healthy diet</em>.</p>
+        `,
+        openLabel: "Write your answer here",
+        solutionHtml: `<p><strong>Solución oficial:</strong> Respuesta libre.</p>`,
+      },
+      {
+        type: "question",
+        id: "q15-24",
+        number: "15-24",
+        title: "Conocimiento de la lengua extranjera · test",
+        points: 20,
+        kind: "multiChoiceGroup",
+        pointsPerItem: 2,
+        includeInSummary: true,
+        promptHtml: `<p>Elige en cada caso la opción que consideres más correcta.</p>`,
+        noteHtml: `<p class="meta">Igual que en el ejercicio 13, estas respuestas quedaron confirmadas visualmente al revisar las casillas marcadas en el solucionario rasterizado.</p>`,
+        items: [
+          { label: "15. Bea’s birthday is…", options: ["on may 7th.", "in may 7h.", "on May 7th."], correctIndex: 2 },
+          { label: "16. For the pizza dough, …", options: ["you add yeast to water warm.", "add yeast to warm water.", "add you yeast to warm water."], correctIndex: 1 },
+          { label: "17. Cenydd is…", options: ["friendly boy.", "a friendly boy.", "a friend boy."], correctIndex: 1 },
+          { label: "18. It’s just a possibility, but we...", options: ["may see you later.", "must see you later.", "can’t see you later."], correctIndex: 0 },
+          { label: "19. In winter, we...", options: ["play karate.", "do karate.", "go karate."], correctIndex: 1 },
+          { label: "20. Unless you study, you … pass this test.", options: ["won’t", "will", "wouldn’t"], correctIndex: 0 },
+          { label: "21. How....", options: ["does she feel today?", "do she feel today?", "is she feeling today?"], correctIndex: 2 },
+          { label: "22. Mr. Lascelles got married … month.", options: ["last", "in", "ago"], correctIndex: 0 },
+          { label: "23. I…", options: ["just’ve read a book by Virginia Woolf.", "’ve read a book by Virginia Woolf just.", "’ve just read a book by Virginia Woolf."], correctIndex: 2 },
+          { label: "24. Monday is … day of the week.", options: ["the busier", "the busyest", "the busiest"], correctIndex: 2 },
         ],
       },
     ],
