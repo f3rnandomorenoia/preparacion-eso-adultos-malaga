@@ -15,6 +15,14 @@ window.examCatalog = [
     manualPoints: 60,
     status: "Verificado",
   },
+  {
+    "id": "2024-06-ct",
+    "label": "Junio 2024 · Ámbito científico-tecnológico",
+    "totalPoints": 100,
+    "autoPoints": 20,
+    "manualPoints": 80,
+    "status": "Piloto verificado"
+  }
 ];
 
 window.examData = {
@@ -822,4 +830,471 @@ window.examData = {
       },
     ],
   },
+  "2024-06-ct": {
+    "id": "2024-06-ct",
+    "title": "Convocatoria junio 2024 · Ámbito científico-tecnológico",
+    "subtitle": "Prueba interactiva con apoyo visual en las preguntas de gráfica y problema final.",
+    "sourceLinks": [
+      {
+        "label": "Archivo oficial de convocatorias anteriores",
+        "url": "https://www.juntadeandalucia.es/educacion/portales/web/educacion-permanente/pruebas-obtencion-titulo-graduado-eso-personas-adultas/convocatorias-anteriores"
+      },
+      {
+        "label": "PDF del examen (copia local)",
+        "url": "data/exam-packs/2024-06/extracted/Convocatoria%20junio%202024/CT_ESPA%20_2024.pdf"
+      },
+      {
+        "label": "PDF del solucionario (copia local)",
+        "url": "data/exam-packs/2024-06/extracted/Convocatoria%20junio%202024/CT_ESPA_soluciones_2024.pdf"
+      },
+      {
+        "label": "Notas de extracción",
+        "url": "content/exams/2024-06-ct-notes.md"
+      }
+    ],
+    "introHtml": "<p>Examen oficial de junio de 2024 del ámbito científico-tecnológico. Mantiene la estructura original por bloques y añade apoyo visual en las preguntas basadas en gráficos.</p><ul><li><strong>A.</strong> Conceptos básicos (15 puntos)</li><li><strong>B.</strong> Comprensión y análisis de un documento escrito (20 puntos)</li><li><strong>C.</strong> Comprensión y análisis de información gráfica (30 puntos)</li><li><strong>D.</strong> Expresión escrita (15 puntos)</li><li><strong>E.</strong> Resolución de un problema (20 puntos)</li></ul>",
+    "sections": [
+      {
+        "type": "question",
+        "id": "q1",
+        "number": 1,
+        "title": "Organización de la materia",
+        "points": 5,
+        "kind": "multiChoiceGroup",
+        "includeInSummary": true,
+        "promptHtml": "<p>Completa cada afirmación eligiendo la opción correcta.</p>",
+        "items": [
+          {
+            "label": "Los ___ se reúnen formando moléculas y macromoléculas.",
+            "options": [
+              "átomos",
+              "tejidos"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "label": "Las moléculas y macromoléculas forman las ___.",
+            "options": [
+              "células",
+              "órganos"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "label": "Las células forman ___.",
+            "options": [
+              "tejidos",
+              "sistemas"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "label": "Los tejidos forman ___.",
+            "options": [
+              "órganos",
+              "ecosistemas"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "label": "Los sistemas y aparatos forman un ___.",
+            "options": [
+              "ser vivo",
+              "biotopo"
+            ],
+            "correctIndex": 0
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q2",
+        "number": 2,
+        "title": "Conceptos de ecología",
+        "points": 5,
+        "kind": "openList",
+        "promptHtml": "<p>Relaciona cada descripción con el término adecuado.</p>",
+        "items": [
+          {
+            "label": "Sistema formado por una comunidad de seres vivos y el medio físico en el que viven",
+            "solution": "ecosistema"
+          },
+          {
+            "label": "Conjunto de individuos de la misma especie que vive en un lugar y tiempo determinados",
+            "solution": "población"
+          },
+          {
+            "label": "Zona de características ambientales uniformes ocupada por una comunidad de seres vivos",
+            "solution": "biotopo"
+          },
+          {
+            "label": "Conjunto de poblaciones de distintas especies que viven en un mismo ecosistema",
+            "solution": "comunidad"
+          },
+          {
+            "label": "Función que desempeña una especie dentro de un ecosistema",
+            "solution": "nicho ecológico"
+          }
+        ],
+        "noteHtml": "<p>La corrección automática no puntúa este apartado, pero puedes comparar tus términos con la solución oficial.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q3",
+        "number": 3,
+        "title": "Cambio físico o cambio químico",
+        "points": 5,
+        "kind": "multiChoiceGroup",
+        "includeInSummary": true,
+        "promptHtml": "<p>Indica si cada proceso corresponde a un cambio físico o a un cambio químico.</p>",
+        "items": [
+          {
+            "label": "Congelación del agua",
+            "options": [
+              "Cambio físico",
+              "Cambio químico"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "label": "Cocción de un huevo",
+            "options": [
+              "Cambio físico",
+              "Cambio químico"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "label": "Evaporación del alcohol",
+            "options": [
+              "Cambio físico",
+              "Cambio químico"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "label": "Oxidación del hierro",
+            "options": [
+              "Cambio físico",
+              "Cambio químico"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "label": "Trituración de una piedra",
+            "options": [
+              "Cambio físico",
+              "Cambio químico"
+            ],
+            "correctIndex": 0
+          }
+        ]
+      },
+      {
+        "type": "reading",
+        "id": "reading-ia",
+        "title": "Texto base · IA, ChatGPT y empresa",
+        "html": "<p><strong>Lee el siguiente texto y responde a las cuestiones 4 a 7.</strong></p><p><em>La inteligencia artificial llega para revolucionar el día a día de las empresas.</em> ChatGPT es un sistema de inteligencia artificial capaz de elaborar textos, responder preguntas, resumir contenidos y generar borradores para distintos usos empresariales.</p><p>Según el texto, la clave no está solo en la herramienta, sino también en hacer una pregunta adecuada, es decir, redactar un buen <em>prompt</em>. Cuanto más precisa y contextualizada sea la petición, mejor será la respuesta obtenida.</p><p>OpenAI ha conseguido desarrollar ChatGPT alimentándolo con una enorme cantidad de información procedente de páginas web, artículos, libros, vídeos, audios y otros contenidos disponibles en internet.</p><p>El artículo menciona usos como responder correos, sintetizar documentos, extraer ideas principales, redactar la ficha de un producto y apoyar distintas tareas del trabajo diario.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q4",
+        "number": 4,
+        "title": "Verdadero o falso sobre el texto",
+        "points": 5,
+        "kind": "booleanGroupWithJustification",
+        "includeInSummary": true,
+        "promptHtml": "<p>Indica si las siguientes afirmaciones son verdaderas o falsas según el texto.</p>",
+        "items": [
+          {
+            "label": "Para que una empresa pueda sacar partido de ChatGPT es necesario contar con grandes conocimientos de programación.",
+            "correct": false,
+            "solution": "El texto insiste en que la herramienta depende sobre todo de formular bien la petición, no de tener grandes conocimientos de programación."
+          },
+          {
+            "label": "ChatGPT puede utilizarse para redactar un correo electrónico o la ficha de un producto.",
+            "correct": true,
+            "solution": "Se cita expresamente como ejemplo de uso en el texto."
+          },
+          {
+            "label": "Cuanto más precisa y contextualizada es la pregunta que se hace a ChatGPT, mejor será su respuesta.",
+            "correct": true,
+            "solution": "El artículo presenta el buen prompt como la clave para obtener una respuesta adecuada."
+          },
+          {
+            "label": "La IA podría desplazar a los trabajadores del servicio de atención al cliente en las empresas.",
+            "correct": false,
+            "solution": "El texto habla de transformar tareas y formas de trabajo, no de afirmar ese desplazamiento como conclusión directa."
+          },
+          {
+            "label": "Según el autor, la IA ahorra tiempo y esfuerzo a las empresas, pero no cambia sustancialmente su manera de trabajar.",
+            "correct": false,
+            "solution": "El artículo sostiene precisamente que la IA puede revolucionar el día a día y transformar la forma de trabajar."
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q5",
+        "number": 5,
+        "title": "Cómo se entrenó ChatGPT",
+        "points": 5,
+        "kind": "openText",
+        "promptHtml": "<p>Según el texto, ¿cómo ha conseguido OpenAI desarrollar la herramienta ChatGPT para que confeccione respuestas de la forma que lo hace?</p>",
+        "openLabel": "Resume la explicación del texto",
+        "solutionHtml": "<p>OpenAI ha desarrollado ChatGPT alimentándolo con una enorme cantidad de información disponible en internet: páginas web, artículos de medios, libros, vídeos y audios, además de información actualizada por los propios usuarios. El texto añade que la calidad de la respuesta depende mucho de cómo se redacte la petición o <em>prompt</em>.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q6",
+        "number": 6,
+        "title": "Ejemplos de aplicaciones de la robótica",
+        "points": 5,
+        "kind": "openList",
+        "promptHtml": "<p>Pon un ejemplo de aplicación actual de la robótica en cada uno de estos ámbitos.</p>",
+        "items": [
+          {
+            "label": "Agricultura",
+            "solution": "Recogida y selección de productos o procesos de siembra y aplicación de tratamientos"
+          },
+          {
+            "label": "Industria",
+            "solution": "Tareas de ensamblaje, soldadura, pintura o manipulación repetitiva y peligrosa"
+          },
+          {
+            "label": "Medicina",
+            "solution": "Cirugía asistida, rehabilitación o ayuda en intervenciones de precisión"
+          },
+          {
+            "label": "Logística",
+            "solution": "Clasificación, almacenamiento, transporte interno o preparación de pedidos"
+          },
+          {
+            "label": "Servicios",
+            "solution": "Atención, limpieza, reparto o asistencia en entornos comerciales y públicos"
+          }
+        ],
+        "noteHtml": "<p>Se admiten ejemplos equivalentes a los del solucionario oficial.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q7",
+        "number": 7,
+        "title": "Opinión razonada sobre la IA en las empresas",
+        "points": 5,
+        "kind": "openText",
+        "promptHtml": "<p>En el texto se mencionan numerosas ventajas del uso de la IA en las empresas. ¿Crees que se trata de una herramienta que transformará la forma de trabajar? Razona tu respuesta.</p>",
+        "openLabel": "Tu texto argumentado",
+        "noteHtml": "<p>Respuesta abierta. Se valora que argumentes tu postura con claridad y apoyándote en ideas del texto.</p>",
+        "solutionHtml": "<p>No hay una única respuesta cerrada. El solucionario oficial espera una opinión razonada: puedes defender que la IA ya está transformando el trabajo porque ahorra tiempo, automatiza tareas y cambia procesos, o matizar sus límites si justificas bien tu postura.</p>"
+      },
+      {
+        "type": "reading",
+        "id": "reading-estados",
+        "title": "Apoyo visual · Estados de la materia",
+        "html": "<p>Usa esta página del examen para responder a las cuestiones 8, 9 y 10.</p><figure style=\"margin:1rem 0;\"><img src=\"content/exams/img/2024-06-ct-page-3.png\" alt=\"Página del examen con el gráfico de estados de la materia y la tabla de propiedades.\" style=\"max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;\" /><figcaption style=\"font-size:.95rem;color:#5c677d;margin-top:.5rem;\">Página del examen con el gráfico de estados de la materia y la tabla de propiedades.</figcaption></figure>"
+      },
+      {
+        "type": "question",
+        "id": "q8",
+        "number": 8,
+        "title": "Preguntas a partir del gráfico de estados de la materia",
+        "points": 4,
+        "kind": "openList",
+        "promptHtml": "<p>Contesta a las preguntas que se pueden deducir del gráfico 1.</p><figure style=\"margin:1rem 0;\"><img src=\"content/exams/img/2024-06-ct-page-3.png\" alt=\"Página del examen con el gráfico de estados de la materia y la tabla de propiedades.\" style=\"max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;\" /><figcaption style=\"font-size:.95rem;color:#5c677d;margin-top:.5rem;\">Página del examen con el gráfico de estados de la materia y la tabla de propiedades.</figcaption></figure>",
+        "items": [
+          {
+            "label": "A. ¿Qué estados de la materia aparecen en el gráfico?",
+            "solution": "Sólido, líquido y gaseoso"
+          },
+          {
+            "label": "B. ¿Cómo se llama el cambio de estado de sólido a líquido?",
+            "solution": "Fusión o derretimiento"
+          },
+          {
+            "label": "C. ¿Es necesario pasar por el estado líquido para que un sólido pase a gaseoso?",
+            "solution": "No. Puede pasar directamente por sublimación"
+          },
+          {
+            "label": "D. ¿Cómo se consigue que un gas condense a líquido?",
+            "solution": "Reduciendo la temperatura o enfriándolo para que sus partículas se muevan menos"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q9",
+        "number": 9,
+        "title": "Tabla de propiedades de sólidos, líquidos y gases",
+        "points": 6,
+        "kind": "openText",
+        "promptHtml": "<p>Completa la tabla marcando con una X los estados que cumplen cada propiedad.</p><figure style=\"margin:1rem 0;\"><img src=\"content/exams/img/2024-06-ct-page-3.png\" alt=\"Página del examen con el gráfico de estados de la materia y la tabla de propiedades.\" style=\"max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;\" /><figcaption style=\"font-size:.95rem;color:#5c677d;margin-top:.5rem;\">Página del examen con el gráfico de estados de la materia y la tabla de propiedades.</figcaption></figure>",
+        "openLabel": "Describe cómo completarías la tabla",
+        "solutionHtml": "<p>La corrección oficial se resume así:</p><ul><li><strong>Tienen forma y volumen propios:</strong> sólido.</li><li><strong>No pueden comprimirse ni expandirse:</strong> sólido y líquido.</li><li><strong>Adoptan la forma y el volumen del recipiente que los contiene:</strong> gas.</li><li><strong>Se pueden derramar:</strong> líquido y gas.</li></ul><p>Si en tu formulación usas vocabulario equivalente y la lógica física es correcta, la respuesta debe darse por válida.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q10",
+        "number": 10,
+        "title": "Verdadero o falso sobre los estados de la materia",
+        "points": 5,
+        "kind": "booleanGroupWithJustification",
+        "includeInSummary": true,
+        "promptHtml": "<p>Indica si cada afirmación es verdadera o falsa y compárala con la explicación oficial.</p>",
+        "items": [
+          {
+            "label": "La fuerza de atracción entre las moléculas de los sólidos es mayor que en los líquidos.",
+            "correct": true,
+            "solution": "En los sólidos las partículas están más unidas y por eso conservan mejor su forma."
+          },
+          {
+            "label": "Los líquidos tienen forma propia.",
+            "correct": false,
+            "solution": "Los líquidos adoptan la forma del recipiente que los contiene."
+          },
+          {
+            "label": "Los gases no tienen volumen propio.",
+            "correct": true,
+            "solution": "Se expanden y ocupan el volumen del recipiente."
+          },
+          {
+            "label": "El hielo seco (CO₂ sólido) puede pasar directamente a gas al aumentar la temperatura.",
+            "correct": true,
+            "solution": "Ese paso directo de sólido a gas se llama sublimación."
+          },
+          {
+            "label": "La velocidad de las partículas disminuye al aumentar la temperatura.",
+            "correct": false,
+            "solution": "Sucede lo contrario: al aumentar la temperatura, las partículas se mueven más deprisa."
+          }
+        ]
+      },
+      {
+        "type": "reading",
+        "id": "reading-movimiento",
+        "title": "Apoyo visual · Gráfica posición-tiempo",
+        "html": "<p>Usa esta gráfica para responder a las cuestiones 11, 12 y 13.</p><figure style=\"margin:1rem 0;\"><img src=\"content/exams/img/2024-06-ct-page-4.png\" alt=\"Página del examen con la gráfica posición-tiempo del vehículo.\" style=\"max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;\" /><figcaption style=\"font-size:.95rem;color:#5c677d;margin-top:.5rem;\">Página del examen con la gráfica posición-tiempo del vehículo.</figcaption></figure>"
+      },
+      {
+        "type": "question",
+        "id": "q11",
+        "number": 11,
+        "title": "Lectura de la gráfica de movimiento",
+        "points": 3,
+        "kind": "openList",
+        "promptHtml": "<p>Observa la gráfica y responde a las cuestiones.</p><figure style=\"margin:1rem 0;\"><img src=\"content/exams/img/2024-06-ct-page-4.png\" alt=\"Página del examen con la gráfica posición-tiempo del vehículo.\" style=\"max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;\" /><figcaption style=\"font-size:.95rem;color:#5c677d;margin-top:.5rem;\">Página del examen con la gráfica posición-tiempo del vehículo.</figcaption></figure>",
+        "items": [
+          {
+            "label": "A1. ¿Cuánto dura el movimiento en total?",
+            "solution": "18 horas"
+          },
+          {
+            "label": "A2. ¿Cuánto dura el tramo C-D?",
+            "solution": "6 horas"
+          },
+          {
+            "label": "B. ¿Está parado en algún momento? ¿Cómo se sabe?",
+            "solution": "Sí, en los tramos B-C y D-E, porque la posición permanece constante (línea horizontal)"
+          },
+          {
+            "label": "C1. ¿A qué distancia del origen está al cabo de 1 hora?",
+            "solution": "120 km"
+          },
+          {
+            "label": "C2. ¿A qué distancia del origen se encuentra al llegar al destino?",
+            "solution": "240 km"
+          }
+        ],
+        "noteHtml": "<p>Se aceptan respuestas equivalentes si interpretan correctamente la gráfica.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q12",
+        "number": 12,
+        "title": "Velocidad en cada tramo",
+        "points": 8,
+        "kind": "openList",
+        "promptHtml": "<p>Calcula la velocidad en cada uno de los cinco tramos. Puedes expresarla en km/h y justificar tus cuentas.</p><table class=\"exam-table\"><thead><tr><th>Tramo</th><th>Velocidad</th></tr></thead><tbody><tr><td>A-B</td><td>…</td></tr><tr><td>B-C</td><td>…</td></tr><tr><td>C-D</td><td>…</td></tr><tr><td>D-E</td><td>…</td></tr><tr><td>E-F</td><td>…</td></tr></tbody></table><figure style=\"margin:1rem 0;\"><img src=\"content/exams/img/2024-06-ct-page-4.png\" alt=\"Página del examen con la gráfica posición-tiempo del vehículo.\" style=\"max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;\" /><figcaption style=\"font-size:.95rem;color:#5c677d;margin-top:.5rem;\">Página del examen con la gráfica posición-tiempo del vehículo.</figcaption></figure>",
+        "items": [
+          {
+            "label": "A-B",
+            "solution": "120 km/h"
+          },
+          {
+            "label": "B-C",
+            "solution": "0 km/h"
+          },
+          {
+            "label": "C-D",
+            "solution": "-20 km/h"
+          },
+          {
+            "label": "D-E",
+            "solution": "0 km/h"
+          },
+          {
+            "label": "E-F",
+            "solution": "40 km/h"
+          }
+        ],
+        "noteHtml": "<p>El solucionario oficial usa la fórmula <code>v = (e<sub>f</sub> - e<sub>i</sub>) / (t<sub>f</sub> - t<sub>i</sub>)</code>. Si razonas correctamente, una expresión equivalente también vale.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q13",
+        "number": 13,
+        "title": "Porcentaje del tiempo parado",
+        "points": 4,
+        "kind": "openText",
+        "promptHtml": "<p>Utilizando la gráfica, ¿qué porcentaje del tiempo total está parado el vehículo?</p><figure style=\"margin:1rem 0;\"><img src=\"content/exams/img/2024-06-ct-page-4.png\" alt=\"Página del examen con la gráfica posición-tiempo del vehículo.\" style=\"max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;\" /><figcaption style=\"font-size:.95rem;color:#5c677d;margin-top:.5rem;\">Página del examen con la gráfica posición-tiempo del vehículo.</figcaption></figure>",
+        "openLabel": "Explica el cálculo",
+        "solutionHtml": "<p>El vehículo está parado en dos tramos horizontales: B-C y D-E. Cada uno dura 3 horas, así que en total está parado 6 horas.</p><p>Como el movimiento dura 18 horas, el porcentaje es:</p><p><code>(6 / 18) · 100 = 33,33 %</code></p>"
+      },
+      {
+        "type": "question",
+        "id": "q14",
+        "number": 14,
+        "title": "Texto sobre enfermedades infecciosas",
+        "points": 15,
+        "kind": "openText",
+        "promptHtml": "<p>Redacta un texto de al menos 150 palabras sobre las enfermedades infecciosas siguiendo el esquema oficial:</p><ul><li>Qué son y qué microorganismos las provocan.</li><li>Cómo actúan los antibióticos y qué precauciones hay que tener.</li><li>Qué mecanismos de defensa tiene nuestro organismo.</li><li>Qué son las vacunas y qué papel desempeñan.</li></ul>",
+        "openLabel": "Tu redacción",
+        "noteHtml": "<p>Respuesta abierta. Además del contenido, se valora la presentación, ortografía, estructura, coherencia y cohesión.</p>",
+        "solutionHtml": "<p>Una respuesta completa debe explicar que las enfermedades infecciosas las provocan microorganismos como bacterias, virus, hongos y protistas. No todos son perjudiciales, pero algunos pueden causar patologías de distinta gravedad.</p><p>También debe aclarar que los antibióticos solo actúan contra bacterias, no contra virus, y que su mal uso favorece la resistencia bacteriana.</p><p>En cuanto a las defensas del organismo, el solucionario recuerda las barreras físico-químicas (piel, mucosas, fosas nasales, etc.) y el sistema inmunitario, con leucocitos y linfocitos que destruyen microorganismos o células infectadas.</p><p>Por último, las vacunas se presentan como una forma de prevención y combate porque preparan al sistema inmunitario para reconocer y responder mejor frente al patógeno.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q15",
+        "number": 15,
+        "title": "Coste de moqueta y papel pintado",
+        "points": 10,
+        "kind": "openText",
+        "promptHtml": "<p>Calcula cuánto costarían la moqueta del suelo y el papel para empapelar las paredes del salón, según los datos del problema.</p>",
+        "openLabel": "Desarrolla los cálculos",
+        "solutionHtml": "<p><strong>Moqueta:</strong> el suelo es rectangular, así que su superficie es <code>4,5 · 7 = 31,5 m²</code>. A 25 €/m², la moqueta cuesta <code>31,5 · 25 = 787,50 €</code>.</p><p><strong>Papel pintado:</strong> la superficie total de las cuatro paredes es <code>2·(4,5·2,8) + 2·(7·2,8) = 64,4 m²</code>. Restando la puerta (<code>2·0,80 = 1,6 m²</code>) y la ventana (<code>1,5·1,2 = 1,8 m²</code>), quedan <code>61 m²</code>. A 12 €/m², el papel cuesta <code>61 · 12 = 732 €</code>.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q16",
+        "number": 16,
+        "title": "Frigorías necesarias",
+        "points": 5,
+        "kind": "openText",
+        "promptHtml": "<p>Con las dimensiones del salón, ¿qué aparato recomendarías: uno de 3000 frigorías o uno de 4500 frigorías? Justifica tu elección.</p>",
+        "openLabel": "Justificación",
+        "solutionHtml": "<p>Primero se calcula el volumen del salón: <code>4,5 · 7 · 2,8 = 88,2 m³</code>.</p><p>El solucionario estima las frigorías necesarias multiplicando por 50: <code>88,2 · 50 = 4410 frigorías</code>.</p><p>Como 4410 está mucho más cerca de 4500 que de 3000, conviene instalar el aparato de <strong>4500 frigorías</strong>.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q17",
+        "number": 17,
+        "title": "Coste total del aire acondicionado",
+        "points": 5,
+        "kind": "openText",
+        "promptHtml": "<p>Si el aparato cuesta 675 € y el montaje con mano de obra son 200 €, ¿cuánto costaría en total?</p>",
+        "openLabel": "Resultado final",
+        "solutionHtml": "<p>El coste total es <code>675 + 200 = 875 €</code>.</p>"
+      }
+    ]
+  }
 };
