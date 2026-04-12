@@ -5,11 +5,11 @@
 - [x] `2024-04-com-in` · Abril 2024 · Ámbito de comunicación (inglés)
 - [x] `2024-06-com-in` · Junio 2024 · Ámbito de comunicación (inglés)
 - [x] `2024-06-ct` · Junio 2024 · Ámbito científico-tecnológico
+- [x] `2024-06-social` · Junio 2024 · Ámbito social
 
-## Pendientes del pack oficial de junio 2024
+## No crear por ahora
 
-- [ ] `2024-06-fr-in` · Junio 2024 · Ámbito de comunicación (francés)
-- [ ] `2024-06-social` · Junio 2024 · Ámbito social
+- [ ] `2024-06-fr-in` · Junio 2024 · Ámbito de comunicación (francés) · pausado por indicación de Fernando
 
 ## Pendientes de otros packs
 

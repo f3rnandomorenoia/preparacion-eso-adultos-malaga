@@ -22,6 +22,14 @@ window.examCatalog = [
     "autoPoints": 20,
     "manualPoints": 80,
     "status": "Piloto verificado"
+  },
+  {
+    "id": "2024-06-social",
+    "label": "Junio 2024 · Ámbito social",
+    "totalPoints": 100,
+    "autoPoints": 25,
+    "manualPoints": 75,
+    "status": "Verificado"
   }
 ];
 
@@ -1294,6 +1302,340 @@ window.examData = {
         "promptHtml": "<p>Si el aparato cuesta 675 € y el montaje con mano de obra son 200 €, ¿cuánto costaría en total?</p>",
         "openLabel": "Resultado final",
         "solutionHtml": "<p>El coste total es <code>675 + 200 = 875 €</code>.</p>"
+      }
+    ]
+  },
+  "2024-06-social": {
+    "id": "2024-06-social",
+    "title": "Convocatoria junio 2024 · Ámbito social",
+    "subtitle": "Prueba interactiva basada en el modelo oficial, con apoyo visual para la pintura de Goya y el mapa de densidad de población.",
+    "sourceLinks": [
+      {
+        "label": "Archivo oficial de convocatorias anteriores",
+        "url": "https://www.juntadeandalucia.es/educacion/portales/web/educacion-permanente/servicios/pruebas/obtencion-titulo-eso/sobre-las-pruebas/modelos-de-convocatorias-anteriores"
+      },
+      {
+        "label": "ZIP oficial junio 2024 (incluye soluciones)",
+        "url": "https://www.juntadeandalucia.es/educacion/portales/documents/1454565/1624993/Pruebas%20convocatoria%20junio%202024%20%28incluye%20soluciones%29/1c4d10d9-36a0-8654-0095-1944e6c8dab7?version=1.1"
+      },
+      {
+        "label": "PDF del examen (copia local)",
+        "url": "data/exam-packs/2024-06/extracted/Convocatoria%20junio%202024/SOC_ESPA_2024.pdf"
+      },
+      {
+        "label": "PDF del solucionario (copia local)",
+        "url": "data/exam-packs/2024-06/extracted/Convocatoria%20junio%202024/SOC_ESPA_soluciones_2024.pdf"
+      },
+      {
+        "label": "Notas de extracción y apoyo visual",
+        "url": "content/exams/2024-06-social-notes.md"
+      }
+    ],
+    "introHtml": "<p>Examen oficial de junio de 2024 del ámbito social. Mantiene la estructura original por bloques y añade apoyo visual en la parte de análisis de imágenes y mapas.</p><ul><li><strong>A.</strong> Conceptos básicos (25 puntos)</li><li><strong>B.</strong> Comprensión y análisis de documento escrito (30 puntos)</li><li><strong>C.</strong> Comprensión y análisis de información gráfica (30 puntos)</li><li><strong>D.</strong> Expresión escrita (15 puntos)</li></ul><p><strong>Corrección automática:</strong> 25 puntos de ejercicios cerrados (2, 4 y 6). Los otros 75 puntos quedan para comparación manual con la solución oficial.</p>",
+    "sections": [
+      {
+        "type": "question",
+        "id": "q1",
+        "number": 1,
+        "title": "Términos y procesos históricos",
+        "points": 10,
+        "kind": "openList",
+        "promptHtml": "<p>Relaciona cada definición con el término histórico correcto y con su periodo. Los términos posibles son: <strong>Polis</strong>, <strong>Gótico</strong>, <strong>Tratado de Tordesillas</strong>, <strong>Régimen franquista</strong> y <strong>Homo Sapiens Sapiens</strong>. Los periodos son: <strong>Prehistoria</strong>, <strong>Edad Antigua</strong>, <strong>Edad Media</strong>, <strong>Edad Moderna</strong> y <strong>Edad Contemporánea</strong>.</p>",
+        "items": [
+          {
+            "label": "A. Acuerdo firmado por Castilla y Portugal en 1494 para repartirse las zonas de influencia del Nuevo Mundo.",
+            "solution": "<strong>Tratado de Tordesillas</strong> · Edad Moderna"
+          },
+          {
+            "label": "B. Dictadura militar que hubo en España de 1939 a 1975 dirigida por Franco.",
+            "solution": "<strong>Régimen franquista</strong> · Edad Contemporánea"
+          },
+          {
+            "label": "C. Nombre que recibe la ciudad-estado en la Grecia clásica, como Atenas.",
+            "solution": "<strong>Polis</strong> · Edad Antigua"
+          },
+          {
+            "label": "D. Estilo artístico europeo entre los siglos XII y XV cuya expresión más perfecta fue la catedral.",
+            "solution": "<strong>Gótico</strong> · Edad Media"
+          },
+          {
+            "label": "E. Hombre moderno, sabio, aparecido en Europa hace unos 40.000 años y autor del arte rupestre.",
+            "solution": "<strong>Homo Sapiens Sapiens</strong> · Prehistoria"
+          }
+        ],
+        "noteHtml": "<p>La web no puntúa este ejercicio automáticamente, pero puedes comparar cada fila con la solución oficial.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q2",
+        "number": 2,
+        "title": "Conceptos básicos de geografía, demografía, política y economía",
+        "points": 15,
+        "kind": "multiChoiceGroup",
+        "includeInSummary": true,
+        "pointsPerItem": 3,
+        "promptHtml": "<p>Marca el concepto o término más adecuado para cada definición.</p>",
+        "items": [
+          {
+            "label": "A. Bosque formado por árboles que pierden la hoja en otoño, característico del clima oceánico.",
+            "options": [
+              "Bosque de coníferas",
+              "Bosque caducifolio",
+              "Bosque mediterráneo"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "label": "B. Gráfica que representa la estructura de la población por sexo y edad.",
+            "options": [
+              "Gráfica de barras",
+              "Pirámide",
+              "Tasa de natalidad"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "label": "C. Reformas emprendidas por Gorbachov en la URSS a partir de 1985.",
+            "options": [
+              "Perestroika",
+              "Capitalismo",
+              "Comunismo"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "label": "D. Actividad económica que transforma materias primas en productos elaborados.",
+            "options": [
+              "Sector primario o agrario",
+              "Sector secundario o industrial",
+              "Sector terciario o servicios"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "label": "E. Modelo político-social europeo de posguerra que redistribuye recursos para cubrir necesidades básicas e igualdad de oportunidades.",
+            "options": [
+              "Democracia",
+              "Economía de escala",
+              "Estado de bienestar"
+            ],
+            "correctIndex": 2
+          }
+        ]
+      },
+      {
+        "type": "reading",
+        "id": "reading-guerra",
+        "title": "Documento 1 · La Gran Guerra",
+        "html": "<p><strong>Lee el siguiente texto y responde a las cuestiones 3, 4 y 5.</strong></p><blockquote><p>\"Alemania tomó la iniciativa de las operaciones militares, con la aplicación del Plan Schlieffen. Ni siquiera constituyó un obstáculo la neutralidad garantizada de Bélgica. A los dos días de que esta se negara a permitir el paso de las tropas germanas, los alemanes invadieron el país...</p><p>Las avanzadas galas y británicas chocaron con fuerzas que habían comenzado a fortificarse cavando trincheras... La iniciativa había partido, pues, de Alemania, pero rápidamente fue imitada por los aliados. Así, a lo largo de todo este año, uno y otro bando se dedicaron a cavar profundas zanjas y a esconderse en ellas para defenderse...</p><p>Cerca de un millón y medio de soldados estadounidenses han sido movilizados a Europa desde que Estados Unidos decidiera su participación en la guerra. Woodrow Wilson, presidente de los Estados Unidos, ha sido el mago capaz de convencer al pueblo yanqui de la necesidad de participar en una contienda de la que le separan miles de kilómetros... Sin la participación de Estados Unidos, la Gran Guerra se hubiera prolongado indefinidamente\".</p></blockquote><p class=\"meta\">Texto extraído de la materia Ámbito social Nivel II (CREA), bloque 8, tema 3.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q3",
+        "number": 3,
+        "title": "Resumen del documento sobre la Primera Guerra Mundial",
+        "points": 5,
+        "kind": "openText",
+        "promptHtml": "<p>Elabora un breve resumen, con tus palabras, de las ideas principales que expresa el texto.</p>",
+        "openLabel": "Tu resumen",
+        "solutionHtml": "<p>El texto explica que Alemania inició la Primera Guerra Mundial aplicando el Plan Schlieffen e invadiendo Bélgica. Después, ambos bandos pasaron a una guerra de trincheras. También subraya que la entrada de Estados Unidos, impulsada por Woodrow Wilson, fue decisiva para acortar la contienda y favorecer la victoria aliada.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q4",
+        "number": 4,
+        "title": "Verdadero o falso sobre el documento 1",
+        "points": 5,
+        "kind": "booleanGroup",
+        "includeInSummary": true,
+        "pointsPerItem": 1,
+        "promptHtml": "<p>Indica si las siguientes afirmaciones son verdaderas (V) o falsas (F) según el texto.</p>",
+        "items": [
+          {
+            "label": "El país que tomó la iniciativa de la guerra fue Bélgica.",
+            "correct": false
+          },
+          {
+            "label": "Los dos bandos durante el primer año se dedicaron a cavar trincheras.",
+            "correct": true
+          },
+          {
+            "label": "Francia y Gran Bretaña formaban parte del bando de los aliados.",
+            "correct": true
+          },
+          {
+            "label": "Napoleón convenció a los norteamericanos para participar en la guerra.",
+            "correct": false
+          },
+          {
+            "label": "La participación de Estados Unidos en la Gran Guerra fue decisiva.",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q5",
+        "number": 5,
+        "title": "Explicación del acontecimiento histórico",
+        "points": 5,
+        "kind": "openText",
+        "promptHtml": "<p>Explica brevemente el acontecimiento al que se refiere el texto.</p>",
+        "openLabel": "Tu explicación",
+        "solutionHtml": "<p>El texto se refiere a la <strong>Primera Guerra Mundial</strong> o <strong>Gran Guerra</strong>, desarrollada entre 1914 y 1918.</p><ul><li><strong>Causas de fondo:</strong> rivalidades territoriales y coloniales, auge de los nacionalismos, rearme y creación de bloques enfrentados.</li><li><strong>Desencadenante:</strong> el atentado de Sarajevo contra el heredero de Austria-Hungría.</li><li><strong>Fases:</strong> guerra de movimientos, guerra de trincheras y desenlace final en 1918.</li><li><strong>Hecho decisivo:</strong> en 1917 Estados Unidos entró en la guerra y Rusia salió tras la Revolución soviética.</li><li><strong>Consecuencias:</strong> enorme mortandad, destrucción material, Tratado de Versalles y creación de la Sociedad de Naciones.</li></ul><p>Se considera correcta cualquier explicación equivalente que sitúe bien el conflicto y sus rasgos principales.</p>"
+      },
+      {
+        "type": "reading",
+        "id": "reading-ddhh",
+        "title": "Documento 2 · Derechos Humanos y democracia",
+        "html": "<p><strong>Lee el siguiente texto y responde a las cuestiones 6, 7 y 8.</strong></p><blockquote><p>\"La historia de la Humanidad es la historia de una lucha por el reconocimiento de que todos los seres humanos son personas dignas, iguales y valiosas. Así comenzó un proceso que condujo a la conversión del súbdito pasivo obediente en ciudadano activo y respetuoso.</p><p>Un momento clave en este proceso se llevó a cabo en 1948 en las Naciones Unidas con la Declaración Universal de los Derechos Humanos. El ciudadano es tal cuando es sujeto de un conjunto de derechos que le permiten reclamar aquellas cosas que son necesarias para llevar una vida digna, así como para vivir responsablemente dentro de su comunidad, como la educación, la cultura, el alimento, el vestido y la vivienda. También incluye condiciones como las libertades de expresión, de credo, de circulación, etc.</p><p>Los Derechos Humanos se caracterizan por ser universales, preexistentes e inviolables.</p><p>De esta forma podemos decir que los Derechos Humanos son un conjunto de principios éticos que buscan la defensa de la dignidad del ser humano, y que por tanto existe una estrecha relación entre democracia y Derechos Humanos\".</p></blockquote><p class=\"meta\">Texto extraído de la materia Ámbito social Nivel I (CREA), bloque 2, tema 4.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q6",
+        "number": 6,
+        "title": "Verdadero o falso sobre Derechos Humanos",
+        "points": 5,
+        "kind": "booleanGroup",
+        "includeInSummary": true,
+        "pointsPerItem": 1,
+        "promptHtml": "<p>Indica si las siguientes afirmaciones son verdaderas (V) o falsas (F) según el texto.</p>",
+        "items": [
+          {
+            "label": "La Declaración Universal de Derechos Humanos fue aprobada en el año 2000.",
+            "correct": false
+          },
+          {
+            "label": "En la Declaración se expresaron los derechos y libertades a los que todo ser humano puede aspirar.",
+            "correct": true
+          },
+          {
+            "label": "Los Derechos Humanos fueron aprobados por la ONU.",
+            "correct": true
+          },
+          {
+            "label": "Existe una estrecha relación entre dictadura y Derechos Humanos.",
+            "correct": false
+          },
+          {
+            "label": "Los Derechos Humanos son un conjunto de principios éticos.",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q7",
+        "number": 7,
+        "title": "Ideas principales del documento 2",
+        "points": 5,
+        "kind": "openText",
+        "promptHtml": "<p>Expresa con tus propias palabras las ideas que recoge el texto anterior.</p>",
+        "openLabel": "Tu explicación",
+        "solutionHtml": "<p>El texto sostiene que la humanidad ha luchado por reconocer la dignidad e igualdad de todas las personas y por convertir a los súbditos en ciudadanos con derechos. Señala como momento clave la Declaración Universal de los Derechos Humanos de 1948, aprobada en la ONU, y recuerda que esos derechos garantizan una vida digna, libertades básicas y participación responsable en la comunidad. Además, define los Derechos Humanos como universales, preexistentes e inviolables, y los vincula directamente con la democracia.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q8",
+        "number": 8,
+        "title": "Importancia de la Declaración Universal de Derechos Humanos",
+        "points": 5,
+        "kind": "openText",
+        "promptHtml": "<p>Explica la importancia de la Declaración de los Derechos Humanos. Puedes orientarte con este guion: cuándo se creó, por quién, para qué, por qué y cuáles son sus principios fundamentales.</p>",
+        "openLabel": "Tu respuesta desarrollada",
+        "solutionHtml": "<p>La <strong>Declaración Universal de los Derechos Humanos</strong> fue aprobada por la Asamblea General de la ONU en 1948, después de la Segunda Guerra Mundial. Su objetivo era evitar que se repitieran atrocidades como las del conflicto y fijar unos derechos comunes para todas las personas.</p><p>Su importancia radica en que reconoce de forma universal que todos los seres humanos nacen libres e iguales en dignidad y derechos. Incluye libertades y derechos como la vida, la igualdad ante la ley, la libertad de expresión y de creencias, la educación, el trabajo o una vivienda digna.</p><p>También afirma que estos derechos son universales, innatos y no deben ser violados. Por eso se consideran una base ética de las democracias modernas y un compromiso internacional de respeto a la dignidad humana.</p>",
+        "noteHtml": "<p>Se valora que organices bien la respuesta y que expliques por qué esta declaración sigue siendo importante hoy.</p>"
+      },
+      {
+        "type": "reading",
+        "id": "reading-goya",
+        "title": "Información gráfica 1 · Goya",
+        "html": "<p>Usa esta imagen para responder a las cuestiones 9, 10 y 11.</p><figure style=\"margin:1rem 0;\"><img src=\"content/exams/img/2024-06-social-goya.png\" alt=\"Cuadro Los fusilamientos del 3 de mayo, de Francisco de Goya.\" style=\"max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;\" /><figcaption style=\"font-size:.95rem;color:#5c677d;margin-top:.5rem;\">Los fusilamientos del 3 de mayo, de Francisco de Goya.</figcaption></figure>"
+      },
+      {
+        "type": "question",
+        "id": "q9",
+        "number": 9,
+        "title": "Identificación de la obra",
+        "points": 5,
+        "kind": "openText",
+        "promptHtml": "<p>Identifica la obra, su autor, el estilo y la época a la que corresponde.</p>",
+        "openLabel": "Tu identificación",
+        "solutionHtml": "<p>Se trata de <strong>Los fusilamientos del tres de mayo</strong> o <strong>Los fusilamientos en la montaña del Príncipe Pío</strong>, obra de <strong>Francisco de Goya</strong>, pintada en <strong>1814</strong>. Representa la represión francesa en Madrid tras el levantamiento de 1808 y se encuadra en el <strong>Romanticismo</strong>, dentro del inicio de la Edad Contemporánea.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q10",
+        "number": 10,
+        "title": "Descripción y análisis artístico del cuadro",
+        "points": 5,
+        "kind": "openText",
+        "promptHtml": "<p>Describe qué representa el cuadro y analiza artísticamente la obra.</p>",
+        "openLabel": "Tu análisis",
+        "solutionHtml": "<p>La escena muestra la ejecución de madrileños por las tropas francesas durante la Guerra de la Independencia. Goya denuncia la violencia y el horror de la guerra presentando a los soldados como un bloque anónimo y a las víctimas iluminadas por un farol.</p><p>Desde el punto de vista artístico, es un óleo sobre lienzo de gran formato, con fuerte dramatismo, composición dividida en dos grupos enfrentados y un claro contraste de luces y sombras. Destaca el personaje central vestido de blanco, símbolo de inocencia y sacrificio.</p><p>La pincelada es suelta, los colores contrastan los tonos oscuros del pelotón con la luz de las víctimas, y toda la obra está al servicio de la denuncia del hecho histórico.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q11",
+        "number": 11,
+        "title": "Goya y otras obras relevantes",
+        "points": 5,
+        "kind": "openText",
+        "promptHtml": "<p>Explica brevemente la pintura de Goya y menciona alguna de sus obras más relevantes.</p>",
+        "openLabel": "Tu respuesta",
+        "solutionHtml": "<p>Goya es uno de los grandes pintores de la historia del arte y una figura de transición hacia la modernidad. Su obra refleja la España de finales del siglo XVIII y comienzos del XIX, la vida de la corte, la Guerra de la Independencia y también sus propias crisis personales.</p><p>Trabajó cartones para tapices, retratos, pintura histórica, grabados y las conocidas Pinturas Negras. Se valora especialmente su dominio de la luz, la psicología de los personajes y la libertad de su pincelada.</p><p>Entre sus obras más conocidas están <em>La carga de los mamelucos</em>, <em>La familia de Carlos IV</em>, <em>La maja vestida</em>, <em>La maja desnuda</em>, los grabados de <em>Los caprichos</em> y pinturas negras como <em>Saturno devorando a sus hijos</em>.</p>"
+      },
+      {
+        "type": "reading",
+        "id": "reading-mapa",
+        "title": "Información gráfica 2 · Densidad de población en España",
+        "html": "<p>Usa este mapa para responder a las cuestiones 12, 13 y 14.</p><figure style=\"margin:1rem 0;\"><img src=\"content/exams/img/2024-06-social-mapa.png\" alt=\"Mapa de densidad de población de España usado en el examen oficial.\" style=\"max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;\" /><figcaption style=\"font-size:.95rem;color:#5c677d;margin-top:.5rem;\">Mapa de densidad de población de España usado en el examen oficial.</figcaption></figure>"
+      },
+      {
+        "type": "question",
+        "id": "q12",
+        "number": 12,
+        "title": "Lectura general del mapa y provincias con alta densidad",
+        "points": 5,
+        "kind": "openText",
+        "promptHtml": "<p>Indica qué tema se representa en el mapa y explica la leyenda. Escribe el nombre de cinco provincias que tengan más de 100 habitantes por km².</p>",
+        "openLabel": "Tu respuesta",
+        "solutionHtml": "<p>El mapa representa la <strong>densidad de población en España</strong>. La leyenda usa distintos tonos para diferenciar territorios con mayor o menor número de habitantes por kilómetro cuadrado: el tono más oscuro marca la mayor densidad y los tonos más claros, densidades medias o bajas.</p><p>Son válidas muchas provincias con más de 100 hab./km². Por ejemplo: <strong>Madrid, Barcelona, Valencia, Málaga y Vizcaya</strong>. También servirían otras como Alicante, Murcia, Sevilla, Pontevedra, Guipúzcoa, Baleares, Las Palmas o Santa Cruz de Tenerife.</p>",
+        "noteHtml": "<p>Si eliges otras cinco provincias claramente situadas en la franja de mayor densidad del mapa, la respuesta debe darse por válida.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q13",
+        "number": 13,
+        "title": "Definición de densidad de población y comunidades más densas",
+        "points": 5,
+        "kind": "openText",
+        "promptHtml": "<p>Define el concepto de densidad de población y enumera las cuatro comunidades autónomas con mayor densidad (color más oscuro).</p>",
+        "openLabel": "Tu definición y ejemplos",
+        "solutionHtml": "<p>La <strong>densidad de población</strong> es el número de habitantes que vive en un territorio en relación con su superficie, normalmente expresado en habitantes por kilómetro cuadrado.</p><p>Según la lectura del mapa, entre las comunidades con mayor densidad aparecen <strong>Madrid, Cataluña, Comunidad Valenciana y País Vasco</strong>. En una corrección flexible también pueden aceptarse otras muy densas si se justifican con el sombreado del mapa, como Andalucía, Murcia, Baleares o Canarias.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q14",
+        "number": 14,
+        "title": "Distribución de la población española",
+        "points": 5,
+        "kind": "openText",
+        "promptHtml": "<p>Describe brevemente las características de la distribución de la población española.</p>",
+        "openLabel": "Tu descripción",
+        "solutionHtml": "<p>La distribución de la población española es <strong>desigual</strong>. La mayor densidad se concentra en las grandes ciudades, la costa mediterránea, el valle del Guadalquivir, los archipiélagos y el área metropolitana de Madrid. También destacan algunos ejes urbanos e industriales del norte.</p><p>Las zonas del interior peninsular y muchas áreas montañosas presentan densidades bajas, población envejecida y pérdida demográfica ligada al éxodo rural. En general, las zonas más densas coinciden con territorios urbanos, turísticos o con economías más dinámicas; las menos densas se asocian a actividades agrarias y menor dinamismo económico.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q15",
+        "number": 15,
+        "title": "Texto sobre la Ilustración",
+        "points": 15,
+        "kind": "openText",
+        "promptHtml": "<p>Imagina que trabajas para Wikipedia y te piden un informe de al menos 150 palabras sobre la Ilustración. Puedes orientarte con este esquema oficial:</p><ul><li>Antecedentes: Revolución Inglesa, Revolución científica y crisis del Antiguo Régimen.</li><li>Concepto de Ilustración: dónde y cuándo aparece.</li><li>Difusión: la Enciclopedia.</li><li>Ideas de la Ilustración y principales pensadores.</li><li>Puesta en práctica: Despotismo Ilustrado y Revolución Francesa.</li></ul>",
+        "openLabel": "Tu redacción",
+        "noteHtml": "<p>Se valora tanto el contenido histórico como la claridad, la estructura y la corrección escrita.</p>",
+        "solutionHtml": "<p>La respuesta es abierta, pero debería incluir al menos estos puntos: el cuestionamiento del Antiguo Régimen, la influencia de la Revolución Inglesa y la revolución científica, el nacimiento de la Ilustración en la Francia del siglo XVIII, la difusión de sus ideas mediante la <em>Enciclopedia</em> y autores como <strong>Voltaire, Montesquieu y Rousseau</strong>.</p><p>También conviene explicar sus principios políticos y culturales: defensa de la razón, crítica al absolutismo, soberanía nacional, separación de poderes, igualdad ante la ley, libertad individual y cultura laica. Por último, debe mencionarse su aplicación en el Despotismo Ilustrado y, de forma más radical, en la Revolución Francesa.</p>"
       }
     ]
   }
