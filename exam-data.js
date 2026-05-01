@@ -54,6 +54,14 @@ window.examCatalog = [
     autoPoints: 45,
     manualPoints: 55,
     status: "Verificado",
+  },
+  {
+    id: "2025-04-ct",
+    label: "Abril 2025 · Ámbito científico-tecnológico",
+    totalPoints: 100,
+    autoPoints: 20,
+    manualPoints: 80,
+    status: "Verificado",
   }
 ];
 
@@ -97,7 +105,7 @@ window.examData = {
           <p>Volviendo a la neurociencia, superada la montaña rusa inicial, si permanecemos al lado de la misma persona, la bioquímica del cerebro cambia de nuevo. A medida que la dopamina y la noradrenalina disminuyen, la corteza prefrontal —la del juicio— recupera su actividad y el hipotálamo se calma, bajando la producción de las hormonas que desatan la pasión.</p>
           <p>En esta fase madura del amor, podemos ver con claridad dónde estamos y qué proyecto a largo plazo queremos construir. Si la pareja sigue avanzando, se libera oxitocina, considerada la hormona de la confianza o del apego, ya que se produce al estar en contacto con nuestros seres queridos. (…)</p>
           <p>Para que la pasión no vaya decayendo (…) necesitaremos mantener vivas en el cerebro la testosterona y la dopamina. La primera se estimula con una vida sexual activa; en cuanto a la dopamina, la hormona del placer, se puede incrementar haciendo cosas emocionantes en pareja. (…)</p>
-          <p class="meta">Francesc Miralles, elpais.com, 12/10/2023 (texto adaptado)</p>
+          <p class='meta'>Francesc Miralles, elpais.com, 12/10/2023 (texto adaptado)</p>
         `,
       },
       {
@@ -175,7 +183,7 @@ window.examData = {
         kind: "openText",
         promptHtml: `
           <p>Redacta un texto de al menos 200 palabras en el que expreses tu punto de vista sobre si el amor pasional es más auténtico que el amor sereno de una pareja estable, sobre quienes cambian constantemente de pareja para buscar esa pasión y sobre cómo conservar una relación amorosa viva a pesar de los años y la rutina.</p>
-          <p class="meta">Recuerda: en la puntuación se tendrán en cuenta, de forma proporcional, la expresión, la presentación, la ortografía, la estructura y la cohesión del texto.</p>
+          <p class='meta'>Recuerda: en la puntuación se tendrán en cuenta, de forma proporcional, la expresión, la presentación, la ortografía, la estructura y la cohesión del texto.</p>
         `,
         openLabel: "Escribe aquí tu redacción",
         solutionHtml: `<p><strong>Solución oficial:</strong> Respuesta libre.</p>`,
@@ -259,7 +267,7 @@ window.examData = {
             <p>Padre nuestro que estás en la tierra,<br>En un banco del Prado leyendo.<br>Eres ese viejo que da migas de pan a los pájaros del paseo.</p>
             <p>Padre nuestro que estás en la tierra,<br>En la cigarra, en el beso,<br>En la espiga, en el pecho<br>De todos los que son buenos.</p>
             <p>Padre que habitas en cualquier sitio,<br>Dios que penetras en cualquier hueco,<br>Tú que quitas la angustia, que estás en la tierra,<br>Padre nuestro que sí que te vemos<br>Los que luego hemos de ver,<br>Donde sea, o ahí en el cielo.</p>
-            <p class="meta">Que estás en la tierra (1962), Gloria Fuertes</p>
+            <p class='meta'>Que estás en la tierra (1962), Gloria Fuertes</p>
           </div>
         `,
       },
@@ -307,7 +315,7 @@ window.examData = {
           <p>For hundreds of people, these tunnels are home. Some are transient — temporary occupants moving in and out every few weeks. But several tunnels have become small, off-the-map communities. There’s no fresh water, and the only electricity comes from batteries, but people have still managed to build simulated apartments inside the industrial-sized, concrete-walled waterways. Some have lived down here for a decade or more. Each occupied tunnel has its own customs and rituals and unofficial leaders.</p>
           <p>Nearly everyone in the tunnels lives with some sort of addiction, but many have also gathered enough discarded items from above to create the illusion of a home. They have beds with bed frames, tables with chairs, fridges and bicycles and barbecue grills — all pulled from curbs or dumpsters. A lot of the beds and bookcases sit on homemade stilts a foot or two off the ground, because when the water comes through, it comes fast and hard, and sometimes it sweeps away everything it touches.</p>
           <p>Of course, the tunnels can be dangerous when it’s not raining, too. There are knives and guns and irrational people down every tunnel. Some sleep inside the smaller concrete pipes that shoot off of the main tunnels. Some residents are hiding from the law or dangerous people. Some from their own parents.</p>
-          <p class="meta">Texto adaptado de www.deseret.com</p>
+          <p class='meta'>Texto adaptado de www.deseret.com</p>
           <div class="vocab-card">
             <strong>Vocabulario:</strong>
             <ul>
@@ -369,7 +377,7 @@ window.examData = {
         pointsPerItem: 1,
         includeInSummary: true,
         promptHtml: `<p>Marca la respuesta que mejor se ajuste a lo expresado en el texto.</p>`,
-        noteHtml: `<p class="meta">Nota: en el PDF de soluciones la marca visible de estas casillas no aparece al extraer el texto; por eso se confirmaron visualmente a partir del propio PDF rasterizado, además de comprobarse contra el texto oficial.</p>`,
+        noteHtml: `<p class='meta'>Nota: en el PDF de soluciones la marca visible de estas casillas no aparece al extraer el texto; por eso se confirmaron visualmente a partir del propio PDF rasterizado, además de comprobarse contra el texto oficial.</p>`,
         items: [
           {
             label: "A. The entrances to the tunnels…",
@@ -419,7 +427,7 @@ window.examData = {
         kind: "openText",
         promptHtml: `
           <p>Escribe un texto en inglés de entre 50 y 70 palabras en el que des tu opinión sobre si es buena idea mostrar la vida de las personas sin hogar en canales de YouTube.</p>
-          <p class="meta">Puedes usar <em>can</em>, <em>mustn’t</em>, <em>should</em> y oraciones condicionales. Expresiones sugeridas: <em>YouTube channel / exploitation / views / show sympathy</em>.</p>
+          <p class='meta'>Puedes usar <em>can</em>, <em>mustn’t</em>, <em>should</em> y oraciones condicionales. Expresiones sugeridas: <em>YouTube channel / exploitation / views / show sympathy</em>.</p>
         `,
         openLabel: "Write your answer here",
         solutionHtml: `<p><strong>Solución oficial:</strong> Respuesta libre.</p>`,
@@ -434,7 +442,7 @@ window.examData = {
         pointsPerItem: 2,
         includeInSummary: true,
         promptHtml: `<p>Elige en cada caso la opción que consideres más correcta.</p>`,
-        noteHtml: `<p class="meta">Igual que en el ejercicio 13, estas respuestas se confirmaron visualmente a partir del PDF de soluciones rasterizado, porque el texto extraído no muestra la casilla marcada.</p>`,
+        noteHtml: `<p class='meta'>Igual que en el ejercicio 13, estas respuestas se confirmaron visualmente a partir del PDF de soluciones rasterizado, porque el texto extraído no muestra la casilla marcada.</p>`,
         items: [
           { label: "15. -My name is Jeff.", options: ["Kind to meet you.", "Fine to meet you.", "Nice to meet you."], correctIndex: 2 },
           { label: "16. Zadie…", options: ["have got curly hair.", "has got curly hair.", "is curly hair."], correctIndex: 1 },
@@ -921,7 +929,7 @@ window.examData = {
           <p><strong>2.8</strong> Las renovaciones del préstamo se harán personalmente o a distancia, bien por teléfono o correo electrónico, dentro de las horas de apertura de la biblioteca.</p>
           <p><strong>2.9</strong> El usuario tendrá derecho a solicitar la reserva de un libro prestado. La biblioteca avisará al usuario en el momento en que el ejemplar sea devuelto.</p>
           <p><strong>2.10</strong> Las reservas se mantendrán cinco días a partir de su comunicación, transcurrido dicho plazo se pasará a la siguiente reserva del mismo o bien se colocará en la estantería correspondiente.</p>
-          <p class="meta">Texto adaptado extraído de vera.es</p>
+          <p class='meta'>Texto adaptado extraído de vera.es</p>
         `,
       },
       {
@@ -996,7 +1004,7 @@ window.examData = {
         promptHtml: `
           <p>Las descargas ilegales de libros en Internet están afectando de forma muy directa a las empresas editoriales de este país y a los escritores, que ven cómo se vulneran sus derechos de autor. Esto forma parte de un problema más amplio que afecta también a los creadores de música, películas y videojuegos. A pesar de que se trata de una práctica ilegal según la Ley de Propiedad Intelectual, muchos usuarios no tienen la percepción de que sea algo ilegítimo.</p>
           <p>¿Qué opinas tú de la piratería digital de contenidos? ¿Qué consecuencias crees que tiene en la industria artística y en la cultura en general? ¿Se te ocurre alguna manera de luchar contra ella?</p>
-          <p class="meta">Redacta un texto de al menos 200 palabras en el que expreses tu punto de vista sobre el tema, argumentándolo de forma adecuada. En la puntuación se tendrán en cuenta, de forma proporcional, la expresión, la presentación, la ortografía, la estructura y la cohesión del texto.</p>
+          <p class='meta'>Redacta un texto de al menos 200 palabras en el que expreses tu punto de vista sobre el tema, argumentándolo de forma adecuada. En la puntuación se tendrán en cuenta, de forma proporcional, la expresión, la presentación, la ortografía, la estructura y la cohesión del texto.</p>
         `,
         openLabel: "Escribe aquí tu redacción",
         solutionHtml: `<p><strong>Solución oficial:</strong> Respuesta libre.</p>`,
@@ -1046,7 +1054,7 @@ window.examData = {
         pointsPerItem: 1,
         includeInSummary: true,
         promptHtml: `<p>Indica qué función sintáctica tienen los sintagmas marcados en cada oración.</p>`,
-        noteHtml: `<p class="meta">Nota: en esta versión web, los sintagmas que iban subrayados en el PDF aparecen resaltados dentro de cada oración.</p>`,
+        noteHtml: `<p class='meta'>Nota: en esta versión web, los sintagmas que iban subrayados en el PDF aparecen resaltados dentro de cada oración.</p>`,
         items: [
           {
             label: "A. Los servicios de la biblioteca son <strong>gratuitos</strong>.",
@@ -1103,7 +1111,7 @@ window.examData = {
             <p>Con timbre sonoro y hueco<br>truena el maestro, un anciano<br>mal vestido, enjuto y seco,<br>que lleva un libro en la mano.</p>
             <p>Y todo un coro infantil<br>va cantando la lección;<br>“mil veces ciento, cien mil,<br>mil veces mil, un millón”.</p>
             <p>Una tarde parda y fría<br>de invierno. Los colegiales<br>estudian. Monotonía<br>de la lluvia en los cristales.</p>
-            <p class="meta"><em>Soledades, galerías y otros poemas</em>, Antonio Machado</p>
+            <p class='meta'><em>Soledades, galerías y otros poemas</em>, Antonio Machado</p>
           </div>
         `,
       },
@@ -1154,7 +1162,7 @@ window.examData = {
           <p>“What we actually need to know is what’s behind these associations. Is it the ultra-processed foods? Is it the nutritional content of them? Is it some kind of additive that’s in them? I think we really need to find out a bit more about it.”, says Victoria Taylor, from the British Heart Foundation.</p>
           <p>The authors of the two studies say there is now mounting evidence that ultra-processed foods may be harmful. And the research comes out soon after tests showing these types of foods make us eat more and put on weight.</p>
           <p>But while the term ultra-processed might feel new, the health advice is very familiar. A diet rich in fruit, vegetables, fish, nuts and seeds also happens to be one full of unprocessed foods.</p>
-          <p class="meta">Texto adaptado de bbc.co.uk/learningenglish</p>
+          <p class='meta'>Texto adaptado de bbc.co.uk/learningenglish</p>
           <div class="vocab-card">
             <strong>Vocabulario:</strong>
             <ul>
@@ -1215,7 +1223,7 @@ window.examData = {
         pointsPerItem: 1,
         includeInSummary: true,
         promptHtml: `<p>Marca la respuesta que mejor se ajuste a lo expresado en el texto.</p>`,
-        noteHtml: `<p class="meta">Nota: estas respuestas quedaron confirmadas visualmente al revisar las casillas marcadas en el solucionario rasterizado.</p>`,
+        noteHtml: `<p class='meta'>Nota: estas respuestas quedaron confirmadas visualmente al revisar las casillas marcadas en el solucionario rasterizado.</p>`,
         items: [
           {
             label: "A. Examples of ultra-processed foods are…",
@@ -1254,7 +1262,7 @@ window.examData = {
         promptHtml: `
           <p>Lo que comemos influye enormemente en nuestro estado de salud. Un exceso de alimentos ultraprocesados puede ser peligroso y, por tanto, deben evitarse.</p>
           <p>Escribe un texto en inglés de entre 50 y 70 palabras en el que describas una dieta saludable, nombrando qué alimentos deben consumirse más frecuentemente y cuáles menos. Puedes usar los verbos modales <em>should</em> y <em>ought to</em> para expresar consejos.</p>
-          <p class="meta">Expresiones que pueden ayudarte: <em>heart disease / intake / nutrition / to follow a healthy diet</em>.</p>
+          <p class='meta'>Expresiones que pueden ayudarte: <em>heart disease / intake / nutrition / to follow a healthy diet</em>.</p>
         `,
         openLabel: "Write your answer here",
         solutionHtml: `<p><strong>Solución oficial:</strong> Respuesta libre.</p>`,
@@ -1269,7 +1277,7 @@ window.examData = {
         pointsPerItem: 2,
         includeInSummary: true,
         promptHtml: `<p>Elige en cada caso la opción que consideres más correcta.</p>`,
-        noteHtml: `<p class="meta">Igual que en el ejercicio 13, estas respuestas quedaron confirmadas visualmente al revisar las casillas marcadas en el solucionario rasterizado.</p>`,
+        noteHtml: `<p class='meta'>Igual que en el ejercicio 13, estas respuestas quedaron confirmadas visualmente al revisar las casillas marcadas en el solucionario rasterizado.</p>`,
         items: [
           { label: "15. Bea’s birthday is…", options: ["on may 7th.", "in may 7h.", "on May 7th."], correctIndex: 2 },
           { label: "16. For the pizza dough, …", options: ["you add yeast to water warm.", "add yeast to warm water.", "add you yeast to warm water."], correctIndex: 1 },
@@ -2452,7 +2460,7 @@ window.examData = {
           <p>En mi infancia usaba el diccionario para buscar malas palabras. No me interesaba tanto conocer el significado del término “trascendente” como descubrir de qué manera aquel libro docto definía la palabra “culo”. Después crecí y la navegación por los mares de las enciclopedias empezó a ser una deriva gozosa de enigmas y revelaciones, pero ahora, al leer aquellos titulares, tuve un déjà vu. Buena parte de la humanidad parece estar haciendo con la inteligencia artificial lo que yo hacía con el diccionario en mi infancia. Este titán cibernético no sólo puede procesar toneladas de información en segundos, sino que, además, tiene capacidad de educarse a sí mismo. Y come de nosotros, que lo alimentamos con datos.</p>
           <p>No sería descabellado que, a partir de este tsunami de consultas idiotas, la inteligencia artificial llegara a la conclusión de que, si bien la humanidad tuvo alguna vez entre sus miembros a personas como Leonardo Da Vinci o Isaac Newton, ahora está formada por sujetos grotescos más interesados en saber cómo luciría la familia Picapiedra en la vida real que en dilucidar si este temible y refinado océano de neuronas artificiales puede ser autoconsciente, tener ética, sentir compasión o hacer daño.</p>
           <p>Es posible, entonces, que el ChatGPT y sus hermanitos menores y tíos y primos lejanos se den cuenta muy pronto de que la humanidad es pan comido y de que son sus algorítmicas legiones las que ganarán la batalla.</p>
-          <p class="meta">Leila Guerriero, <em>El País</em></p>
+          <p class='meta'>Leila Guerriero, <em>El País</em></p>
         `,
       },
       {
@@ -2530,7 +2538,7 @@ window.examData = {
         promptHtml: `
           <p>El ChatGPT en general es un problema que cada vez está acarreando más y peores consecuencias en las aulas. La creación de textos originales e individuales está en peligro. Es difícil realizar un concurso literario en los centros educativos debido al uso de estas aplicaciones.</p>
           <p>¿Consideras que la creatividad de los jóvenes está en peligro? ¿Cómo crees que se debe organizar la creación de textos propios en las aulas? ¿Cuáles crees que deben ser los límites de la IA para utilizarla en los trabajos académicos?</p>
-          <p class="meta">Redacta un texto de al menos 200 palabras en el que expreses tu punto de vista sobre el tema, argumentándolo de forma adecuada e incorporando los aspectos de la lectura que consideres.</p>
+          <p class='meta'>Redacta un texto de al menos 200 palabras en el que expreses tu punto de vista sobre el tema, argumentándolo de forma adecuada e incorporando los aspectos de la lectura que consideres.</p>
         `,
         openLabel: "Escribe aquí tu redacción",
         solutionHtml: `<p><strong>Solución oficial:</strong> Respuesta libre.</p>`,
@@ -2550,7 +2558,7 @@ window.examData = {
           { label: "D.", solution: "Por ejemplo: <strong>habían</strong>." },
           { label: "E.", solution: "Por ejemplo: <strong>Hijo</strong> o <strong>prohíbe</strong>." },
         ],
-        noteHtml: `<p class="meta">La solución oficial reescribe el texto completo ya corregido; aquí se admiten varias combinaciones válidas de cinco palabras.</p>`,
+        noteHtml: `<p class='meta'>La solución oficial reescribe el texto completo ya corregido; aquí se admiten varias combinaciones válidas de cinco palabras.</p>`,
       },
       {
         type: "question",
@@ -2631,7 +2639,7 @@ window.examData = {
           <p><strong>DON LUIS:</strong> ¡Ah!, ¿era para eso?</p>
           <p><strong>LUIS:</strong> No te lo dije, pero sí.</p>
           <p><strong>DON LUIS:</strong> Sabe Dios cuándo habrá otro verano.</p>
-          <p class="meta"><em>Las bicicletas son para el verano</em>, Fernando Fernán Gómez</p>
+          <p class='meta'><em>Las bicicletas son para el verano</em>, Fernando Fernán Gómez</p>
         `,
       },
       {
@@ -2676,7 +2684,7 @@ window.examData = {
           <p>Kathryn Cunningham, a voice expert from the University of Tennessee, explained: “While the average woman’s voice is higher-pitched than the average man’s due to a combination of anatomical and social factors, some women who speak this way seem to be intentionally placing their voices higher than their natural pitch range in order to convey submission to male authority and childlike innocence.”</p>
           <p>Deliberate voice changes are very much a reality for women in fundamentalist Christian communities, who from a young age are taught over and over again to modulate their voices in order to sound sweet, soft, and childlike. There are very strict gender roles, and women are supposed to never sound angry but keep sweet, obey, dress modestly, speak softly and be very feminine.</p>
           <p>“It is important to remember that women’s voices are always examined carefully,” Cunningham added. “The truth is that we can’t win, no matter how we speak. Because of outdated stereotypes many women are consciously changing the way they speak all the time to achieve the desired effect for the circumstances.”</p>
-          <p class="meta">Texto adaptado de huffpost.com</p>
+          <p class='meta'>Texto adaptado de huffpost.com</p>
           <div class="vocab-card">
             <strong>Vocabulario:</strong>
             <ul>
@@ -2736,7 +2744,7 @@ window.examData = {
         pointsPerItem: 1,
         includeInSummary: true,
         promptHtml: `<p>Marca la respuesta que mejor se ajuste a lo expresado en el texto.</p>`,
-        noteHtml: `<p class="meta">Las casillas del solucionario no se extraían bien como texto, así que se revisaron sobre las páginas rasterizadas del PDF oficial.</p>`,
+        noteHtml: `<p class='meta'>Las casillas del solucionario no se extraían bien como texto, así que se revisaron sobre las páginas rasterizadas del PDF oficial.</p>`,
         items: [
           { label: "A. The concept ‘fundie baby voice’…", options: ["was created in a video.", "appeared in 2023.", "is heard by female politicians."], correctIndex: 1 },
           { label: "B. People raised in evangelical churches...", options: ["are familiar with fundie baby voice.", "are typical of Sunday school teachers and pastors’ wives.", "are sweet and submissive."], correctIndex: 0 },
@@ -2755,7 +2763,7 @@ window.examData = {
         promptHtml: `
           <p>Los estereotipos de género pueden condicionar nuestras vidas en maneras de las que ni siquiera somos conscientes, como por ejemplo nuestra forma de hablar o nuestro tono de voz.</p>
           <p>Escribe un texto en inglés de entre 50 y 70 palabras dando tu opinión sobre el hecho de que las mujeres se sientan en el deber de hablar de manera más dulce o agradable que los hombres. Puedes usar oraciones condicionales y verbos modales (<em>should, shouldn’t, must, mustn’t, don’t have to</em>) para expresar tu opinión.</p>
-          <p class="meta">Expresiones que pueden ayudarte: <em>conform to expectations / gender identity / patriarchy / gender equality</em>.</p>
+          <p class='meta'>Expresiones que pueden ayudarte: <em>conform to expectations / gender identity / patriarchy / gender equality</em>.</p>
         `,
         openLabel: "Write your answer here",
         solutionHtml: `<p><strong>Solución oficial:</strong> Respuesta libre.</p>`,
@@ -2770,7 +2778,7 @@ window.examData = {
         pointsPerItem: 2,
         includeInSummary: true,
         promptHtml: `<p>Elige en cada caso la opción que consideres más correcta.</p>`,
-        noteHtml: `<p class="meta">Las respuestas se contrastaron con el solucionario rasterizado; además, los ítems son consistentes con la gramática inglesa esperable en cada caso.</p>`,
+        noteHtml: `<p class='meta'>Las respuestas se contrastaron con el solucionario rasterizado; además, los ítems son consistentes con la gramática inglesa esperable en cada caso.</p>`,
         items: [
           { label: "15. Our next meeting is…", options: ["Monday.", "the Monday.", "on Monday."], correctIndex: 2 },
           { label: "16. Jim, please, …", options: ["you help me with my homework.", "help me with my homework.", "you will help me with my homework."], correctIndex: 1 },
@@ -2783,6 +2791,299 @@ window.examData = {
           { label: "23. We…", options: ["never have read a book by Shakespeare.", "’ve read never a book by Shakespeare.", "’ve never read a book by Shakespeare."], correctIndex: 2 },
           { label: "24. California is … US state.", options: ["the best", "the most good", "the better"], correctIndex: 0 },
         ],
+      },
+    ],
+  }
+
+  ,"2025-04-ct": {
+    id: "2025-04-ct",
+    title: "Convocatoria abril 2025 · Ámbito científico-tecnológico",
+    subtitle: "Prueba interactiva basada en el modelo oficial, con apoyo visual en los bloques de átomo y nutrición.",
+    sourceLinks: [
+      {
+        label: "Archivo oficial de convocatorias anteriores",
+        url: "https://www.juntadeandalucia.es/educacion/portales/web/educacion-permanente/servicios/pruebas/obtencion-titulo-eso/sobre-las-pruebas/modelos-de-convocatorias-anteriores",
+      },
+      {
+        label: "ZIP oficial abril 2025 (incluye soluciones)",
+        url: "https://www.juntadeandalucia.es/educacion/portales/documents/1454565/1625008/Pruebas%20convocatoria%20abril%202025%20%28incluye%20soluciones%29/864b6c80-496c-6291-4aa0-dcea2cdf83e1?version=1.0",
+      },
+      {
+        label: "PDF del examen (copia local)",
+        url: "data/exam-packs/2025-04/extracted/Convocatoria%20abril%202025/CT_ESPA_2025.pdf",
+      },
+      {
+        label: "PDF del solucionario (copia local)",
+        url: "data/exam-packs/2025-04/extracted/Convocatoria%20abril%202025/CT_ESPA_soluciones_2025.pdf",
+      },
+      {
+        label: "Notas de extracción y apoyo visual",
+        url: "content/exams/2025-04-ct-notes.md",
+      },
+    ],
+    introHtml: "<p>Examen oficial de abril de 2025 del ámbito científico-tecnológico. Mantiene la estructura original por bloques y añade apoyo visual en las preguntas de átomo y nutrición.</p><ul><li><strong>A.</strong> Conceptos básicos (15 puntos)</li><li><strong>B.</strong> Comprensión y análisis de un documento escrito (20 puntos)</li><li><strong>C.</strong> Comprensión y análisis de información gráfica (30 puntos)</li><li><strong>D.</strong> Expresión escrita (15 puntos)</li><li><strong>E.</strong> Resolución de un problema (20 puntos)</li></ul><p><strong>Corrección automática:</strong> 20 puntos de ejercicios cerrados (1, 2, 3 y 4). Los otros 80 puntos quedan para comparación manual con la solución oficial.</p>",
+    sections: [
+      {
+        type: "question",
+        id: "q1",
+        number: 1,
+        title: "Salud y nutrición",
+        points: 5,
+        kind: "multiChoiceGroup",
+        includeInSummary: true,
+        promptHtml: "<p>Completa las siguientes afirmaciones sobre salud y nutrición eligiendo el término correcto en cada caso.</p>",
+        items: [
+          { label: "La ___ consiste en obtener...", options: ["nutrición", "alimentación"], correctIndex: 0 },
+          { label: "...obtener los ___ que hay...", options: ["alimentos", "nutrientes"], correctIndex: 1 },
+          { label: "...que hay en los ___ mediante la digestión...", options: ["alimentos", "nutrientes"], correctIndex: 0 },
+          { label: "En una dieta saludable se recomienda consumir más ___", options: ["carne y pescado", "fruta y verdura"], correctIndex: 1 },
+          { label: "...que ___", options: ["carne y pescado", "fruta y verdura"], correctIndex: 0 },
+        ],
+      },
+      {
+        type: "question",
+        id: "q2",
+        number: 2,
+        title: "Afirmaciones correctas sobre la energía",
+        points: 5,
+        kind: "booleanGroup",
+        includeInSummary: true,
+        pointsPerItem: 1,
+        promptHtml: "<p>Marca solo las afirmaciones correctas.</p>",
+        items: [
+          { label: "La energía de la biomasa es una forma de energía química.", correct: true },
+          { label: "Andalucía cuenta con importantes parques eólicos y la energía eólica es una de sus principales renovables.", correct: true },
+          { label: "El calor fluye espontáneamente desde el cuerpo a menor temperatura hacia el cuerpo a mayor temperatura.", correct: false },
+          { label: "La energía no se crea ni se destruye, solo se transforma.", correct: true },
+          { label: "La energía que proviene de recursos naturales limitados recibe el nombre de energía renovable.", correct: false },
+        ],
+      },
+      {
+        type: "question",
+        id: "q3",
+        number: 3,
+        title: "Condiciones que hacen posible la vida en la Tierra",
+        points: 5,
+        kind: "booleanGroup",
+        includeInSummary: true,
+        pointsPerItem: 1,
+        promptHtml: "<p>Contesta verdadero [V] o falso [F] a las siguientes afirmaciones.</p>",
+        items: [
+          { label: "El tamaño y densidad de la Tierra permiten retener una atmósfera vital para la vida.", correct: true },
+          { label: "La vida en la Tierra sería posible sin la presencia del campo magnético terrestre.", correct: false },
+          { label: "En la Luna se dan las condiciones para albergar vida por estar aproximadamente a la misma distancia del Sol que la Tierra.", correct: false },
+          { label: "La distancia al Sol es el único factor que hace posible la vida en la Tierra.", correct: false },
+          { label: "Uno de los factores que hace posible la vida en la Tierra es la presencia de bioelementos en la superficie.", correct: true },
+        ],
+      },
+      {
+        type: "reading",
+        id: "reading-alzheimer",
+        title: "Texto base · Un enfoque radicalmente nuevo contra el alzhéimer",
+        html: "<p><strong>Un enfoque radicalmente nuevo contra el alzhéimer</strong></p><p>Los científicos acaban de descubrir una forma enteramente novedosa de deshacerse de los agregados de priones, las proteínas causantes de varias enfermedades neurodegenerativas.</p><p>Déjame decirte en primer lugar que este artículo no es un anuncio de un nuevo fármaco milagroso contra el alzhéimer. No existe tal cosa. Los medicamentos aprobados recientemente en Estados Unidos tienen un efecto tan modesto que ni siquiera han merecido la autorización por la Agencia Europea del Medicamento.</p><p>De lo que vamos a tratar aquí es de un enfoque radicalmente nuevo contra el alzhéimer, el párkinson y otras enfermedades neurodegenerativas. De momento no es nada más que ciencia básica, y nada menos que ciencia básica: el verdadero motor del conocimiento sobre la naturaleza, incluida nuestra propia naturaleza.</p><p>¿Tiene algo que ver el alzhéimer con las vacas locas? Oh, sí. La encefalopatía espongiforme bovina, vulgo vacas locas, es una enfermedad priónica. Los priones son los únicos agentes infecciosos que no tienen genes.</p><p>Un prion es una proteína normal de la célula que adopta una forma errónea y puede inducir a otras proteínas normales a plegarse mal. Ese proceso se propaga y forma agregados que dañan o matan células.</p><p>Con las enfermedades neurodegenerativas ocurre algo similar: proteínas como tau, beta-amiloide o alfa-sinucleína pueden plegarse mal, propagarse y formar agregados. Por eso el alzhéimer y el párkinson pueden considerarse enfermedades priónicas, igual que las vacas locas.</p><p>El artículo añade que ciertas células de la microglía construyen nanotúneles que conectan con neuronas dañadas: retiran agregados tóxicos y les transfieren mitocondrias sanas, lo que abre una posible vía terapéutica futura.</p><p class='meta'>Artículo adaptado de <em>elpais.com</em>, 13 de septiembre de 2024.</p>",
+      },
+      {
+        type: "question",
+        id: "q4",
+        number: 4,
+        title: "Verdadero o falso sobre el texto del alzhéimer",
+        points: 5,
+        kind: "booleanGroup",
+        includeInSummary: true,
+        pointsPerItem: 1,
+        promptHtml: "<p>Basándote en la información del texto, indica si las siguientes afirmaciones son verdaderas [V] o falsas [F].</p>",
+        items: [
+          { label: "Los priones no son los únicos agentes infecciosos que no tienen genes.", correct: false },
+          { label: "Los medicamentos aprobados recientemente en EEUU para el alzhéimer tienen un efecto notable y son altamente efectivos.", correct: false },
+          { label: "El párkinson y el alzhéimer se consideran enfermedades priónicas originadas por un mal plegamiento de proteínas.", correct: true },
+          { label: "El fármaco lecanemab aprobado por la FDA cura el alzhéimer.", correct: false },
+          { label: "Las células microgliales forman nanotúneles que conectan con las neuronas y permiten intercambios beneficiosos.", correct: true },
+        ],
+      },
+      {
+        type: "question",
+        id: "q5",
+        number: 5,
+        title: "Relación entre alzhéimer, párkinson y vacas locas",
+        points: 5,
+        kind: "openText",
+        promptHtml: "<p>Según el texto, ¿cuál es la relación entre el alzhéimer, el párkinson y las vacas locas?</p>",
+        openLabel: "Resume la relación",
+        solutionHtml: "<p>Las tres enfermedades están relacionadas con <strong>priones o proteínas mal plegadas</strong> que inducen a otras proteínas normales a adoptar una forma errónea, propagando así el daño celular y la enfermedad.</p>",
+      },
+      {
+        type: "question",
+        id: "q6",
+        number: 6,
+        title: "Sistema de coordinación del ser humano",
+        points: 5,
+        kind: "openText",
+        promptHtml: "<p>La temática del texto está relacionada con el principal sistema de coordinación del ser humano. Di cuál es y cuáles son sus funciones principales.</p>",
+        openLabel: "Tu respuesta",
+        solutionHtml: "<p>Se trata del <strong>sistema nervioso</strong>. Sus funciones principales son coordinar y controlar el organismo, percibir estímulos del entorno, procesar la información recibida y emitir o coordinar respuestas motoras, hormonales o emocionales.</p>",
+      },
+      {
+        type: "question",
+        id: "q7",
+        number: 7,
+        title: "Hábitos no saludables que dañan el sistema nervioso",
+        points: 5,
+        kind: "openText",
+        promptHtml: "<p>¿Qué hábitos de vida no saludables pueden afectar gravemente al sistema nervioso y, más concretamente, al correcto funcionamiento del cerebro?</p>",
+        openLabel: "Tu respuesta",
+        solutionHtml: "<p>El solucionario destaca sobre todo el <strong>consumo de drogas legales o ilegales</strong>, porque alteran la acción de los neurotransmisores, afectan a la conducta, al estado de ánimo y a la percepción, y además pueden generar dependencia física y/o psicológica.</p>",
+      },
+      {
+        type: "reading",
+        id: "reading-atomo",
+        title: "Apoyo visual · Estructura básica del átomo",
+        html: "<p>Usa esta imagen del examen para responder a las cuestiones 8, 9 y 10.</p><figure style='margin:1rem 0;'><img src='content/exams/img/2025-04-ct-page-3.png' alt='Página del examen con la estructura básica de un átomo' style='max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;' /><figcaption style='font-size:.95rem;color:#5c677d;margin-top:.5rem;'>Imagen del examen con la estructura básica de un átomo.</figcaption></figure>",
+      },
+      {
+        type: "question",
+        id: "q8",
+        number: 8,
+        title: "Tabla sobre la estructura del átomo",
+        points: 6,
+        kind: "openList",
+        promptHtml: "<p>Rellena la tabla con ayuda de la información reflejada en el gráfico 1.</p><figure style='margin:1rem 0;'><img src='content/exams/img/2025-04-ct-page-3.png' alt='Página del examen con la estructura básica de un átomo' style='max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;' /></figure>",
+        items: [
+          { label: "Núcleo · partícula 1", solution: "<strong>protones</strong>" },
+          { label: "Núcleo · carga 1", solution: "<strong>positiva</strong>" },
+          { label: "Núcleo · partícula 2", solution: "<strong>neutrones</strong>" },
+          { label: "Núcleo · carga 2", solution: "<strong>neutra</strong>" },
+          { label: "Corteza · partícula", solution: "<strong>electrones</strong>" },
+          { label: "Corteza · carga", solution: "<strong>negativa</strong>" },
+        ],
+      },
+      {
+        type: "question",
+        id: "q9",
+        number: 9,
+        title: "Carga total del átomo",
+        points: 4,
+        kind: "openText",
+        promptHtml: "<p>¿Qué carga total tiene el átomo? Razona tu respuesta.</p><figure style='margin:1rem 0;'><img src='content/exams/img/2025-04-ct-page-3.png' alt='Página del examen con la estructura básica de un átomo' style='max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;' /></figure>",
+        openLabel: "Tu razonamiento",
+        solutionHtml: "<p>La carga total del átomo es <strong>neutra</strong>, porque tiene el mismo número de protones que de electrones.</p>",
+      },
+      {
+        type: "question",
+        id: "q10",
+        number: 10,
+        title: "Número atómico y número másico",
+        points: 5,
+        kind: "openList",
+        promptHtml: "<p>Indica el número atómico y el número másico del átomo representado.</p><figure style='margin:1rem 0;'><img src='content/exams/img/2025-04-ct-page-3.png' alt='Página del examen con la estructura básica de un átomo' style='max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;' /></figure>",
+        items: [
+          { label: "Número atómico", solution: "<strong>2</strong>, porque tiene 2 protones." },
+          { label: "Número másico", solution: "<strong>4</strong>, porque suma 2 protones y 2 neutrones." },
+        ],
+      },
+      {
+        type: "reading",
+        id: "reading-nutricion",
+        title: "Apoyo visual · Aparatos que intervienen en la nutrición",
+        html: "<p>Usa esta imagen del examen para responder a las cuestiones 11, 12 y 13.</p><figure style='margin:1rem 0;'><img src='content/exams/img/2025-04-ct-page-4.png' alt='Página del examen con los aparatos que intervienen en la nutrición' style='max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;' /><figcaption style='font-size:.95rem;color:#5c677d;margin-top:.5rem;'>Imagen del examen con los aparatos que intervienen en la nutrición.</figcaption></figure>",
+      },
+      {
+        type: "question",
+        id: "q11",
+        number: 11,
+        title: "Nombre y función de cada aparato",
+        points: 4,
+        kind: "openList",
+        promptHtml: "<p>Completa el cuadro con el nombre de cada aparato de la ilustración y su función en el proceso de nutrición.</p><figure style='margin:1rem 0;'><img src='content/exams/img/2025-04-ct-page-4.png' alt='Página del examen con los aparatos que intervienen en la nutrición' style='max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;' /></figure>",
+        items: [
+          { label: "Aparato 1", solution: "<strong>Digestivo</strong>: transforma los alimentos en sustancias más simples para que sus nutrientes puedan ser absorbidos." },
+          { label: "Aparato 2", solution: "<strong>Respiratorio</strong>: obtiene oxígeno del aire y expulsa dióxido de carbono." },
+          { label: "Aparato 3", solution: "<strong>Circulatorio</strong>: transporta nutrientes y oxígeno a las células y recoge sustancias de desecho." },
+          { label: "Aparato 4", solution: "<strong>Excretor</strong>: elimina del organismo las sustancias de desecho procedentes de la actividad celular." },
+        ],
+      },
+      {
+        type: "question",
+        id: "q12",
+        number: 12,
+        title: "Relación entre afirmaciones y aparatos",
+        points: 5,
+        kind: "openList",
+        promptHtml: "<p>Indica con cuál de los cuatro aparatos están relacionadas las siguientes afirmaciones.</p><figure style='margin:1rem 0;'><img src='content/exams/img/2025-04-ct-page-4.png' alt='Página del examen con los aparatos que intervienen en la nutrición' style='max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;' /></figure>",
+        items: [
+          { label: "A. El intercambio gaseoso se produce en los alveolos", solution: "<strong>aparato respiratorio</strong>" },
+          { label: "B. El corazón bombea la sangre con sístole y diástole", solution: "<strong>aparato circulatorio</strong>" },
+          { label: "C. La corteza con nefronas filtra la sangre y forma la orina", solution: "<strong>aparato excretor</strong>" },
+          { label: "D. El hígado y el páncreas forman parte de este aparato", solution: "<strong>aparato digestivo</strong>" },
+          { label: "E. El quimo pasa al intestino delgado y en el duodeno se transforma en quilo", solution: "<strong>aparato digestivo</strong>" },
+        ],
+      },
+      {
+        type: "question",
+        id: "q13",
+        number: 13,
+        title: "Enfermedades y aparato relacionado",
+        points: 6,
+        kind: "openList",
+        promptHtml: "<p>Completa el cuadro indicando con qué aparato está relacionada cada enfermedad.</p>",
+        items: [
+          { label: "A. Arteriosclerosis", solution: "<strong>circulatorio</strong>" },
+          { label: "B. Hepatitis", solution: "<strong>digestivo</strong>" },
+          { label: "C. Varices", solution: "<strong>circulatorio</strong>" },
+          { label: "D. Cálculos biliares", solution: "<strong>digestivo</strong>" },
+          { label: "E. Nefritis", solution: "<strong>excretor</strong>" },
+          { label: "F. Infarto de miocardio", solution: "<strong>circulatorio</strong>" },
+          { label: "G. Cólico nefrítico", solution: "<strong>excretor</strong>" },
+          { label: "H. Asma", solution: "<strong>respiratorio</strong>" },
+          { label: "I. Cistitis", solution: "<strong>excretor</strong>" },
+          { label: "J. Enfisema pulmonar", solution: "<strong>respiratorio</strong>" },
+          { label: "K. Peritonitis", solution: "<strong>digestivo</strong>" },
+          { label: "L. Apendicitis", solution: "<strong>digestivo</strong>" },
+        ],
+      },
+      {
+        type: "question",
+        id: "q14",
+        number: 14,
+        title: "Texto sobre e-learning o teleformación",
+        points: 15,
+        kind: "openText",
+        promptHtml: "<p>Redacta un texto de un mínimo de 150 palabras donde hables de qué es el <em>e-learning</em> o teleformación y de las ventajas e inconvenientes de este tipo de formación.</p><ul><li>Qué es el e-learning y cuáles son sus características principales.</li><li>Qué ventajas e inconvenientes encuentras en este tipo de formación.</li></ul>",
+        openLabel: "Tu redacción",
+        noteHtml: "<p>Se valora la presentación, la ortografía, la estructura y la coherencia del texto.</p>",
+        solutionHtml: "<p>La solución oficial define el <strong>e-learning</strong> como una enseñanza no presencial realizada mediante plataformas digitales e internet. Destaca su flexibilidad, el acceso desde cualquier lugar y el uso de recursos interactivos.</p><p>Como ventajas, subraya la comodidad, el ahorro de desplazamientos, la autonomía y el acceso a más cursos. Como inconvenientes, señala la falta de contacto directo, la necesidad de autodisciplina y motivación, y los posibles problemas técnicos o de conexión.</p>",
+      },
+      {
+        type: "question",
+        id: "q15",
+        number: 15,
+        title: "Volumen de la piscina en metros cúbicos",
+        points: 10,
+        kind: "openText",
+        promptHtml: "<p>Quieres llenar una piscina circular de 5 metros de diámetro y 1,20 metros de altura. ¿Qué volumen de agua en metros cúbicos necesita tu piscina?</p>",
+        openLabel: "Desarrolla el cálculo",
+        solutionHtml: "<p>Como la piscina es un cilindro, su volumen es <code>V = πr²h</code>.</p><p>Con radio <code>r = 2,5 m</code> y altura <code>h = 1,20 m</code>:</p><p><code>V = π · 2,5² · 1,20 = 23,55 m³</code></p><p>La piscina necesita <strong>23,55 m³</strong> de agua.</p>",
+      },
+      {
+        type: "question",
+        id: "q16",
+        number: 16,
+        title: "Volumen de la piscina en litros",
+        points: 5,
+        kind: "openText",
+        promptHtml: "<p>¿Cuál es el volumen en litros de la piscina sabiendo que 1 litro equivale a 1 decímetro cúbico?</p>",
+        openLabel: "Escribe la conversión",
+        solutionHtml: "<p>Si la piscina tiene <strong>23,55 m³</strong>, eso equivale a <strong>23.550 dm³</strong>, es decir, <strong>23.550 litros</strong>.</p>",
+      },
+      {
+        type: "question",
+        id: "q17",
+        number: 17,
+        title: "Coste de llenar la piscina",
+        points: 5,
+        kind: "openText",
+        promptHtml: "<p>La empresa cobra 180 € por cada cuba de 10.000 litros de agua, de forma proporcional. ¿Cuánto te cuesta llenar la piscina?</p>",
+        openLabel: "Haz la regla de tres o el cálculo equivalente",
+        solutionHtml: "<p>Si 10.000 litros cuestan 180 €, entonces 23.550 litros cuestan:</p><p><code>(23.550 · 180) / 10.000 = 423,90 €</code></p><p>Llenar la piscina cuesta <strong>423,90 €</strong>.</p>",
       },
     ],
   }

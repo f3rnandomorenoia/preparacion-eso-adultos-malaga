@@ -16,7 +16,7 @@
 #### Orden recomendado de siguientes exámenes
 
 - [x] `2025-04-com-in` · Abril 2025 · Ámbito de comunicación (inglés)
-- [ ] `2025-04-ct` · Abril 2025 · Ámbito científico-tecnológico
+- [x] `2025-04-ct` · Abril 2025 · Ámbito científico-tecnológico
 - [ ] `2025-04-social` · Abril 2025 · Ámbito social
 - [ ] `2025-06-com-in` · Junio 2025 · Ámbito de comunicación (inglés)
 - [ ] `2025-06-ct` · Junio 2025 · Ámbito científico-tecnológico
@@ -24,7 +24,7 @@
 
 ### Siguiente recomendado ahora
 
-- [ ] `2025-04-ct` · Abril 2025 · Ámbito científico-tecnológico
+- [ ] `2025-04-social` · Abril 2025 · Ámbito social
 
 ### Otros posibles siguientes pasos
 
