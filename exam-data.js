@@ -8,6 +8,14 @@ window.examCatalog = [
     status: "Piloto verificado",
   },
   {
+    "id": "2024-04-ct",
+    "label": "Abril 2024 · Ámbito científico-tecnológico",
+    "totalPoints": 100,
+    "autoPoints": 20,
+    "manualPoints": 80,
+    "status": "Verificado"
+  },
+  {
     id: "2024-06-com-in",
     label: "Junio 2024 · Ámbito de comunicación (inglés)",
     totalPoints: 100,
@@ -425,6 +433,429 @@ window.examData = {
         ],
       },
     ],
+  },
+  "2024-04-ct": {
+    "id": "2024-04-ct",
+    "title": "Convocatoria abril 2024 · Ámbito científico-tecnológico",
+    "subtitle": "Prueba interactiva basada en el modelo oficial, con apoyo visual para los esquemas, la gráfica de movimiento y el problema geométrico.",
+    "sourceLinks": [
+      {
+        "label": "Archivo oficial de convocatorias anteriores",
+        "url": "https://www.juntadeandalucia.es/educacion/portales/web/educacion-permanente/servicios/pruebas/obtencion-titulo-eso/sobre-las-pruebas/modelos-de-convocatorias-anteriores"
+      },
+      {
+        "label": "ZIP oficial abril 2024 (incluye soluciones)",
+        "url": "https://www.juntadeandalucia.es/educacion/portales/documents/1454565/1624993/Pruebas%20convocatoria%20abril%202024%20%28incluye%20soluciones%29/35ea24e8-0010-b560-0915-44b5fd3171e0?version=1.1"
+      },
+      {
+        "label": "PDF del examen (copia local)",
+        "url": "data/exam-packs/2024-04/extracted/Convocatoria%20abril%202024/CT_ESPA_2024.pdf"
+      },
+      {
+        "label": "PDF del solucionario (copia local)",
+        "url": "data/exam-packs/2024-04/extracted/Convocatoria%20abril%202024/CT_ESPA_soluciones_2024.pdf"
+      },
+      {
+        "label": "Notas de extracción y apoyo visual",
+        "url": "content/exams/2024-04-ct-notes.md"
+      }
+    ],
+    "introHtml": "<p>Examen oficial de abril de 2024 del ámbito científico-tecnológico. Mantiene la estructura original por bloques y añade apoyo visual en las preguntas basadas en esquemas, gráficas y geometría.</p><ul><li><strong>A.</strong> Conceptos básicos (15 puntos)</li><li><strong>B.</strong> Comprensión y análisis de un documento escrito (20 puntos)</li><li><strong>C.</strong> Comprensión y análisis de información gráfica (30 puntos)</li><li><strong>D.</strong> Expresión escrita (15 puntos)</li><li><strong>E.</strong> Resolución de un problema (20 puntos)</li></ul><p><strong>Corrección automática:</strong> 20 puntos de ejercicios cerrados (1, 3, 4 y 5). Los otros 80 puntos quedan para comparación manual con la solución oficial.</p>",
+    "sections": [
+      {
+        "type": "question",
+        "id": "q1",
+        "number": 1,
+        "title": "Verdadero o falso sobre lenguaje algebraico",
+        "points": 5,
+        "kind": "booleanGroup",
+        "pointsPerItem": 1,
+        "includeInSummary": true,
+        "promptHtml": "<p>Indica si las siguientes afirmaciones son verdaderas [V] o falsas [F].</p>",
+        "items": [
+          {
+            "label": "Si Ana tiene x años y es 2 años mayor que su hermana, su hermana tiene x + 2 años.",
+            "correct": false
+          },
+          {
+            "label": "Si a una reunión en la que se ha citado a un total de P personas solo asiste el 80% de ellas, están asistiendo 0,8P personas.",
+            "correct": true
+          },
+          {
+            "label": "Si el precio de las naranjas está a 1,50 €/kg y compramos x kg, pagaremos 1,50x €.",
+            "correct": true
+          },
+          {
+            "label": "Si el lado de un cuadrado mide a, su perímetro será a².",
+            "correct": false
+          },
+          {
+            "label": "Si una población de bacterias B se reduce a la cuarta parte, quedarán B/4 bacterias.",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q2",
+        "number": 2,
+        "title": "Servicios digitales y administración electrónica",
+        "points": 5,
+        "kind": "openList",
+        "promptHtml": "<p>Relaciona cada descripción con uno de estos términos: <strong>DNI electrónico</strong>, <strong>sede electrónica</strong>, <strong>banca electrónica</strong>, <strong>almacenamiento en la nube</strong> y <strong>certificado digital</strong>.</p>",
+        "items": [
+          {
+            "label": "A. Dirección electrónica de una Administración Pública disponible para la ciudadanía.",
+            "solution": "sede electrónica"
+          },
+          {
+            "label": "B. Espacio de almacenamiento y procesamiento de datos y archivos ubicado en internet.",
+            "solution": "almacenamiento en la nube"
+          },
+          {
+            "label": "C. Documento emitido por la Policía que acredita físicamente y también electrónicamente la identidad.",
+            "solution": "DNI electrónico"
+          },
+          {
+            "label": "D. Prestación de servicios financieros al cliente mediante equipos informáticos en tiempo real.",
+            "solution": "banca electrónica"
+          },
+          {
+            "label": "E. Documento digital expedido por la FNMT para identificarse y firmar en internet.",
+            "solution": "certificado digital"
+          }
+        ],
+        "noteHtml": "<p>La corrección automática no puntúa este apartado, pero puedes comparar tus términos con la solución oficial.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q3",
+        "number": 3,
+        "title": "Átomos y moléculas",
+        "points": 5,
+        "kind": "multiChoiceGroup",
+        "pointsPerItem": 1,
+        "includeInSummary": true,
+        "promptHtml": "<p>Completa cada afirmación eligiendo la opción correcta.</p>",
+        "items": [
+          {
+            "label": "A1. En la corteza del átomo se encuentran los…",
+            "options": [
+              "electrones",
+              "protones"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "label": "A2. Esas partículas tienen carga…",
+            "options": [
+              "positiva",
+              "negativa"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "label": "B. Si un átomo tiene 6 protones y 8 neutrones, su número atómico es…",
+            "options": [
+              "6",
+              "14"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "label": "C. Las moléculas están formadas por la unión de dos o más…",
+            "options": [
+              "átomos",
+              "partículas subatómicas"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "label": "D. En los enlaces donde un átomo gana electrones y otro los pierde hablamos de enlaces…",
+            "options": [
+              "iónicos",
+              "covalentes"
+            ],
+            "correctIndex": 0
+          }
+        ]
+      },
+      {
+        "type": "reading",
+        "id": "reading-cepsa",
+        "title": "Texto base · Biocombustibles y transición energética",
+        "html": "<p><strong>Cepsa construirá una nueva planta de biocombustibles en Huelva</strong></p><p>Cepsa construirá una nueva planta de biocombustibles de segunda generación (2G) en Palos de la Frontera, Huelva, que supondrá una inversión de hasta 1000 millones de euros. Esta nueva planta, que se ubicará en el Parque Energético La Rábida, producirá tanto diésel renovable como SAF (combustible sostenible para aviación) y supondrá la creación de hasta 1600 puestos de trabajo, directos e indirectos, durante su fase de construcción.</p><p>Los biocombustibles 2G serán fabricados a partir de residuos orgánicos, como aceites usados de cocina o desechos agrícolas. Estos biocombustibles fomentan la economía circular, al utilizar para su producción residuos que de otro modo terminarían en vertederos.</p><p>La utilización de biocombustibles puede llegar a reducir hasta en un 90% las emisiones de CO2 respecto a los combustibles tradicionales, por lo que son un elemento clave para avanzar en la transición energética e impulsar la descarbonización del transporte, especialmente en sectores en los que la electrificación es muy compleja, como el transporte pesado por carretera, el aéreo y el marítimo.</p><p>La construcción de esta nueva planta responde al objetivo de la compañía de convertirse en esta década en un referente de la transición energética y liderar la fabricación de biocombustibles en España y Portugal, con una producción anual de 2,5 millones de toneladas, de las que 800.000 toneladas serán de SAF.</p><p>En su estrategia 2030, Cepsa impulsa la producción de moléculas verdes, principalmente hidrógeno renovable y biocombustibles, y plantea reducir en 2030 sus emisiones de CO2 en un 55% para llegar a emisiones netas cero en 2050. El artículo también vincula estos biocombustibles con varios Objetivos de Desarrollo Sostenible.</p><p class=\"meta\">Texto adaptado de El Correo de Andalucía, 8/03/2023</p>"
+      },
+      {
+        "type": "question",
+        "id": "q4",
+        "number": 4,
+        "title": "Verdadero o falso sobre el texto",
+        "points": 5,
+        "kind": "booleanGroup",
+        "pointsPerItem": 1,
+        "includeInSummary": true,
+        "promptHtml": "<p>Basándote en el texto, indica si las siguientes afirmaciones son verdaderas [V] o falsas [F].</p>",
+        "items": [
+          {
+            "label": "Cuando Cepsa construya su planta de biocombustibles en Huelva creará hasta 1.600 puestos de trabajo, directos e indirectos.",
+            "correct": false
+          },
+          {
+            "label": "La producción anual destinada a SAF será de 2,5 millones de toneladas.",
+            "correct": false
+          },
+          {
+            "label": "Los biocombustibles ayudan especialmente en sectores donde electrificar el transporte es complicado.",
+            "correct": true
+          },
+          {
+            "label": "El objetivo final del proyecto es quedarse en cero neto desde 2050 sin ir más allá.",
+            "correct": false
+          },
+          {
+            "label": "La fabricación de biocombustibles fomenta la economía circular porque se basa en tirar los residuos a vertederos.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q5",
+        "number": 5,
+        "title": "Tipo de energía del texto",
+        "points": 5,
+        "kind": "multiChoiceGroup",
+        "pointsPerItem": 5,
+        "includeInSummary": true,
+        "promptHtml": "<p>Marca el nombre de la energía que proporcionan recursos como aceites usados de cocina o desechos agrícolas.</p>",
+        "items": [
+          {
+            "label": "Selecciona la opción correcta.",
+            "options": [
+              "Energía geotérmica",
+              "Energía de la biomasa",
+              "Energía térmica",
+              "Energía nuclear"
+            ],
+            "correctIndex": 1
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q6",
+        "number": 6,
+        "title": "Energías renovables y no renovables",
+        "points": 5,
+        "kind": "openText",
+        "promptHtml": "<p>Describe brevemente la diferencia entre fuentes de energía renovables y no renovables. Después indica de cuál de los dos tipos se habla en el texto.</p>",
+        "openLabel": "Tu explicación",
+        "solutionHtml": "<p>Las fuentes de energía son los recursos que nos ofrece la naturaleza para producir energía utilizable. Son <strong>renovables</strong> cuando proceden de recursos naturales ilimitados o que se regeneran, y <strong>no renovables</strong> cuando provienen de recursos limitados.</p><p>En el texto se habla de <strong>energía renovable</strong>, porque el biocombustible procede de la biomasa.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q7",
+        "number": 7,
+        "title": "Desarrollo sostenible",
+        "points": 5,
+        "kind": "openText",
+        "promptHtml": "<p>¿En qué consiste el desarrollo sostenible?</p>",
+        "openLabel": "Tu respuesta",
+        "solutionHtml": "<p>El desarrollo sostenible es aquel que satisface las necesidades del presente sin comprometer las de las futuras generaciones, manteniendo un equilibrio entre las especies y los recursos del entorno. En otras palabras, implica explotar recursos con ciclos de regeneración que permitan su continuidad.</p>"
+      },
+      {
+        "type": "reading",
+        "id": "reading-nutricion",
+        "title": "Apoyo visual · Función de nutrición",
+        "html": "<p>Usa esta página del examen para responder a las cuestiones 8, 9 y 10.</p><figure style=\"margin:1rem 0;\"><img src=\"content/exams/img/2024-04-ct-page-3.png\" alt=\"Página del examen con el esquema de la función de nutrición\" style=\"max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;\" /><figcaption style=\"font-size:.95rem;color:#5c677d;margin-top:.5rem;\">Esquema de la función de nutrición y relación entre aparatos del cuerpo humano.</figcaption></figure>"
+      },
+      {
+        "type": "question",
+        "id": "q8",
+        "number": 8,
+        "title": "Función vital representada",
+        "points": 5,
+        "kind": "openText",
+        "promptHtml": "<p>¿Qué función del ser humano representa el gráfico 1? ¿Cuáles son las otras dos funciones básicas de los seres vivos?</p><figure style=\"margin:1rem 0;\"><img src=\"content/exams/img/2024-04-ct-page-3.png\" alt=\"Página del examen con el esquema de la función de nutrición\" style=\"max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;\" /></figure>",
+        "openLabel": "Tu explicación",
+        "solutionHtml": "<p>El gráfico representa la <strong>función de nutrición</strong>.</p><p>Las otras dos funciones básicas de los seres vivos son la <strong>relación</strong> y la <strong>reproducción</strong>.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q9",
+        "number": 9,
+        "title": "Aparatos que intervienen en la nutrición",
+        "points": 5,
+        "kind": "openList",
+        "promptHtml": "<p>Indica qué aparatos intervienen en la función representada y describe brevemente la función de cada uno.</p><figure style=\"margin:1rem 0;\"><img src=\"content/exams/img/2024-04-ct-page-3.png\" alt=\"Página del examen con el esquema de la función de nutrición\" style=\"max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;\" /></figure>",
+        "items": [
+          {
+            "label": "Aparato digestivo",
+            "solution": "Digiere los alimentos, absorbe nutrientes y elimina desechos en forma de heces"
+          },
+          {
+            "label": "Aparato respiratorio",
+            "solution": "Realiza el intercambio gaseoso: toma oxígeno y expulsa CO2"
+          },
+          {
+            "label": "Aparato circulatorio",
+            "solution": "Lleva nutrientes y oxígeno a las células y recoge sustancias de desecho"
+          },
+          {
+            "label": "Aparato excretor",
+            "solution": "Elimina las sustancias de desecho producidas por el cuerpo"
+          }
+        ],
+        "noteHtml": "<p>Se aceptan formulaciones equivalentes si describen correctamente la función de cada aparato.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q10",
+        "number": 10,
+        "title": "Enfermedades por aparato",
+        "points": 5,
+        "kind": "openText",
+        "promptHtml": "<p>Coloca estas enfermedades debajo del aparato que corresponda: bronquitis, cólico nefrítico, taquicardia, asma, infarto de miocardio, hepatitis, cistitis, apendicitis, gastroenteritis, varices, enfisema pulmonar, cálculos biliares, gastritis, uretritis y arterioesclerosis.</p><figure style=\"margin:1rem 0;\"><img src=\"content/exams/img/2024-04-ct-page-4.png\" alt=\"Página del examen con la tabla por aparatos y la gráfica velocidad-tiempo\" style=\"max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;\" /></figure>",
+        "openLabel": "Escribe tu clasificación",
+        "solutionHtml": "<p><strong>Aparato digestivo:</strong> hepatitis, apendicitis, gastroenteritis, cálculos biliares y gastritis.</p><p><strong>Aparato respiratorio:</strong> bronquitis, asma y enfisema pulmonar.</p><p><strong>Aparato circulatorio:</strong> taquicardia, infarto de miocardio, varices y arterioesclerosis.</p><p><strong>Aparato excretor:</strong> cólico nefrítico, cistitis y uretritis.</p>"
+      },
+      {
+        "type": "reading",
+        "id": "reading-movimiento",
+        "title": "Apoyo visual · Gráfica velocidad-tiempo",
+        "html": "<p>Usa esta gráfica para responder a las cuestiones 11, 12 y 13.</p><figure style=\"margin:1rem 0;\"><img src=\"content/exams/img/2024-04-ct-page-4.png\" alt=\"Página del examen con la gráfica velocidad-tiempo del vehículo\" style=\"max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;\" /><figcaption style=\"font-size:.95rem;color:#5c677d;margin-top:.5rem;\">Gráfica velocidad-tiempo con tres tramos.</figcaption></figure>"
+      },
+      {
+        "type": "question",
+        "id": "q11",
+        "number": 11,
+        "title": "Lectura de la gráfica de movimiento",
+        "points": 6,
+        "kind": "openList",
+        "promptHtml": "<p>Observa la gráfica y responde a las cuestiones.</p><figure style=\"margin:1rem 0;\"><img src=\"content/exams/img/2024-04-ct-page-4.png\" alt=\"Página del examen con la gráfica velocidad-tiempo del vehículo\" style=\"max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;\" /></figure>",
+        "items": [
+          {
+            "label": "A1. ¿Cuánto dura el movimiento en total?",
+            "solution": "100 segundos"
+          },
+          {
+            "label": "A2. ¿Cuánto dura el movimiento en el tramo 2?",
+            "solution": "50 segundos"
+          },
+          {
+            "label": "B1. ¿Cuál es la velocidad máxima que alcanza?",
+            "solution": "30 m/s"
+          },
+          {
+            "label": "B2. ¿Permanece parado en algún periodo?",
+            "solution": "No; solo se detiene en el instante final cuando la velocidad vale 0 m/s"
+          },
+          {
+            "label": "C. ¿Hay algún tramo en el que frene?",
+            "solution": "Sí, en el tramo 3, donde la velocidad baja de 30 m/s a 0 m/s"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q12",
+        "number": 12,
+        "title": "Aceleración en cada tramo",
+        "points": 6,
+        "kind": "openList",
+        "promptHtml": "<p>Completa la tabla con la aceleración de cada tramo.</p><table class=\"exam-table\"><thead><tr><th>Tramo</th><th>Aceleración (m/s²)</th></tr></thead><tbody><tr><td>1</td><td>…</td></tr><tr><td>2</td><td>…</td></tr><tr><td>3</td><td>…</td></tr></tbody></table><figure style=\"margin:1rem 0;\"><img src=\"content/exams/img/2024-04-ct-page-4.png\" alt=\"Página del examen con la gráfica velocidad-tiempo del vehículo\" style=\"max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;\" /></figure>",
+        "items": [
+          {
+            "label": "Tramo 1",
+            "solution": "0,5 m/s²"
+          },
+          {
+            "label": "Tramo 2",
+            "solution": "0 m/s²"
+          },
+          {
+            "label": "Tramo 3",
+            "solution": "-3 m/s²"
+          }
+        ],
+        "noteHtml": "<p>El solucionario oficial usa la fórmula <code>a = (v<sub>f</sub> - v<sub>i</sub>) / (t<sub>f</sub> - t<sub>i</sub>)</code>.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q13",
+        "number": 13,
+        "title": "Tipo de movimiento y aceleración",
+        "points": 3,
+        "kind": "openList",
+        "promptHtml": "<p>Di el tipo de movimiento y la aceleración que se da en cada tramo, justificando tu respuesta.</p><figure style=\"margin:1rem 0;\"><img src=\"content/exams/img/2024-04-ct-page-4.png\" alt=\"Página del examen con la gráfica velocidad-tiempo del vehículo\" style=\"max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;\" /></figure>",
+        "items": [
+          {
+            "label": "A. Tramo 1",
+            "solution": "Movimiento rectilíneo uniformemente acelerado (MRUA), con aceleración positiva y velocidad creciente"
+          },
+          {
+            "label": "B. Tramo 2",
+            "solution": "Movimiento rectilíneo uniforme (MRU), con aceleración nula y velocidad constante"
+          },
+          {
+            "label": "C. Tramo 3",
+            "solution": "Movimiento rectilíneo uniformemente acelerado (MRUA) con aceleración negativa; el vehículo va frenando"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q14",
+        "number": 14,
+        "title": "Texto sobre robotización",
+        "points": 15,
+        "kind": "openText",
+        "promptHtml": "<p>Redacta un texto de al menos 150 palabras sobre la robotización siguiendo el esquema oficial:</p><ul><li>En qué consiste el proceso de robotización y en qué se diferencia de la mecanización y la automatización.</li><li>Los diferentes sistemas que componen un robot.</li><li>Algunas posibles aplicaciones de la robótica.</li></ul>",
+        "openLabel": "Tu redacción",
+        "noteHtml": "<p>Además del contenido, se valoran la presentación, la ortografía, la estructura, la coherencia y la cohesión.</p>",
+        "solutionHtml": "<p>Una respuesta completa debe explicar que la robotización es una fase avanzada de la optimización tecnológica en la que un robot puede sustituir no solo el trabajo manual, sino también parte de la toma de decisiones mediante un programa.</p><p>También debe diferenciarla de la <strong>mecanización</strong> (la máquina sustituye el trabajo manual, pero necesita más control del operario) y de la <strong>automatización</strong> (la máquina realiza tareas sin control permanente, pero sin la capacidad de decisión propia de un robot).</p><p>El solucionario oficial menciona sistemas como el mecánico, el eléctrico, el de control y el sensorial, y acepta aplicaciones en industria, medicina, agricultura, astronáutica o tareas domésticas.</p>"
+      },
+      {
+        "type": "reading",
+        "id": "reading-problema",
+        "title": "Apoyo visual · Problema geométrico del centro escolar",
+        "html": "<p>Usa esta figura para responder a las cuestiones 15, 16 y 17.</p><figure style=\"margin:1rem 0;\"><img src=\"content/exams/img/2024-04-ct-page-6.png\" alt=\"Página del examen con el problema geométrico del centro escolar\" style=\"max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;\" /><figcaption style=\"font-size:.95rem;color:#5c677d;margin-top:.5rem;\">Terreno rectangular de 98 × 76 metros y edificio en forma de L.</figcaption></figure>"
+      },
+      {
+        "type": "question",
+        "id": "q15",
+        "number": 15,
+        "title": "Perímetro y superficie del terreno",
+        "points": 5,
+        "kind": "openText",
+        "promptHtml": "<p>Calcula el perímetro y la superficie total del terreno.</p><figure style=\"margin:1rem 0;\"><img src=\"content/exams/img/2024-04-ct-page-6.png\" alt=\"Página del examen con el problema geométrico del centro escolar\" style=\"max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;\" /></figure>",
+        "openLabel": "Desarrolla los cálculos",
+        "solutionHtml": "<p><strong>Perímetro:</strong> <code>P = 2·76 + 2·98 = 348 m</code>.</p><p><strong>Superficie total:</strong> <code>A = 76 · 98 = 7.448 m²</code>.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q16",
+        "number": 16,
+        "title": "Superficie del edificio y porcentaje de patio",
+        "points": 10,
+        "kind": "openText",
+        "promptHtml": "<p>¿Cuál es la superficie del terreno que ocupará el edificio? ¿Qué porcentaje del terreno ocupará el edificio y qué porcentaje quedará de patio?</p><figure style=\"margin:1rem 0;\"><img src=\"content/exams/img/2024-04-ct-page-6.png\" alt=\"Página del examen con el problema geométrico del centro escolar\" style=\"max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;\" /></figure>",
+        "openLabel": "Explica tus operaciones",
+        "solutionHtml": "<p>La superficie del edificio puede obtenerse descomponiéndolo en dos rectángulos: <code>12 · 32 + 10 · 31 = 384 + 310 = 694 m²</code>.</p><p>El porcentaje ocupado por el edificio es <code>(694 / 7448) · 100 = 9,32 %</code>.</p><p>El porcentaje que queda de patio es <code>100 - 9,32 = 90,68 %</code>.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q17",
+        "number": 17,
+        "title": "Coste del muro exterior",
+        "points": 5,
+        "kind": "openText",
+        "promptHtml": "<p>Se quiere cercar el exterior del terreno dejando una apertura de 5 metros para la puerta principal. Si cada metro lineal cuesta 45 €, ¿cuánto costará construir el muro completo?</p><figure style=\"margin:1rem 0;\"><img src=\"content/exams/img/2024-04-ct-page-6.png\" alt=\"Página del examen con el problema geométrico del centro escolar\" style=\"max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;\" /></figure>",
+        "openLabel": "Resultado final",
+        "solutionHtml": "<p>Del perímetro total de 348 m se dejan <strong>5 m</strong> sin cercar, así que hay que construir <code>343 m</code> de muro.</p><p>El coste total es <code>343 · 45 = 15.435 €</code>.</p>"
+      }
+    ]
   },
   "2024-06-com-in": {
     id: "2024-06-com-in",
