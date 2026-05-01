@@ -4,6 +4,7 @@
 
 - [x] `2024-04-com-in` · Abril 2024 · Ámbito de comunicación (inglés)
 - [x] `2024-04-ct` · Abril 2024 · Ámbito científico-tecnológico
+- [x] `2024-04-social` · Abril 2024 · Ámbito social
 - [x] `2024-06-com-in` · Junio 2024 · Ámbito de comunicación (inglés)
 - [x] `2024-06-ct` · Junio 2024 · Ámbito científico-tecnológico
 - [x] `2024-06-social` · Junio 2024 · Ámbito social
@@ -14,7 +15,6 @@
 
 ## Pendientes de otros packs
 
-- [ ] `2024-04-social` · Abril 2024 · Ámbito social
 - [ ] `2024-04-com-fr` · Abril 2024 · Ámbito de comunicación (francés)
 - [ ] Seguir con otras convocatorias según prioridad de Fernando.
 

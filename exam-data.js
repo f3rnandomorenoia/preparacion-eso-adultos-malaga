@@ -16,6 +16,14 @@ window.examCatalog = [
     "status": "Verificado"
   },
   {
+    "id": "2024-04-social",
+    "label": "Abril 2024 · Ámbito social",
+    "totalPoints": 100,
+    "autoPoints": 25,
+    "manualPoints": 75,
+    "status": "Verificado"
+  },
+  {
     id: "2024-06-com-in",
     label: "Junio 2024 · Ámbito de comunicación (inglés)",
     totalPoints: 100,
@@ -1733,6 +1741,338 @@ window.examData = {
         "promptHtml": "<p>Si el aparato cuesta 675 € y el montaje con mano de obra son 200 €, ¿cuánto costaría en total?</p>",
         "openLabel": "Resultado final",
         "solutionHtml": "<p>El coste total es <code>675 + 200 = 875 €</code>.</p>"
+      }
+    ]
+  },
+  "2024-04-social": {
+    "id": "2024-04-social",
+    "title": "Convocatoria abril 2024 · Ámbito social",
+    "subtitle": "Prueba interactiva basada en el modelo oficial, con apoyo visual para la mezquita de Córdoba y el mapa de la Unión Europea.",
+    "sourceLinks": [
+      {
+        "label": "Archivo oficial de convocatorias anteriores",
+        "url": "https://www.juntadeandalucia.es/educacion/portales/web/educacion-permanente/servicios/pruebas/obtencion-titulo-eso/sobre-las-pruebas/modelos-de-convocatorias-anteriores"
+      },
+      {
+        "label": "ZIP oficial abril 2024 (incluye soluciones)",
+        "url": "https://www.juntadeandalucia.es/educacion/portales/documents/1454565/1624993/Pruebas%20convocatoria%20abril%202024%20%28incluye%20soluciones%29/35ea24e8-0010-b560-0915-44b5fd3171e0?version=1.1"
+      },
+      {
+        "label": "PDF del examen (copia local)",
+        "url": "data/exam-packs/2024-04/extracted/Convocatoria%20abril%202024/SOC_ESPA_2024.pdf"
+      },
+      {
+        "label": "PDF del solucionario (copia local)",
+        "url": "data/exam-packs/2024-04/extracted/Convocatoria%20abril%202024/SOC_ESPA_soluciones_2024.pdf"
+      },
+      {
+        "label": "Notas de extracción y apoyo visual",
+        "url": "content/exams/2024-04-social-notes.md"
+      }
+    ],
+    "introHtml": "<p>Examen oficial de abril de 2024 del ámbito social. Mantiene la estructura original por bloques y añade apoyo visual en la parte de análisis de imágenes y mapas.</p><ul><li><strong>A.</strong> Conceptos básicos (25 puntos)</li><li><strong>B.</strong> Comprensión y análisis de documento escrito (30 puntos)</li><li><strong>C.</strong> Comprensión y análisis de información gráfica (30 puntos)</li><li><strong>D.</strong> Expresión escrita (15 puntos)</li></ul><p><strong>Corrección automática:</strong> 25 puntos de ejercicios cerrados (2, 4 y 6). Los otros 75 puntos quedan para comparación manual con la solución oficial.</p>",
+    "sections": [
+      {
+        "type": "question",
+        "id": "q1",
+        "number": 1,
+        "title": "Términos y procesos históricos",
+        "points": 10,
+        "kind": "openList",
+        "promptHtml": "<p>Relaciona cada definición con el término histórico correcto y con su periodo. Los términos posibles son: <strong>Edad de los Metales</strong>, <strong>Hispania</strong>, <strong>Humanismo</strong>, <strong>Reino Nazarí de Granada</strong> y <strong>Proletariado</strong>. Los periodos son: <strong>Prehistoria</strong>, <strong>Edad Antigua</strong>, <strong>Edad Media</strong>, <strong>Edad Moderna</strong> y <strong>Edad Contemporánea</strong>.</p>",
+        "items": [
+          {
+            "label": "A. Movimiento intelectual, filosófico y artístico que surge en Italia en el siglo XV y se difunde por Europa en el siglo XVI.",
+            "solution": "<strong>Humanismo</strong> · Edad Moderna"
+          },
+          {
+            "label": "B. Nuevo grupo social que surge en el siglo XIX con la Revolución Industrial, formado por los obreros que trabajan en las fábricas.",
+            "solution": "<strong>Proletariado</strong> · Edad Contemporánea"
+          },
+          {
+            "label": "C. Nombre con el que los romanos llamaron a la Península Ibérica durante su dominación.",
+            "solution": "<strong>Hispania</strong> · Edad Antigua"
+          },
+          {
+            "label": "D. Último reino musulmán de la Península que se mantuvo hasta 1492.",
+            "solution": "<strong>Reino Nazarí de Granada</strong> · Edad Media"
+          },
+          {
+            "label": "E. Periodo comprendido entre el VI milenio a. C. y la aparición de la escritura, con surgimiento de la metalurgia.",
+            "solution": "<strong>Edad de los Metales</strong> · Prehistoria"
+          }
+        ],
+        "noteHtml": "<p>La web no puntúa este ejercicio automáticamente, pero puedes comparar cada fila con la solución oficial.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q2",
+        "number": 2,
+        "title": "Conceptos básicos de relieve, espacios protegidos y globalización",
+        "points": 15,
+        "kind": "multiChoiceGroup",
+        "includeInSummary": true,
+        "pointsPerItem": 3,
+        "promptHtml": "<p>Marca el concepto o término más adecuado para cada definición.</p>",
+        "items": [
+          {
+            "label": "A. Tipo de relieve plano y elevado, también conocido como altiplano.",
+            "options": [
+              "Llanura",
+              "Cordillera",
+              "Meseta"
+            ],
+            "correctIndex": 2
+          },
+          {
+            "label": "B. Espacio natural grande, protegido y poco transformado por el ser humano. Ejemplo: Doñana.",
+            "options": [
+              "Reforestación",
+              "Parque Nacional",
+              "Reserva"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "label": "C. Países emergentes que han salido del subdesarrollo pero aún no alcanzan cifras altas de desarrollo humano.",
+            "options": [
+              "Países en vías de desarrollo",
+              "Desarrollados",
+              "Atrasados"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "label": "D. Representación gráfica de una ciudad a gran escala, con calles y edificios detallados.",
+            "options": [
+              "Funciones urbanas",
+              "Plano urbano",
+              "Red urbana"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "label": "E. Proceso de integración internacional de economías, sociedades, culturas y sistemas políticos que funciona como sistema global.",
+            "options": [
+              "Globalización",
+              "Capitalismo",
+              "Neoliberalismo"
+            ],
+            "correctIndex": 0
+          }
+        ]
+      },
+      {
+        "type": "reading",
+        "id": "reading-engels",
+        "title": "Documento 1 · Barrio obrero en Manchester",
+        "html": "<p><strong>Lee el siguiente texto y responde a las cuestiones 3, 4 y 5.</strong></p><blockquote><p>\"Aquí uno se encuentra de verdad en un distrito que ha quedado abandonado por completo a las clases trabajadoras, porque ni siquiera los tenderos y taberneros de la calle principal se esfuerzan en dar una apariencia de limpieza a sus establecimientos.</p><p>Pero por deplorable que sea la condición de la calle principal, no es en absoluto tan mala como la de los callejones y patios que se encuentran tras ella... Los peores patios son los que dan al río, donde se encuentran sin duda las más horribles viviendas que uno haya visto...</p><p>Aguas arriba hay algunos edificios elevados dedicados a la curtiduría de pieles y, más arriba, talleres de teñido de telas y fábricas de porcelana y de gas. Todos los residuos líquidos y sólidos de esos talleres van a parar al río...\"</p></blockquote><p class=\"meta\">Federico Engels describe un barrio obrero de Manchester (1845). Texto extraído de la materia Ámbito social Nivel II (CREA).</p>"
+      },
+      {
+        "type": "question",
+        "id": "q3",
+        "number": 3,
+        "title": "Resumen del documento 1",
+        "points": 5,
+        "kind": "openText",
+        "promptHtml": "<p>Elabora un breve resumen, con tus palabras, de las ideas principales que expresa el texto.</p>",
+        "openLabel": "Tu resumen",
+        "solutionHtml": "<p>Engels describe cómo eran los barrios obreros de Manchester a mediados del siglo XIX durante la Revolución Industrial: calles, patios y viviendas en condiciones miserables, gran suciedad, hacinamiento y contaminación del río por los residuos de talleres y fábricas. En conjunto, el texto denuncia las condiciones infrahumanas en las que vivía la clase trabajadora.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q4",
+        "number": 4,
+        "title": "Verdadero o falso sobre el documento 1",
+        "points": 5,
+        "kind": "booleanGroup",
+        "includeInSummary": true,
+        "pointsPerItem": 1,
+        "promptHtml": "<p>Indica, con la información que se extrae del texto, si las siguientes afirmaciones son verdaderas (V) o falsas (F).</p>",
+        "items": [
+          {
+            "label": "Federico Engels describe un barrio obrero de Londres.",
+            "correct": false
+          },
+          {
+            "label": "Los peores patios son los que dan al río, donde se encuentran las más horribles viviendas.",
+            "correct": true
+          },
+          {
+            "label": "En esa zona hay fábricas y talleres textiles.",
+            "correct": true
+          },
+          {
+            "label": "Los tenderos y taberneros de la calle principal limpian sus establecimientos.",
+            "correct": false
+          },
+          {
+            "label": "El texto fue escrito a mediados del siglo XIX.",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q5",
+        "number": 5,
+        "title": "Situación del proletariado en la Revolución Industrial",
+        "points": 5,
+        "kind": "openText",
+        "promptHtml": "<p>Explica brevemente la situación del proletariado en la Revolución Industrial al que se refiere el texto.</p>",
+        "openLabel": "Tu explicación",
+        "solutionHtml": "<p>El proletariado era la clase obrera surgida con la Revolución Industrial. Trabajaba por salarios muy bajos, con jornadas larguísimas, sin descanso, sin seguridad laboral ni protección social. Vivía en barrios insalubres, cerca de las fábricas, en viviendas hacinadas y sin buenas condiciones higiénicas. También trabajaban mujeres y niños por sueldos inferiores. Esta situación impulsó la toma de conciencia obrera y las luchas por mejorar sus derechos.</p>"
+      },
+      {
+        "type": "reading",
+        "id": "reading-constitucion",
+        "title": "Documento 2 · Constitución española de 1978",
+        "html": "<p><strong>Lee el siguiente texto y responde a las cuestiones 6, 7 y 8.</strong></p><blockquote><p>\"Art. 1.1. España se constituye en un Estado social y democrático de derecho... La soberanía nacional reside en el pueblo español... La forma política del Estado español es la Monarquía parlamentaria.</p><p>Art. 2. La Constitución se fundamenta en la indisoluble unidad de la Nación española... y reconoce y garantiza el derecho a la autonomía...</p><p>Art. 14. Los españoles son iguales ante la Ley...</p><p>Art. 56. El Rey es el Jefe del Estado...</p><p>Art. 66. Las Cortes Generales representan al pueblo español... ejercen la potestad legislativa del Estado...\"</p></blockquote><p class=\"meta\">Artículos procedentes de la Constitución española de 1978.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q6",
+        "number": 6,
+        "title": "Verdadero o falso sobre la Constitución de 1978",
+        "points": 5,
+        "kind": "booleanGroup",
+        "includeInSummary": true,
+        "pointsPerItem": 1,
+        "promptHtml": "<p>Indica, con la información que se extrae del texto, si las siguientes afirmaciones son verdaderas (V) o falsas (F).</p>",
+        "items": [
+          {
+            "label": "La soberanía nacional no reside en el pueblo español.",
+            "correct": false
+          },
+          {
+            "label": "Las Cortes Generales ejercen la potestad legislativa del Estado.",
+            "correct": true
+          },
+          {
+            "label": "La forma política del Estado español es la Monarquía Parlamentaria.",
+            "correct": true
+          },
+          {
+            "label": "No se garantiza la libertad ideológica, religiosa y de culto.",
+            "correct": false
+          },
+          {
+            "label": "La Constitución se fundamenta en la indisoluble unidad de la Nación española.",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q7",
+        "number": 7,
+        "title": "Ideas principales del documento 2",
+        "points": 5,
+        "kind": "openText",
+        "promptHtml": "<p>Expresa con tus propias palabras las ideas principales que recoge el texto anterior.</p>",
+        "openLabel": "Tu explicación",
+        "solutionHtml": "<p>El texto resume varios artículos de la Constitución de 1978: España es un Estado social y democrático de derecho; la soberanía reside en el pueblo; la forma política es la monarquía parlamentaria; se defiende la unidad de España y el derecho a la autonomía; todos los españoles son iguales ante la ley; el Rey es el Jefe del Estado; y las Cortes Generales representan al pueblo, hacen las leyes, aprueban presupuestos y controlan al Gobierno.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q8",
+        "number": 8,
+        "title": "Importancia y rasgos de la Constitución de 1978",
+        "points": 5,
+        "kind": "openText",
+        "promptHtml": "<p>Explica la importancia de la Constitución de 1978 e indica cuáles son sus principales rasgos.</p>",
+        "openLabel": "Tu respuesta desarrollada",
+        "solutionHtml": "<p>La Constitución de 1978 puso fin a la dictadura franquista y consolidó la democracia durante la Transición. Fue aprobada en referéndum y sigue siendo la norma fundamental vigente.</p><p>Sus rasgos principales son: España como Estado social y democrático de derecho; soberanía nacional en el pueblo; monarquía parlamentaria; separación de poderes; reconocimiento de derechos y libertades; e organización territorial descentralizada en comunidades autónomas, provincias y municipios.</p><p>También garantiza la igualdad ante la ley y los derechos individuales y colectivos, y sitúa a España como una democracia moderna integrada en la comunidad internacional.</p>"
+      },
+      {
+        "type": "reading",
+        "id": "reading-mezquita",
+        "title": "Información gráfica 1 · Mezquita de Córdoba",
+        "html": "<p>Usa esta imagen para responder a las cuestiones 9, 10 y 11.</p><figure style=\"margin:1rem 0;\"><img src=\"content/exams/img/2024-04-social-mezquita.png\" alt=\"Interior de la mezquita de Córdoba usado en el examen oficial.\" style=\"max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;\" /><figcaption style=\"font-size:.95rem;color:#5c677d;margin-top:.5rem;\">Interior de la mezquita de Córdoba.</figcaption></figure>"
+      },
+      {
+        "type": "question",
+        "id": "q9",
+        "number": 9,
+        "title": "Identificación de la obra arquitectónica",
+        "points": 5,
+        "kind": "openText",
+        "promptHtml": "<p>Identifica esta obra arquitectónica, su función, época y estilo artístico al que corresponde.</p>",
+        "openLabel": "Tu identificación",
+        "solutionHtml": "<p>Es la <strong>sala de oraciones de la mezquita de Córdoba</strong>. Tiene función <strong>religiosa</strong>, pertenece al <strong>arte hispanomusulmán</strong> y corresponde al <strong>periodo califal</strong>, con gran desarrollo en el siglo X.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q10",
+        "number": 10,
+        "title": "Descripción y análisis artístico",
+        "points": 5,
+        "kind": "openText",
+        "promptHtml": "<p>Describe y analiza artísticamente esta obra.</p>",
+        "openLabel": "Tu análisis",
+        "solutionHtml": "<p>La mezquita de Córdoba es una de las obras maestras del Islam en Occidente. Destaca por su planta rectangular, patio, sala de oraciones y muro de la quibla con mihrab.</p><p>En la sala de oración sobresale la doble arquería con arcos de herradura y de medio punto, dovelas rojas y blancas, columnas reaprovechadas y una solución estructural que aporta altura y un efecto visual de gran riqueza.</p><p>También destaca la decoración del mihrab y la maqsura, con mosaicos, yeserías, atauriques y arcos profusamente decorados. Los materiales son relativamente modestos, pero el resultado artístico es muy suntuoso.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q11",
+        "number": 11,
+        "title": "Arquitectura hispanomusulmana",
+        "points": 5,
+        "kind": "openText",
+        "promptHtml": "<p>Elabora una redacción describiendo la arquitectura hispanomusulmana y citando sus obras principales.</p>",
+        "openLabel": "Tu redacción",
+        "solutionHtml": "<p>La arquitectura hispanomusulmana se desarrolló en Al-Ándalus y se caracteriza por edificios orientados al interior, materiales modestos y una decoración muy rica. Son típicos los arcos de herradura, polilobulados y apuntados, las yeserías, lacerías, atauriques, azulejos, mocárabes, patios, fuentes y juegos de luz y agua.</p><p>Entre sus obras más destacadas están la <strong>mezquita de Córdoba</strong>, <strong>Medina Azahara</strong>, la <strong>Giralda</strong> y el patio de los Naranjos de Sevilla, la <strong>mezquita del Cristo de la Luz</strong> en Toledo, alcazabas como las de Málaga o Almería y, sobre todo, la <strong>Alhambra de Granada</strong>.</p>"
+      },
+      {
+        "type": "reading",
+        "id": "reading-ue",
+        "title": "Información gráfica 2 · Mapa de la Unión Europea en 2023",
+        "html": "<p>Usa este mapa para responder a las cuestiones 12, 13 y 14.</p><figure style=\"margin:1rem 0;\"><img src=\"content/exams/img/2024-04-social-ue-mapa.png\" alt=\"Mapa de la Unión Europea en 2023 usado en el examen oficial.\" style=\"max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;\" /><figcaption style=\"font-size:.95rem;color:#5c677d;margin-top:.5rem;\">Mapa político de Europa y países de la Unión Europea en 2023.</figcaption></figure>"
+      },
+      {
+        "type": "question",
+        "id": "q12",
+        "number": 12,
+        "title": "Lectura general del mapa de la UE",
+        "points": 5,
+        "kind": "openText",
+        "promptHtml": "<p>Indica qué representa la imagen y explica la leyenda empleada.</p>",
+        "openLabel": "Tu respuesta",
+        "solutionHtml": "<p>La imagen representa un <strong>mapa político de Europa en 2023</strong>. El color más oscuro identifica a los <strong>países miembros de la Unión Europea</strong>; los tonos grises marcan otros países europeos y territorios limítrofes o próximos según la leyenda. Además, aparece un pequeño mapa de situación que ubica Europa dentro del conjunto de continentes.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q13",
+        "number": 13,
+        "title": "Europa y Unión Europea",
+        "points": 5,
+        "kind": "openText",
+        "promptHtml": "<p>Observa el mapa y explica la diferencia entre países de Europa y países miembros de la Unión Europea.</p>",
+        "openLabel": "Tu explicación",
+        "solutionHtml": "<p>Los <strong>países europeos</strong> son todos los estados soberanos situados en el continente europeo. Los <strong>países miembros de la Unión Europea</strong> son solo los que forman parte de esa organización supranacional y comparten un marco político y económico común.</p><p>Por tanto, hay países que están en Europa pero <strong>no pertenecen a la UE</strong>, como Noruega, Suiza, Islandia, Reino Unido, Bielorrusia o varios estados balcánicos. En 2023 la Unión Europea está formada por <strong>27 países</strong>.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q14",
+        "number": 14,
+        "title": "Historia y características de la Unión Europea",
+        "points": 5,
+        "kind": "openText",
+        "promptHtml": "<p>Describe brevemente la historia y las características de la Unión Europea.</p>",
+        "openLabel": "Tu descripción",
+        "solutionHtml": "<p>La integración europea comenzó tras la Segunda Guerra Mundial con la <strong>CECA</strong> en 1951 y avanzó con la <strong>CEE</strong> creada por el Tratado de Roma en 1957. En 1992, el Tratado de Maastricht transformó ese proceso en la <strong>Unión Europea</strong>, reforzando la integración política y económica.</p><p>Entre sus rasgos principales están el mercado común, la libre circulación de personas, mercancías, servicios y capitales, la cooperación política, el respeto a la democracia y los derechos, y la existencia de instituciones como el Parlamento Europeo, el Consejo, la Comisión y el Tribunal de Justicia. También busca reducir desigualdades entre regiones, proteger el medio ambiente y reforzar la cooperación entre estados.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q15",
+        "number": 15,
+        "title": "Informe sobre ciudades del Tercer Mundo",
+        "points": 15,
+        "kind": "openText",
+        "promptHtml": "<p>Imagina que eres un periodista o geógrafo que trabaja para la ONU y te piden un informe de al menos 150 palabras sobre la situación de las ciudades en los países del Tercer Mundo. Puedes orientarte con este esquema oficial:</p><ul><li>El crecimiento imparable de la urbanización en el mundo y la explosión urbanística en los países menos desarrollados.</li><li>Las causas de este crecimiento.</li><li>Las características de las ciudades del Tercer Mundo.</li><li>La problemática.</li></ul>",
+        "openLabel": "Tu informe",
+        "noteHtml": "<p>Se valora el contenido geográfico, la estructura y la claridad de la redacción.</p>",
+        "solutionHtml": "<p>La respuesta es abierta, pero debería mencionar al menos estos puntos: el fuerte crecimiento de la urbanización mundial, especialmente en países menos desarrollados; causas como la alta natalidad y el éxodo rural; enormes desigualdades entre barrios ricos y periferias de infraviviendas; y problemas graves de servicios, transporte, sanidad, residuos y contaminación.</p><p>También conviene citar ejemplos de megaciudades del mundo en desarrollo y señalar que la cooperación internacional y la planificación urbana sostenible son claves para mejorar las condiciones de vida.</p>"
       }
     ]
   },
