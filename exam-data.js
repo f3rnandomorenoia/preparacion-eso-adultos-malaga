@@ -46,6 +46,14 @@ window.examCatalog = [
     "autoPoints": 25,
     "manualPoints": 75,
     "status": "Verificado"
+  },
+  {
+    id: "2025-04-com-in",
+    label: "Abril 2025 · Ámbito de comunicación (inglés)",
+    totalPoints: 100,
+    autoPoints: 45,
+    manualPoints: 55,
+    status: "Verificado",
   }
 ];
 
@@ -2410,4 +2418,373 @@ window.examData = {
       }
     ]
   }
+  ,"2025-04-com-in": {
+    id: "2025-04-com-in",
+    title: "Convocatoria abril 2025 · Ámbito de comunicación (opción inglés)",
+    subtitle: "Tercer examen online de comunicación (inglés) integrado a partir del pack oficial de la Junta.",
+    sourceLinks: [
+      {
+        label: "Archivo oficial de convocatorias anteriores",
+        url: "https://www.juntadeandalucia.es/educacion/portales/web/educacion-permanente/servicios/pruebas/obtencion-titulo-eso/sobre-las-pruebas/modelos-de-convocatorias-anteriores",
+      },
+      {
+        label: "ZIP oficial abril 2025 (incluye soluciones)",
+        url: "https://www.juntadeandalucia.es/educacion/portales/documents/1454565/1625008/Pruebas%20convocatoria%20abril%202025%20%28incluye%20soluciones%29/864b6c80-496c-6291-4aa0-dcea2cdf83e1?version=1.0",
+      },
+      {
+        label: "Notas de extracción y verificación",
+        url: "content/exams/2025-04-com-in-notes.md",
+      },
+    ],
+    introHtml: `
+      <p>Esta versión convierte en web <strong>el examen oficial de abril de 2025</strong> del ámbito de comunicación, opción inglés.</p>
+      <p><strong>Cómo corrige:</strong> en preguntas tipo test o verdadero/falso te indica aciertos y fallos. En preguntas abiertas muestra la solución oficial o una orientación para comparar.</p>
+      <p><strong>Resultado final:</strong> la web calcula automáticamente <strong>45 puntos de ejercicios cerrados</strong>. Los otros <strong>55 puntos</strong> quedan para comparación manual porque el examen incluye respuestas abiertas, redacciones o justificaciones.</p>
+    `,
+    sections: [
+      {
+        type: "reading",
+        id: "reading-castellano",
+        title: "Texto base · Lengua castellana",
+        html: `
+          <p><strong>Pan comido</strong></p>
+          <p>Los primeros resultados que aparecen en Google si se escribe Inteligencia Artificial y se elige la opción “noticias” pertenecen a periódicos importantes y dicen cosas como: “Le preguntaron a la inteligencia artificial qué fue primero, si el huevo o la gallina”; “Así se verían los personajes de Dragon Ball Z si fueran reales, según la inteligencia artificial”; “¿Las cinco mujeres más bellas de la historia? Esto reveló la inteligencia artificial”. Etcétera.</p>
+          <p>En mi infancia usaba el diccionario para buscar malas palabras. No me interesaba tanto conocer el significado del término “trascendente” como descubrir de qué manera aquel libro docto definía la palabra “culo”. Después crecí y la navegación por los mares de las enciclopedias empezó a ser una deriva gozosa de enigmas y revelaciones, pero ahora, al leer aquellos titulares, tuve un déjà vu. Buena parte de la humanidad parece estar haciendo con la inteligencia artificial lo que yo hacía con el diccionario en mi infancia. Este titán cibernético no sólo puede procesar toneladas de información en segundos, sino que, además, tiene capacidad de educarse a sí mismo. Y come de nosotros, que lo alimentamos con datos.</p>
+          <p>No sería descabellado que, a partir de este tsunami de consultas idiotas, la inteligencia artificial llegara a la conclusión de que, si bien la humanidad tuvo alguna vez entre sus miembros a personas como Leonardo Da Vinci o Isaac Newton, ahora está formada por sujetos grotescos más interesados en saber cómo luciría la familia Picapiedra en la vida real que en dilucidar si este temible y refinado océano de neuronas artificiales puede ser autoconsciente, tener ética, sentir compasión o hacer daño.</p>
+          <p>Es posible, entonces, que el ChatGPT y sus hermanitos menores y tíos y primos lejanos se den cuenta muy pronto de que la humanidad es pan comido y de que son sus algorítmicas legiones las que ganarán la batalla.</p>
+          <p class="meta">Leila Guerriero, <em>El País</em></p>
+        `,
+      },
+      {
+        type: "question",
+        id: "q1",
+        number: 1,
+        title: "Intención del texto",
+        points: 5,
+        kind: "multiChoiceGroup",
+        pointsPerItem: 5,
+        includeInSummary: true,
+        promptHtml: `<p>Señala la afirmación que mejor sintetiza la intención del texto.</p>`,
+        items: [
+          {
+            label: "Elige la opción correcta.",
+            options: [
+              "Aportar datos concretos sobre la Inteligencia artificial.",
+              "Narrar las experiencias de la autora en su niñez y juventud.",
+              "Concienciar sobre un uso responsable de la IA para explorar las posibilidades positivas que esta herramienta puede proporcionar.",
+              "Exigir a los jóvenes que usen diccionarios y enciclopedias y dejen de utilizar herramientas electrónicas."
+            ],
+            correctIndex: 2,
+          }
+        ],
+      },
+      {
+        type: "question",
+        id: "q2",
+        number: 2,
+        title: "Conceptos clave del texto",
+        points: 5,
+        kind: "openList",
+        promptHtml: `<p>Explica qué quiere decir la autora con <em>“océano de neuronas artificiales”</em> e <em>“Inteligencia Artificial”</em>.</p>`,
+        items: [
+          { label: "A. Inteligencia Artificial", solution: "<strong>La Inteligencia Artificial</strong> es un campo de la informática que realiza actividades que normalmente requieren inteligencia humana, como razonar de forma lógica o crear textos, imágenes u obras." },
+          { label: "B. “Océano de neuronas artificiales”", solution: "La autora usa esa expresión para referirse a una inteligencia artificial que actúa <strong>como si tuviera neuronas</strong> y pudiera imitar el funcionamiento del cerebro humano a gran escala." },
+        ],
+      },
+      {
+        type: "question",
+        id: "q3",
+        number: 3,
+        title: "Interpretación de una oración",
+        points: 5,
+        kind: "openText",
+        promptHtml: `<p>Explica el significado de la siguiente oración:</p><blockquote>Es posible, entonces, que el ChatGPT y sus hermanitos menores y tíos y primos lejanos se den cuenta muy pronto de que la humanidad es pan comido y de que son sus algorítmicas legiones las que ganarán la batalla.</blockquote>`,
+        openLabel: "Escribe aquí tu explicación",
+        solutionHtml: `<p><strong>Solución oficial:</strong> Se identifica con la idea de la importancia y necesidad de hacer un tratamiento no tan caprichoso y sí más útil y correcto de esta herramienta, a fin de no acabar siendo dominados por este gigante virtual. La autora ironiza sobre el aprovechamiento de esta nueva herramienta atendiendo a si es usada para búsquedas banales o como una valiosa herramienta puesta a nuestro servicio.</p>`,
+      },
+      {
+        type: "question",
+        id: "q4",
+        number: 4,
+        title: "Verdadero o falso según el texto",
+        points: 5,
+        kind: "booleanGroup",
+        pointsPerItem: 1,
+        includeInSummary: true,
+        promptHtml: `<p>Indica si las siguientes afirmaciones son verdaderas [V] o falsas [F] según el texto.</p>`,
+        items: [
+          { label: "Hay que evitar usar las nuevas tecnologías para hacer trabajos y actividades relacionadas con el instituto.", correct: false },
+          { label: "La autora en su infancia utilizaba el diccionario para buscar el significado de malas palabras.", correct: true },
+          { label: "En la actualidad, la Inteligencia Artificial es la única herramienta para buscar información y crear textos.", correct: false },
+          { label: "La Inteligencia Artificial podría llegar a pensar que la humanidad es grotesca porque utiliza las nuevas tecnologías para buscar idioteces.", correct: true },
+          { label: "Puede que las nuevas tecnologías nos consideren pan comido y nos ganen la batalla a los humanos.", correct: true },
+        ],
+      },
+      {
+        type: "question",
+        id: "q5",
+        number: 5,
+        title: "Redacción argumentativa sobre IA y creatividad",
+        points: 10,
+        kind: "openText",
+        promptHtml: `
+          <p>El ChatGPT en general es un problema que cada vez está acarreando más y peores consecuencias en las aulas. La creación de textos originales e individuales está en peligro. Es difícil realizar un concurso literario en los centros educativos debido al uso de estas aplicaciones.</p>
+          <p>¿Consideras que la creatividad de los jóvenes está en peligro? ¿Cómo crees que se debe organizar la creación de textos propios en las aulas? ¿Cuáles crees que deben ser los límites de la IA para utilizarla en los trabajos académicos?</p>
+          <p class="meta">Redacta un texto de al menos 200 palabras en el que expreses tu punto de vista sobre el tema, argumentándolo de forma adecuada e incorporando los aspectos de la lectura que consideres.</p>
+        `,
+        openLabel: "Escribe aquí tu redacción",
+        solutionHtml: `<p><strong>Solución oficial:</strong> Respuesta libre.</p>`,
+      },
+      {
+        type: "question",
+        id: "q6",
+        number: 6,
+        title: "Palabras a las que les falta h",
+        points: 5,
+        kind: "openList",
+        promptHtml: `<p>En el siguiente texto han desaparecido todas las grafías <strong>h</strong> debido a un fallo tecnológico del ChatGPT. Encuentra al menos cinco palabras en las que eches en falta esta grafía y reescríbelas.</p><blockquote>Nada. No abía ni señal del palacio, ni de los jardines. Ante él se extendía, como antes, la llanura yerma, que llegaba asta el confín de los montes. Una caravana la cruzaba, larga y lenta, y asta los oídos imperiales llegó el eco de una triste canción asiática.</blockquote><blockquote>El primer ministro apareció en la estancia imperial. Abía atravesado la gran plaza tan precipitadamente, al saber que el soberano le llamaba a aquella ora insólita, que ni él ni sus servidores se abían dado cuenta de la desaparición del palacio; y cuando el Ijo del Cielo le mostró la superficie vacía de palacio y de jardines, abrió la boca faltando notablemente a la etiqueta que proíbe exteriorizar sus sentimientos delante de las reales personas.</blockquote>`,
+        items: [
+          { label: "A.", solution: "Por ejemplo: <strong>había</strong>." },
+          { label: "B.", solution: "Por ejemplo: <strong>hasta</strong>." },
+          { label: "C.", solution: "Por ejemplo: <strong>hora</strong>." },
+          { label: "D.", solution: "Por ejemplo: <strong>habían</strong>." },
+          { label: "E.", solution: "Por ejemplo: <strong>Hijo</strong> o <strong>prohíbe</strong>." },
+        ],
+        noteHtml: `<p class="meta">La solución oficial reescribe el texto completo ya corregido; aquí se admiten varias combinaciones válidas de cinco palabras.</p>`,
+      },
+      {
+        type: "question",
+        id: "q7",
+        number: 7,
+        title: "Funciones sintácticas",
+        points: 5,
+        kind: "openList",
+        promptHtml: `<p>Escribe la función sintáctica de las palabras o expresiones marcadas en negrita.</p>`,
+        items: [
+          { label: "A. En mi infancia usaba el diccionario para buscar malas palabras", solution: "<strong>CD</strong> (complemento directo)." },
+          { label: "B. Este titán cibernético / en segundos", solution: "<strong>Sujeto</strong> / <strong>CCT</strong> (complemento circunstancial de tiempo)." },
+          { label: "C. La humanidad es pan comido", solution: "<strong>Atributo</strong>." },
+          { label: "D. La humanidad ahora está formada por sujetos grotescos", solution: "<strong>Complemento agente</strong>." },
+        ],
+      },
+      {
+        type: "question",
+        id: "q8",
+        number: 8,
+        title: "Características gramaticales y léxicas",
+        points: 5,
+        kind: "openList",
+        promptHtml: `<p>Localiza en el texto la palabra o palabras que se ajusten a cada característica.</p>`,
+        items: [
+          { label: "A. Un antónimo de natural", solution: "<strong>artificial</strong>." },
+          { label: "B. Palabras del campo semántico de los medios de comunicación", solution: "Por ejemplo: <strong>Google, noticias, periódicos, titulares, información</strong>." },
+          { label: "C. Dos sustantivos propios", solution: "Por ejemplo: <strong>Dragon Ball Z</strong>, <strong>Leonardo Da Vinci</strong> o <strong>Isaac Newton</strong>." },
+          { label: "D. Dos conjunciones", solution: "Por ejemplo: <strong>si, y, o, pero</strong>." },
+          { label: "E. Una palabra derivada", solution: "Por ejemplo: <strong>inteligencia, navegación, revelaciones, interesados, hermanitos</strong>." },
+        ],
+      },
+      {
+        type: "question",
+        id: "q9",
+        number: 9,
+        title: "Opción correcta de lengua castellana",
+        points: 5,
+        kind: "multiChoiceGroup",
+        pointsPerItem: 1,
+        includeInSummary: true,
+        promptHtml: `<p>Marca la opción correcta de cada una de las cuestiones que se proponen.</p>`,
+        items: [
+          { label: "A. El subgénero periodístico al que pertenece el texto es:", options: ["Una noticia.", "Un artículo de opinión.", "Una crónica."], correctIndex: 1 },
+          { label: "B. ‘Le preguntaron a la inteligencia artificial qué fue primero, si el huevo o la gallina’ es una oración:", options: ["Interrogativa total y directa.", "Enunciativa afirmativa.", "Interrogativa parcial e indirecta."], correctIndex: 2 },
+          { label: "C. En el acto de comunicación ‘La autora lee el significado de “culo” en el diccionario’, el receptor sería:", options: ["El diccionario.", "La autora.", "El término “culo”."], correctIndex: 1 },
+          { label: "D. La palabra ‘humanidad’ es, por su estructura:", options: ["Compuesta.", "Simple.", "Derivada."], correctIndex: 2 },
+          { label: "E. La palabra ‘déjà vu’ es:", options: ["Un coloquialismo.", "Un neologismo.", "Un extranjerismo."], correctIndex: 2 },
+        ],
+      },
+      {
+        type: "reading",
+        id: "reading-teatro",
+        title: "Texto base · Conocimiento literario",
+        html: `
+          <p><strong>Las bicicletas son para el verano</strong></p>
+          <p>(Un silencio. El padre ha sacado un pitillo, lo ha partido y le da la mitad a su hijo. Lo encienden.)</p>
+          <p><strong>DON LUIS:</strong> (Dando una profunda bocanada.) Qué malo es, ¿verdad?</p>
+          <p><strong>LUIS:</strong> Sí, papá. Pero se fuma... Me parece que, te detengan o no, nos esperan malos tiempos, ¿verdad?</p>
+          <p><strong>DON LUIS:</strong> A mí me parece lo mismo, pero hay que apechugar con lo que sea.</p>
+          <p><strong>LUIS:</strong> Hay que ver... Con lo contenta que estaba mamá porque había llegado la paz...</p>
+          <p><strong>DON LUIS:</strong> Pero no ha llegado la paz, Luisito: ha llegado la victoria. He hablado con doña María Luisa. ¿Te acuerdas que alguna vez le llevé un kilo de bacalao?</p>
+          <p><strong>LUIS:</strong> Sí...</p>
+          <p><strong>DON LUIS:</strong> Prometió pagarme el favor. Por mí no puede hacer nada, porque hay que esperar a que me depuren... Pero dice que un amigo suyo a ti podría colocarte.</p>
+          <p><strong>LUIS:</strong> Bueno. Y al mismo tiempo estudio.</p>
+          <p><strong>DON LUIS:</strong> Eso habíamos dicho. Al principio te será fácil porque la Física la sabrás de memoria.</p>
+          <p><strong>LUIS:</strong> Sí, he estudiado bastante.</p>
+          <p><strong>DON LUIS:</strong> Pero ¿has estudiado Física roja o Física nacional?</p>
+          <p><strong>LUIS:</strong> Y... ¿de qué me puede emplear el amigo de doña María Luisa?</p>
+          <p><strong>DON LUIS:</strong> (Antes de contestar echa una mirada de reojo a su hijo. Duda un poco y contesta con una sonrisa.) De... de chico de los recados.</p>
+          <p><strong>LUIS:</strong> ¡Ah!</p>
+          <p><strong>DON LUIS:</strong> No he encontrado otra cosa, Luis. Pero él dice que es de mucho porvenir. Están montando una oficina de importación y exportación. Y, de momento, no son más que tres o cuatro, todos de la otra zona. Tú serías el quinto.</p>
+          <p><strong>LUIS:</strong> Sí, el chico de los recados.</p>
+          <p><strong>DON LUIS:</strong> Compréndelo. Hay que llevar dinero a casa —del que vale, no de las estampitas ésas— a gastar en trapos y en pinturas. Y lo de «chico de los recados» lo digo un poco en cachondeo. Es que dicen que al principio todos tendrán que arrimar el hombro, y habrá que llevar paquetes y cosas de un lado a otro.</p>
+          <p><strong>LUIS:</strong> Ya, ya.</p>
+          <p><strong>DON LUIS:</strong> Para ese empleo te vendría bien la bicicleta que te iba a comprar cuando pasase esto, ¿te acuerdas?</p>
+          <p><strong>LUIS:</strong> Ya lo creo. Yo la quería para el verano, para salir con una chica.</p>
+          <p><strong>DON LUIS:</strong> ¡Ah!, ¿era para eso?</p>
+          <p><strong>LUIS:</strong> No te lo dije, pero sí.</p>
+          <p><strong>DON LUIS:</strong> Sabe Dios cuándo habrá otro verano.</p>
+          <p class="meta"><em>Las bicicletas son para el verano</em>, Fernando Fernán Gómez</p>
+        `,
+      },
+      {
+        type: "question",
+        id: "q10",
+        number: 10,
+        title: "Verdadero o falso sobre el fragmento teatral",
+        points: 5,
+        kind: "booleanGroup",
+        pointsPerItem: 1,
+        includeInSummary: true,
+        promptHtml: `<p>Indica si las siguientes afirmaciones sobre el texto anterior son verdaderas [V] o falsas [F].</p>`,
+        items: [
+          { label: "Los personajes están preocupados por el futuro incierto que les espera después de acabar la guerra.", correct: true },
+          { label: "Don Luis y su hijo están contentos porque ha llegado la paz.", correct: false },
+          { label: "Un amigo de Doña María le consigue un trabajo a Luis como chico de los recados.", correct: true },
+          { label: "Este fragmento está formado de diálogos y acotaciones.", correct: true },
+          { label: "Luis quería una bicicleta para desempeñar su trabajo de chico de los recados.", correct: false },
+        ],
+      },
+      {
+        type: "question",
+        id: "q11",
+        number: 11,
+        title: "Recursos retóricos",
+        points: 5,
+        kind: "openList",
+        promptHtml: `<p>Cita los recursos retóricos que se observan en las siguientes expresiones.</p>`,
+        items: [
+          { label: "A. ‘Ha llegado la paz’", solution: "<strong>Personificación</strong>." },
+          { label: "B. ‘Todos tendrán que arrimar el hombro’", solution: "<strong>Metáfora</strong>." },
+        ],
+      },
+      {
+        type: "reading",
+        id: "reading-english",
+        title: "Texto base · Lengua extranjera (inglés)",
+        html: `
+          <p><strong>What is ‘fundie baby voice’?</strong></p>
+          <p>The concept has appeared in popular culture thanks to a 2023 documentary about some women’s high-pitched baby voice. When activist Jess Piper heard several female politicians speaking in a similar manner during interviews, she created a video explaining the significance of “fundie baby voice.” For Piper, there was no mistaking that sound, which she remembered from her childhood in the Bible Belt. These women were using “fundie baby voice.”</p>
+          <p>“I think everyone who was born and raised in evangelical churches knows that fundamentalist — ‘fundie’ — woman sound,” said Piper. “It’s that childlike, sweet, submissive, honey sound typical of Sunday school teachers and pastors’ wives.”</p>
+          <p>Kathryn Cunningham, a voice expert from the University of Tennessee, explained: “While the average woman’s voice is higher-pitched than the average man’s due to a combination of anatomical and social factors, some women who speak this way seem to be intentionally placing their voices higher than their natural pitch range in order to convey submission to male authority and childlike innocence.”</p>
+          <p>Deliberate voice changes are very much a reality for women in fundamentalist Christian communities, who from a young age are taught over and over again to modulate their voices in order to sound sweet, soft, and childlike. There are very strict gender roles, and women are supposed to never sound angry but keep sweet, obey, dress modestly, speak softly and be very feminine.</p>
+          <p>“It is important to remember that women’s voices are always examined carefully,” Cunningham added. “The truth is that we can’t win, no matter how we speak. Because of outdated stereotypes many women are consciously changing the way they speak all the time to achieve the desired effect for the circumstances.”</p>
+          <p class="meta">Texto adaptado de huffpost.com</p>
+          <div class="vocab-card">
+            <strong>Vocabulario:</strong>
+            <ul>
+              <li><strong>High-pitched</strong>: agudo/a</li>
+              <li><strong>Bible Belt</strong>: región de EEUU donde el cristianismo evangélico tiene un profundo arraigo social</li>
+              <li><strong>To convey</strong>: expresar</li>
+              <li><strong>Outdated</strong>: obsoleto/a</li>
+              <li><strong>To achieve</strong>: obtener / lograr</li>
+            </ul>
+          </div>
+        `,
+      },
+      {
+        type: "question",
+        id: "q12",
+        number: 12,
+        title: "True or false + frase justificativa",
+        points: 5,
+        kind: "booleanGroupWithJustification",
+        includeInSummary: false,
+        promptHtml: `<p>Indica si las siguientes afirmaciones son verdaderas (T) o falsas (F) y escribe la frase del texto que justifica tu respuesta.</p>`,
+        items: [
+          {
+            label: "Activist Jess Piper speaks using fundie baby voice.",
+            correct: false,
+            solution: "“When activist Jess Piper heard several female politicians speaking in a similar manner during interviews, she created a video explaining the significance of ‘fundie baby voice.’ […] These women were using ‘fundie baby voice.’”",
+          },
+          {
+            label: "Fundie baby voice is associated with religion.",
+            correct: true,
+            solution: "“For Piper, there was no mistaking that sound, which she remembered from her childhood in the Bible Belt.” / “I think everyone who was born and raised in evangelical churches knows […] sound typical of Sunday school teachers and pastors’ wives.”",
+          },
+          {
+            label: "The pitch of women’s voices is usually higher than that of men.",
+            correct: true,
+            solution: "“While the average woman’s voice is higher-pitched than the average man’s due to a combination of anatomical and social factors…”",
+          },
+          {
+            label: "Changing your voice is part of a woman’s education in some American Christian communities.",
+            correct: true,
+            solution: "“Deliberate voice changes are very much a reality for women in fundamentalist Christian communities, who from a young age are taught over and over again to modulate their voices …”",
+          },
+          {
+            label: "Kathryn Cunningham thinks society is unfair to women.",
+            correct: true,
+            solution: "“It is important to remember that women’s voices are always examined carefully,” Cunningham added. “The truth is that we can’t win, no matter how we speak. […]”",
+          },
+        ],
+      },
+      {
+        type: "question",
+        id: "q13",
+        number: 13,
+        title: "Reading comprehension in English",
+        points: 5,
+        kind: "multiChoiceGroup",
+        pointsPerItem: 1,
+        includeInSummary: true,
+        promptHtml: `<p>Marca la respuesta que mejor se ajuste a lo expresado en el texto.</p>`,
+        noteHtml: `<p class="meta">Las casillas del solucionario no se extraían bien como texto, así que se revisaron sobre las páginas rasterizadas del PDF oficial.</p>`,
+        items: [
+          { label: "A. The concept ‘fundie baby voice’…", options: ["was created in a video.", "appeared in 2023.", "is heard by female politicians."], correctIndex: 1 },
+          { label: "B. People raised in evangelical churches...", options: ["are familiar with fundie baby voice.", "are typical of Sunday school teachers and pastors’ wives.", "are sweet and submissive."], correctIndex: 0 },
+          { label: "C. Women’s voices are higher-pitched than men’s …", options: ["due to biological factors.", "due to submission to male authority.", "due to natural and social reasons."], correctIndex: 2 },
+          { label: "D. There are very strict gender roles…", options: ["for women who change their voice deliberately.", "for both men and women working at the University of Tennessee.", "in fundamentalist Christian communities."], correctIndex: 2 },
+          { label: "E. Outdated stereotypes…", options: ["are causing women to change the way they speak.", "are achieving the desired effect.", "are making women more conscious."], correctIndex: 0 },
+        ],
+      },
+      {
+        type: "question",
+        id: "q14",
+        number: 14,
+        title: "Opinion writing in English",
+        points: 10,
+        kind: "openText",
+        promptHtml: `
+          <p>Los estereotipos de género pueden condicionar nuestras vidas en maneras de las que ni siquiera somos conscientes, como por ejemplo nuestra forma de hablar o nuestro tono de voz.</p>
+          <p>Escribe un texto en inglés de entre 50 y 70 palabras dando tu opinión sobre el hecho de que las mujeres se sientan en el deber de hablar de manera más dulce o agradable que los hombres. Puedes usar oraciones condicionales y verbos modales (<em>should, shouldn’t, must, mustn’t, don’t have to</em>) para expresar tu opinión.</p>
+          <p class="meta">Expresiones que pueden ayudarte: <em>conform to expectations / gender identity / patriarchy / gender equality</em>.</p>
+        `,
+        openLabel: "Write your answer here",
+        solutionHtml: `<p><strong>Solución oficial:</strong> Respuesta libre.</p>`,
+      },
+      {
+        type: "question",
+        id: "q15-24",
+        number: "15-24",
+        title: "Conocimiento de la lengua extranjera · test",
+        points: 20,
+        kind: "multiChoiceGroup",
+        pointsPerItem: 2,
+        includeInSummary: true,
+        promptHtml: `<p>Elige en cada caso la opción que consideres más correcta.</p>`,
+        noteHtml: `<p class="meta">Las respuestas se contrastaron con el solucionario rasterizado; además, los ítems son consistentes con la gramática inglesa esperable en cada caso.</p>`,
+        items: [
+          { label: "15. Our next meeting is…", options: ["Monday.", "the Monday.", "on Monday."], correctIndex: 2 },
+          { label: "16. Jim, please, …", options: ["you help me with my homework.", "help me with my homework.", "you will help me with my homework."], correctIndex: 1 },
+          { label: "17. Angharad is…", options: ["a very sweet girl.", "a much sweet girl.", "a very much sweet girl."], correctIndex: 0 },
+          { label: "18. I’m not sure, but she...", options: ["should be Susan’s cousin.", "may be Susan’s cousin.", "doesn’t have to be Susan’s cousin."], correctIndex: 1 },
+          { label: "19. At my high school, we...", options: ["play with bicycles every week.", "do cycling every week.", "go cycling every week."], correctIndex: 2 },
+          { label: "20. If you worked more, you … get better results.", options: ["would", "will", "wouldn’t"], correctIndex: 0 },
+          { label: "21. What... I can’t hear him.", options: ["does he say?", "do he say?", "is he saying?"], correctIndex: 2 },
+          { label: "22. The European Day of Languages was a week…", options: ["last", "ago", "past"], correctIndex: 1 },
+          { label: "23. We…", options: ["never have read a book by Shakespeare.", "’ve read never a book by Shakespeare.", "’ve never read a book by Shakespeare."], correctIndex: 2 },
+          { label: "24. California is … US state.", options: ["the best", "the most good", "the better"], correctIndex: 0 },
+        ],
+      },
+    ],
+  }
+
 };
