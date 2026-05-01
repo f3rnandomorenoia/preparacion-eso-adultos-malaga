@@ -62,6 +62,14 @@ window.examCatalog = [
     autoPoints: 20,
     manualPoints: 80,
     status: "Verificado",
+  },
+  {
+    id: "2025-04-social",
+    label: "Abril 2025 · Ámbito social",
+    totalPoints: 100,
+    autoPoints: 50,
+    manualPoints: 50,
+    status: "Verificado",
   }
 ];
 
@@ -3086,6 +3094,287 @@ window.examData = {
         solutionHtml: "<p>Si 10.000 litros cuestan 180 €, entonces 23.550 litros cuestan:</p><p><code>(23.550 · 180) / 10.000 = 423,90 €</code></p><p>Llenar la piscina cuesta <strong>423,90 €</strong>.</p>",
       },
     ],
+  }
+
+  ,"2025-04-social": {
+    "id": "2025-04-social",
+    "title": "Convocatoria abril 2025 · Ámbito social",
+    "subtitle": "Prueba interactiva basada en el modelo oficial, con apoyo visual para Guernica y las fotos de mundo rural y urbano.",
+    "sourceLinks": [
+      {
+        "label": "Archivo oficial de convocatorias anteriores",
+        "url": "https://www.juntadeandalucia.es/educacion/portales/web/educacion-permanente/servicios/pruebas/obtencion-titulo-eso/sobre-las-pruebas/modelos-de-convocatorias-anteriores"
+      },
+      {
+        "label": "ZIP oficial abril 2025 (incluye soluciones)",
+        "url": "https://www.juntadeandalucia.es/educacion/portales/documents/1454565/1625008/Pruebas%20convocatoria%20abril%202025%20%28incluye%20soluciones%29/864b6c80-496c-6291-4aa0-dcea2cdf83e1?version=1.0"
+      },
+      {
+        "label": "PDF del examen (copia local)",
+        "url": "data/exam-packs/2025-04/extracted/Convocatoria%20abril%202025/SOC_ESPA_2025.pdf"
+      },
+      {
+        "label": "PDF del solucionario (copia local)",
+        "url": "data/exam-packs/2025-04/extracted/Convocatoria%20abril%202025/SOC_ESPA_soluciones_2025.pdf"
+      },
+      {
+        "label": "Notas de extracción y apoyo visual",
+        "url": "content/exams/2025-04-social-notes.md"
+      }
+    ],
+    "introHtml": "<p>Examen oficial de abril de 2025 del ámbito social. Mantiene la estructura original por bloques y añade apoyo visual en la parte de análisis de imágenes.</p><ul><li><strong>A.</strong> Conceptos básicos (25 puntos)</li><li><strong>B.</strong> Comprensión y análisis de documento escrito (30 puntos)</li><li><strong>C.</strong> Comprensión y análisis de información gráfica (30 puntos)</li><li><strong>D.</strong> Expresión escrita (15 puntos)</li></ul><p><strong>Corrección automática:</strong> 50 puntos de ejercicios cerrados (2, 3, 6, 7, 9, 10, 12 y 13). Los otros 50 puntos quedan para comparación manual con la solución oficial.</p>",
+    "sections": [
+      {
+        "type": "question",
+        "id": "q1",
+        "number": 1,
+        "title": "Términos y periodos históricos",
+        "points": 10,
+        "kind": "openList",
+        "promptHtml": "<p>Completa la tabla indicando el término correcto y el periodo histórico al que hace referencia cada definición. Los términos posibles son: <strong>Pintura rupestre</strong>, <strong>Culturas precolombinas</strong>, <strong>al-Ándalus</strong>, <strong>Sociedad de clases</strong> y <strong>Cultura clásica</strong>. Los periodos son: <strong>Prehistoria</strong>, <strong>Edad Antigua</strong>, <strong>Edad Media</strong>, <strong>Edad Moderna</strong> y <strong>Edad Contemporánea</strong>.</p>",
+        "items": [
+          { "label": "A. Pueblos que habitaban en América antes de la llegada de Colón.", "solution": "<strong>Culturas precolombinas</strong> · <strong>Edad Moderna</strong>" },
+          { "label": "B. Modelo de organización social que surge con las revoluciones del siglo XIX al eliminar la sociedad estamental.", "solution": "<strong>Sociedad de clases</strong> · <strong>Edad Contemporánea</strong>" },
+          { "label": "C. Aportaciones y legado cultural que hemos recibido de Grecia y Roma Antigua.", "solution": "<strong>Cultura clásica</strong> · <strong>Edad Antigua</strong>" },
+          { "label": "D. Nombre que dieron los musulmanes a la Península Ibérica durante su dominación (711-1492).", "solution": "<strong>al-Ándalus</strong> · <strong>Edad Media</strong>" },
+          { "label": "E. Manifestación artística realizada en las paredes de las cuevas por los hombres prehistóricos.", "solution": "<strong>Pintura rupestre</strong> · <strong>Prehistoria</strong>" }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q2",
+        "number": 2,
+        "title": "Conceptos básicos de geografía y economía",
+        "points": 15,
+        "kind": "multiChoiceGroup",
+        "includeInSummary": true,
+        "pointsPerItem": 3,
+        "promptHtml": "<p>Marca el concepto o término más adecuado para cada definición.</p>",
+        "items": [
+          { "label": "A. Tipo de relieve plano o escasamente ondulado dedicado a la agricultura y ganadería.", "options": ["Meseta", "Cordillera", "Llanura"], "correctIndex": 2 },
+          { "label": "B. Volver a plantar árboles en un espacio donde existieron formaciones boscosas.", "options": ["Parque Nacional", "Reforestación", "Reserva"], "correctIndex": 1 },
+          { "label": "C. Países cuyos habitantes tienen alto nivel de vida y desarrollo económico.", "options": ["Países desarrollados", "Países en vías de desarrollo", "Países atrasados"], "correctIndex": 0 },
+          { "label": "D. Representación gráfica de la Tierra o de parte de ella en una superficie plana.", "options": ["Plano urbano", "Mapa", "Red urbana"], "correctIndex": 1 },
+          { "label": "E. Sistema económico basado en propiedad privada, libertad de mercado y obtención de capital.", "options": ["Capitalismo", "Globalización", "Comunismo"], "correctIndex": 0 }
+        ]
+      },
+      {
+        "type": "reading",
+        "id": "reading-globalizacion",
+        "title": "Documento 1 · Desigualdad y globalización",
+        "html": "<p><strong>Lee el siguiente texto y responde a las cuestiones 3, 4 y 5.</strong></p><blockquote><p>El aumento de la desigualdad produce siempre un debilitamiento de la demanda, puesto que los grupos sociales de rentas más bajas son los que dedican una mayor parte de sus ingresos al consumo. Cuando baja la demanda porque se concentra la renta, se genera la sobreproducción que destruye empresas y empleos, mientras que, al mismo tiempo, el mayor ahorro con menor rentabilidad productiva, incentiva la especulación, que es intrínsecamente inestable.</p><p>La desigualdad, pues, es la antesala de la crisis y por eso el período más inestable y con más crisis de la historia del capitalismo, el del neoliberalismo, es el que está registrando también el mayor incremento de la desigualdad. De 1980 a 2000, los países más ricos se beneficiaron del 82 % de la ampliación del comercio de exportación y del 68 % de la inversión extranjera directa. La diferencia entre naciones ricas y pobres, que era de 35 a 1 en los años sesenta, ha llegado a ser de 80 a 1 y, según el Banco Mundial, el número de personas que viven en la pobreza casi se ha duplicado entre 1981 y 2008.</p></blockquote><p class='meta'>Texto adaptado de Torres López, <em>El capitalismo en crisis</em> (2015).</p>",
+      },
+      {
+        "type": "question",
+        "id": "q3",
+        "number": 3,
+        "title": "Verdadero o falso sobre el documento 1",
+        "points": 5,
+        "kind": "booleanGroup",
+        "includeInSummary": true,
+        "pointsPerItem": 1,
+        "promptHtml": "<p>Indica si las siguientes afirmaciones son verdaderas (V) o falsas (F) según el texto.</p>",
+        "items": [
+          { "label": "La desigualdad produce un aumento de la demanda y del consumo.", "correct": false },
+          { "label": "La sobreproducción se produce por la concentración de la renta y el descenso de la demanda.", "correct": true },
+          { "label": "Los países ricos se han beneficiado del comercio de exportación y de la inversión extranjera.", "correct": true },
+          { "label": "Las diferencias entre el nivel de vida de los países ricos y pobres se han reducido.", "correct": false },
+          { "label": "En China ha aumentado el volumen de población que está bajo el umbral de la pobreza.", "correct": false }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q4",
+        "number": 4,
+        "title": "Idea principal del autor",
+        "points": 5,
+        "kind": "openText",
+        "promptHtml": "<p>Explica brevemente qué es lo que nos quiere transmitir el autor del texto.</p>",
+        "openLabel": "Tu explicación",
+        "solutionHtml": "<p>El autor subraya la relación entre <strong>desigualdad y crisis económicas</strong>. Cuando la riqueza se concentra, baja el consumo, aparece sobreproducción, se destruyen empresas y empleo y se favorece la especulación. Por eso plantea que combatir la desigualdad es una condición clave para lograr mayor estabilidad económica.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q5",
+        "number": 5,
+        "title": "Umbral de pobreza y países subdesarrollados",
+        "points": 5,
+        "kind": "openText",
+        "promptHtml": "<p>Explica qué entiende el autor por umbral de pobreza y cuáles son las características principales de los países pobres o subdesarrollados.</p>",
+        "openLabel": "Tu respuesta",
+        "solutionHtml": "<p>Según el texto, el <strong>umbral de pobreza</strong> se sitúa en ingresos entre <strong>1,25 y 2 dólares diarios</strong>. El solucionario añade que los países subdesarrollados suelen presentar dependencia económica del exterior, baja productividad y nivel tecnológico, fuerte crecimiento demográfico, especialización en materias primas, deuda exterior, grandes desigualdades, insuficiencia alimentaria y déficits en educación, sanidad, empleo y condiciones laborales.</p>"
+      },
+      {
+        "type": "reading",
+        "id": "reading-campoamor",
+        "title": "Documento 2 · Clara Campoamor",
+        "html": "<p><strong>Lee el siguiente texto y responde a las cuestiones 6, 7 y 8.</strong></p><blockquote><p>&ldquo;Dejad que la mujer se manifieste como es, respetad su derecho como ser humano; y si el derecho constituyente, como norma jurídica de los pueblos civilizados, cada día se aproxima más al concepto de libertad... Dejad, además, a la mujer que actúe en Derecho, que será la única forma que se eduque en él.</p><p>Pienso que es el primer país latino en que el derecho al voto de la mujer va a ser reconocido... y me enorgullezco con la idea de que sea mi España la que alce esa bandera de liberación de la mujer.&rdquo;</p></blockquote><p class='meta'>Discurso de Clara Campoamor en las Cortes Constituyentes de la Segunda República, 1 de septiembre de 1931.</p>",
+      },
+      {
+        "type": "question",
+        "id": "q6",
+        "number": 6,
+        "title": "Verdadero o falso sobre Clara Campoamor",
+        "points": 5,
+        "kind": "booleanGroup",
+        "includeInSummary": true,
+        "pointsPerItem": 1,
+        "promptHtml": "<p>Indica si las siguientes afirmaciones son verdaderas (V) o falsas (F) según el texto.</p>",
+        "items": [
+          { "label": "Clara Campoamor dio este discurso durante la Dictadura de Primo de Rivera.", "correct": false },
+          { "label": "Clara Campoamor fue una de las tres primeras diputadas elegidas para formar parte de las Cortes Constituyentes de la 2ª República.", "correct": true },
+          { "label": "La forma política del Estado español en 1931 es la República.", "correct": true },
+          { "label": "Defiende que los hombres y mujeres no tienen los mismos derechos.", "correct": false },
+          { "label": "La diputada anima a que España sea el primer país latino en lograr la liberación de la mujer.", "correct": true }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q7",
+        "number": 7,
+        "title": "Conceptos del texto de Campoamor",
+        "points": 5,
+        "kind": "booleanGroup",
+        "includeInSummary": true,
+        "pointsPerItem": 1,
+        "promptHtml": "<p>Indica si el significado de estas expresiones es verdadero (V) o falso (F).</p>",
+        "items": [
+          { "label": "Constitución: ley suprema de un país democrático que recoge derechos y obligaciones.", "correct": true },
+          { "label": "Gobierno provisional: gobierno permanente, elegido por votación.", "correct": false },
+          { "label": "Cortes Constituyentes: cortes que tienen como misión elaborar una Constitución.", "correct": true },
+          { "label": "País latino: se refiere a los países de habla y cultura inglesa.", "correct": false },
+          { "label": "República Española de 1931: periodo entre la Dictadura de Primo de Rivera y la Guerra Civil en el que se intentó democratizar España.", "correct": true }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q8",
+        "number": 8,
+        "title": "Clara Campoamor, contexto y opinión personal",
+        "points": 5,
+        "kind": "openText",
+        "promptHtml": "<p>Explica con tus palabras qué defendía Clara Campoamor, el contexto histórico en el que lo hace y da tu opinión argumentada sobre la lucha de las mujeres para conseguir los mismos derechos que el hombre.</p>",
+        "openLabel": "Tu redacción",
+        "solutionHtml": "<p>La respuesta debería situar el texto en la <strong>Segunda República</strong>, explicar que Clara Campoamor defendió el <strong>derecho al voto de las mujeres</strong> y la igualdad jurídica y política, y destacar la importancia de esa lucha en el proceso de democratización de España. También se espera una opinión argumentada sobre la igualdad de derechos entre hombres y mujeres y sobre la vigencia actual de esa reivindicación.</p>"
+      },
+      {
+        "type": "reading",
+        "id": "reading-guernica",
+        "title": "Información gráfica 1 · Guernica",
+        "html": "<p>Usa esta página del examen para responder a las cuestiones 9, 10 y 11.</p><figure style='margin:1rem 0;'><img src='content/exams/img/2025-04-social-page-4.png' alt='Página del examen con la imagen del Guernica y sus preguntas' style='max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;' /><figcaption style='font-size:.95rem;color:#5c677d;margin-top:.5rem;'>Página del examen con la imagen del Guernica.</figcaption></figure>"
+      },
+      {
+        "type": "question",
+        "id": "q9",
+        "number": 9,
+        "title": "Verdadero o falso sobre Guernica",
+        "points": 5,
+        "kind": "booleanGroup",
+        "includeInSummary": true,
+        "pointsPerItem": 1,
+        "promptHtml": "<p>Responde si las siguientes afirmaciones son verdaderas (V) o falsas (F).</p>",
+        "items": [
+          { "label": "La obra pintada por Picasso se conoce como 'Los fusilamientos del 3 de Mayo'.", "correct": false },
+          { "label": "Representa el bombardeo del pueblo de Guernica por la aviación alemana durante la Guerra Civil.", "correct": true },
+          { "label": "Picasso dejó escrito que el cuadro no se expusiera en España hasta que no llegara la democracia.", "correct": true },
+          { "label": "Es una obra que denuncia el horror de la guerra.", "correct": true },
+          { "label": "Picasso a través del cuadro defiende la guerra como la mejor forma para solucionar los problemas.", "correct": false }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q10",
+        "number": 10,
+        "title": "Aspectos técnicos y artísticos del Guernica",
+        "points": 5,
+        "kind": "booleanGroup",
+        "includeInSummary": true,
+        "pointsPerItem": 1,
+        "promptHtml": "<p>Centrándonos en los aspectos técnicos y artísticos de la obra, responde si las frases son verdaderas (V) o falsas (F).</p>",
+        "items": [
+          { "label": "Es una obra pictórica de estilo cubista.", "correct": true },
+          { "label": "Predominan los colores vivos.", "correct": false },
+          { "label": "Picasso utiliza el blanco, negro y gris para acentuar el horror y tragedia de las guerras.", "correct": true },
+          { "label": "Es un cuadro figurativo, no realista pero muy expresivo.", "correct": true },
+          { "label": "El cubismo es el primer movimiento vanguardista del siglo XV.", "correct": false }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q11",
+        "number": 11,
+        "title": "Valor histórico y artístico del Guernica",
+        "points": 5,
+        "kind": "openText",
+        "promptHtml": "<p>Elabora una redacción reflexionando por qué el Guernica es una fuente histórica de gran valor y por qué es una de las obras más conocidas del mundo.</p>",
+        "openLabel": "Tu redacción",
+        "solutionHtml": "<p>La respuesta debe destacar que el <strong>Guernica</strong> recoge un hecho histórico real —el bombardeo de la población civil durante la Guerra Civil española— y lo transforma en un <strong>símbolo universal contra la guerra</strong>. También conviene mencionar a Picasso, el uso expresivo del cubismo, la fuerza simbólica de personajes y animales, y el valor del cuadro como denuncia del sufrimiento humano y defensa de la paz.</p>"
+      },
+      {
+        "type": "reading",
+        "id": "reading-rural-urbano",
+        "title": "Información gráfica 2 · Mundo rural y mundo urbano",
+        "html": "<p>Usa esta página del examen para responder a las cuestiones 12, 13 y 14.</p><figure style='margin:1rem 0;'><img src='content/exams/img/2025-04-social-page-5.png' alt='Página del examen con las fotos de entorno rural y urbano' style='max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;' /><figcaption style='font-size:.95rem;color:#5c677d;margin-top:.5rem;'>Página del examen con las imágenes del mundo rural y urbano.</figcaption></figure>"
+      },
+      {
+        "type": "question",
+        "id": "q12",
+        "number": 12,
+        "title": "Verdadero o falso sobre las fotografías",
+        "points": 5,
+        "kind": "booleanGroup",
+        "includeInSummary": true,
+        "pointsPerItem": 1,
+        "promptHtml": "<p>Observa las dos imágenes y responde si las siguientes afirmaciones son verdaderas (V) o falsas (F).</p>",
+        "items": [
+          { "label": "La imagen 1 es una fotografía de un entorno rural.", "correct": true },
+          { "label": "En la fotografía de la imagen 2 predominan las viviendas individuales y horizontales.", "correct": false },
+          { "label": "La concentración de habitantes en la imagen 2 es muy alta.", "correct": true },
+          { "label": "La imagen 1 es un ejemplo del mundo rural donde predomina la población joven.", "correct": false },
+          { "label": "En la imagen 2 no hay problemas de contaminación ni de ruidos.", "correct": false }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q13",
+        "number": 13,
+        "title": "Verdadero o falso sobre la población española",
+        "points": 5,
+        "kind": "booleanGroup",
+        "includeInSummary": true,
+        "pointsPerItem": 1,
+        "promptHtml": "<p>Centrándonos en España, responde si las siguientes afirmaciones son verdaderas (V) o falsas (F).</p>",
+        "items": [
+          { "label": "Las zonas rurales más despobladas están en el interior de España.", "correct": true },
+          { "label": "Las ciudades más pobladas de España se encuentran alejadas de la costa excepto Madrid.", "correct": false },
+          { "label": "La población española se concentra principalmente en ciudades.", "correct": true },
+          { "label": "La población española vive principalmente en las zonas rurales.", "correct": false },
+          { "label": "La población española que vive en el mundo rural está muy envejecida.", "correct": true }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q14",
+        "number": 14,
+        "title": "Diferencias entre mundo rural y urbano",
+        "points": 5,
+        "kind": "openText",
+        "promptHtml": "<p>A partir de la información que aportan la fotografía y las preguntas anteriores, escribe diferencias entre el mundo rural y urbano.</p>",
+        "openLabel": "Tu comparación",
+        "solutionHtml": "<p>Entre las diferencias más importantes están: predominio del <strong>sector primario</strong> y baja densidad en el mundo rural frente a mayor peso de industria y servicios y alta densidad en la ciudad; población más envejecida y despoblación en el campo frente a concentración de población en espacios urbanos; viviendas más horizontales y relaciones más cercanas en los pueblos frente a bloques, más infraestructuras y también más contaminación, ruido y estrés en las ciudades.</p>"
+      },
+      {
+        "type": "question",
+        "id": "q15",
+        "number": 15,
+        "title": "Informe sobre países emergentes",
+        "points": 15,
+        "kind": "openText",
+        "promptHtml": "<p>Imagina que eres un economista y te encargan la elaboración de un informe de al menos 150 palabras sobre los países o espacios emergentes. Puedes orientarte con este esquema:</p><ul><li>Caracterización de los países emergentes.</li><li>China y los emergentes asiáticos.</li><li>Rusia y su espacio euroasiático.</li><li>Brasil y Sudáfrica.</li></ul>",
+        "openLabel": "Tu informe",
+        "solutionHtml": "<p>La respuesta es libre, pero debería explicar que los <strong>países emergentes</strong> han salido parcialmente del semisubdesarrollo gracias a un fuerte crecimiento económico, inversiones exteriores, mano de obra abundante y recursos estratégicos. El solucionario menciona especialmente al grupo <strong>BRICS</strong> y espera referencias a <strong>China</strong>, <strong>India</strong>, <strong>Rusia</strong>, <strong>Brasil</strong> y <strong>Sudáfrica</strong>, señalando tanto su crecimiento como sus límites: desigualdades sociales, falta de democracia plena en algunos casos, tensiones geopolíticas o persistencia de bolsas de pobreza.</p>"
+      }
+    ]
   }
 
 };
