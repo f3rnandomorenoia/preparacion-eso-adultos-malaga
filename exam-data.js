@@ -70,6 +70,22 @@ window.examCatalog = [
     autoPoints: 50,
     manualPoints: 50,
     status: "Verificado",
+  },
+  {
+    id: "2025-06-com-in",
+    label: "Junio 2025 · Ámbito de comunicación (inglés)",
+    totalPoints: 100,
+    autoPoints: 45,
+    manualPoints: 55,
+    status: "Verificado",
+  },
+  {
+    id: "2025-06-ct",
+    label: "Junio 2025 · Ámbito científico-tecnológico",
+    totalPoints: 100,
+    autoPoints: 30,
+    manualPoints: 70,
+    status: "Verificado",
   }
 ];
 
@@ -3375,6 +3391,640 @@ window.examData = {
         "solutionHtml": "<p>La respuesta es libre, pero debería explicar que los <strong>países emergentes</strong> han salido parcialmente del semisubdesarrollo gracias a un fuerte crecimiento económico, inversiones exteriores, mano de obra abundante y recursos estratégicos. El solucionario menciona especialmente al grupo <strong>BRICS</strong> y espera referencias a <strong>China</strong>, <strong>India</strong>, <strong>Rusia</strong>, <strong>Brasil</strong> y <strong>Sudáfrica</strong>, señalando tanto su crecimiento como sus límites: desigualdades sociales, falta de democracia plena en algunos casos, tensiones geopolíticas o persistencia de bolsas de pobreza.</p>"
       }
     ]
+  }
+
+  ,"2025-06-com-in": {
+    id: "2025-06-com-in",
+    title: "Convocatoria junio 2025 · Ámbito de comunicación (opción inglés)",
+    subtitle: "Examen online integrado a partir del pack oficial de junio 2025, con solucionario separado para lengua castellana e inglés.",
+    sourceLinks: [
+      {
+        label: "Archivo oficial de convocatorias anteriores",
+        url: "https://www.juntadeandalucia.es/educacion/portales/web/educacion-permanente/servicios/pruebas/obtencion-titulo-eso/sobre-las-pruebas/modelos-de-convocatorias-anteriores",
+      },
+      {
+        label: "ZIP oficial junio 2025 (incluye soluciones)",
+        url: "data/exam-packs/2025-06/zip/Convocatoria%20junio%202025.zip",
+      },
+      {
+        label: "Notas de extracción y verificación",
+        url: "content/exams/2025-06-com-in-notes.md",
+      },
+    ],
+    introHtml: `
+      <p>Esta versión convierte en web <strong>el examen oficial de junio de 2025</strong> del ámbito de comunicación, opción inglés.</p>
+      <p><strong>Cómo corrige:</strong> en preguntas tipo test o verdadero/falso te indica aciertos y fallos. En preguntas abiertas muestra la solución oficial o una orientación para comparar.</p>
+      <p><strong>Resultado final:</strong> la web calcula automáticamente <strong>45 puntos de ejercicios cerrados</strong>. Los otros <strong>55 puntos</strong> quedan para comparación manual porque el examen incluye respuestas abiertas, redacciones o justificaciones.</p>
+    `,
+    sections: [
+      {
+        type: "reading",
+        id: "reading-castellano",
+        title: "Texto base · Lengua castellana",
+        html: `
+          <p><strong>El turismo y los turistas</strong></p>
+          <p>En algunas de las protestas que se han producido en diversas ciudades españolas, entre ellas varias andaluzas, contra los efectos de un turismo masificado y sin control se ha cargado, de forma injusta, contra los turistas como responsables de esta situación.</p>
+          <p>En Barcelona, por ejemplo, se llegó a acosarlos en calles y terrazas y empiezan a ser frecuentes las pintadas en las que se exige que se vayan. Es un enorme error. Los turistas son los que menos culpa tienen de que la falta de planificación y la obsesión por incrementar a cualquier precio las cifras de visitantes haya alterado para mal la vida cotidiana en los centros de las ciudades y haya hecho imposible el acceso a una vivienda, sobre todo en el mercado de alquiler.</p>
+          <p>En Andalucía tenemos un ejemplo de cómo la política que se ha llevado a cabo desde la Consejería de Turismo no ha ayudado a encauzar el problema, sino a agravarlo. La negativa a introducir una tasa turística, que han pedido los alcaldes de muchas de las ciudades afectadas ante el temor de que ello rebajara la cifra de visitantes, es solo un caso entre muchos. En Sevilla, el pleno del Ayuntamiento ha pedido esa tasa para destinarla a la conservación del patrimonio y a acciones en los barrios de forma que el turismo se vea como un elemento dinamizador y no como un problema. Hasta ahora esas peticiones han caído en saco roto entre otras cosas por la presión que ejercen los empresarios de la hostelería y de los hoteles.</p>
+          <p>Es necesario alejarse de lógicas individualistas que basan su discurso en el ataque a un “enemigo” (los turistas) y ahondar, en cambio, en medidas estructurales para regular la actividad, limitar sus consecuencias y restarle centralidad en la economía autóctona. Alejarse, también, de retóricas identitarias (nosotros contra ellos, los de aquí frente a los de fuera), fácilmente apropiables por la política como munición antinmigratoria, y adoptar, en su lugar, una vía de corresponsabilidad ética.</p>
+          <p>Las recientes manifestaciones contra el turismo masivo, en Canarias, Mallorca, Barcelona o Málaga, evidencian que está en juego algo más que la denuncia de un malestar. A pesar de los intentos por deslegitimar las protestas, los movimientos antituristificación están poniendo sobre la mesa la necesidad de crear marcos políticos propios, discursos, lenguajes y lógicas que sean capaces de encarar el problema y proponer alternativas. Poner los cuidados en el centro es preguntarse cómo subordinar el turismo a la comunidad, y no al revés.</p>
+          <p>Mientras la situación se enquista, los turistas son también víctimas obligadas a transitar por calles colapsadas y a hacer largas colas para acceder a cualquier monumento, con lo que la experiencia de la visita empeora. La principal riqueza de Andalucía está provocando efectos indeseados ante la pasividad de los responsables de evitarlo, que no son, ni mucho menos, las personas que se gastan su dinero en nuestra tierra.</p>
+          <p class='meta'>www.eldiariodesevilla.es, 02/08/2024 (adaptado)</p>
+        `,
+      },
+      {
+        type: "question",
+        id: "q1",
+        number: 1,
+        title: "Intención del texto",
+        points: 5,
+        kind: "multiChoiceGroup",
+        pointsPerItem: 5,
+        includeInSummary: true,
+        promptHtml: `<p>Señala la afirmación que mejor sintetiza la intención del texto.</p>`,
+        items: [
+          {
+            label: "Elige la opción correcta.",
+            options: [
+              "Aportar datos concretos sobre el problema que tienen las grandes ciudades por la masificación turística.",
+              "Narrar las experiencias de los turistas cuando visitan las ciudades españolas.",
+              "Concienciar a los ciudadanos de que los turistas no son los responsables de la masificación de las ciudades y que son los políticos los responsables de subsanar dicha situación.",
+              "Exigir a los turistas que paguen una tasa para que puedan visitar las principales ciudades de nuestro país."
+            ],
+            correctIndex: 2,
+          }
+        ],
+      },
+      {
+        type: "question",
+        id: "q2",
+        number: 2,
+        title: "Conceptos clave del texto",
+        points: 5,
+        kind: "openList",
+        promptHtml: `<p>Explica qué quiere decir la autora con <em>“antituristificación”</em> y <em>“tasa turística”</em>.</p>`,
+        items: [
+          { label: "A. Antituristificación", solution: "Es un <strong>movimiento vecinal</strong> que rechaza la masificación turística y pide medidas para que el turismo no deteriore la vida cotidiana en los centros urbanos." },
+          { label: "B. Tasa turística", solution: "Es un <strong>impuesto</strong> que los turistas pagan durante su estancia en un destino para ayudar a financiar costes asociados al turismo, como conservación o servicios urbanos." },
+        ],
+      },
+      {
+        type: "question",
+        id: "q3",
+        number: 3,
+        title: "Verdadero o falso según el texto",
+        points: 5,
+        kind: "booleanGroup",
+        pointsPerItem: 1,
+        includeInSummary: true,
+        promptHtml: `<p>Indica si las siguientes afirmaciones son verdaderas [V] o falsas [F] según la información contenida en el texto.</p>`,
+        items: [
+          { label: "En España se pagan las tasas turísticas en todas las ciudades principales.", correct: false },
+          { label: "En Barcelona se ha llegado a acosar a los turistas y a hacer pintadas para que se vayan.", correct: true },
+          { label: "En el texto se considera que los principales culpables de la masificación de las ciudades son los turistas.", correct: false },
+          { label: "En Andalucía, el turismo se considera como un grave problema que provoca conflictos y el deterioro de los principales monumentos.", correct: false },
+          { label: "Los turistas también son víctimas de la masificación de las ciudades.", correct: true },
+        ],
+      },
+      {
+        type: "question",
+        id: "q4",
+        number: 4,
+        title: "Preguntas cortas de comprensión",
+        points: 5,
+        kind: "openList",
+        promptHtml: `<p>Contesta brevemente a las siguientes preguntas con la información del texto.</p>`,
+        items: [
+          { label: "A. ¿A quiénes hacen responsables los ciudadanos de la masificación turística?", solution: "De forma injusta, hacen responsables a <strong>los turistas</strong>, llegando incluso a manifestarse contra ellos." },
+          { label: "B. ¿Qué opción ha querido llevar a cabo la Consejería de Turismo de Andalucía, pero ha fracasado?", solution: "Quiso <strong>imponer una tasa turística</strong>, pero la medida no salió adelante por la presión del sector hostelero y hotelero." },
+          { label: "C. ¿Qué pretenden los principales movimientos de antituristificación?", solution: "Pretenden crear un <strong>marco político propio</strong> que regule la masificación y ofrezca soluciones al problema." },
+          { label: "D. ¿Qué motivos da la ciudad de Barcelona para manifestarse?", solution: "Denuncia el <strong>empeoramiento de la vida cotidiana</strong> en el centro y la dificultad para acceder a alquileres duraderos en esa zona." },
+          { label: "E. ¿Por qué los turistas también son víctimas?", solution: "Porque no pueden disfrutar bien la ciudad: sufren <strong>calles colapsadas</strong> y <strong>largas colas</strong> para acceder a monumentos." },
+        ],
+      },
+      {
+        type: "question",
+        id: "q5",
+        number: 5,
+        title: "Redacción argumentativa sobre turismo masivo",
+        points: 10,
+        kind: "openText",
+        promptHtml: `
+          <p>¿Consideras que los turistas son un grave problema para el día a día de los ciudadanos? ¿Qué soluciones propondrías para controlar la masificación turística en tu ciudad? ¿Es el turismo el culpable de que los jóvenes no puedan encontrar una vivienda de alquiler a un precio económico? ¿Y qué pensarías si vas a visitar una ciudad europea y te encuentras con manifestaciones o pintadas para que te vayas?</p>
+          <p class='meta'>Redacta un texto de al menos 200 palabras en el que expreses tu punto de vista sobre el tema, argumentándolo de forma adecuada.</p>
+        `,
+        openLabel: "Escribe aquí tu redacción",
+        solutionHtml: `<p><strong>Solución oficial:</strong> Respuesta libre.</p>`,
+      },
+      {
+        type: "question",
+        id: "q6",
+        number: 6,
+        title: "Haber / a ver",
+        points: 5,
+        kind: "openList",
+        promptHtml: `<p>Escribe <strong>“haber”</strong> o <strong>“a ver”</strong> en los huecos en blanco.</p>`,
+        items: [
+          { label: "A", solution: "<strong>haber</strong>" },
+          { label: "B", solution: "<strong>haber</strong>" },
+          { label: "C", solution: "<strong>haber</strong>" },
+          { label: "D", solution: "<strong>a ver</strong>" },
+          { label: "E", solution: "<strong>haber</strong>" },
+          { label: "F", solution: "<strong>a ver</strong>" },
+          { label: "G", solution: "<strong>a ver</strong>" },
+          { label: "H", solution: "<strong>a ver</strong>" },
+          { label: "I", solution: "<strong>haber</strong>" },
+          { label: "J", solution: "<strong>ver</strong>" },
+        ],
+        noteHtml: `<p class='meta'>El último ítem del oficial aparece como “Vamos a ver si tenemos alguna opción”, así que ahí la palabra esperada es <strong>ver</strong>.</p>`,
+      },
+      {
+        type: "question",
+        id: "q7",
+        number: 7,
+        title: "Opción correcta de lengua castellana",
+        points: 5,
+        kind: "multiChoiceGroup",
+        pointsPerItem: 1,
+        includeInSummary: true,
+        promptHtml: `<p>Marca la opción correcta de cada una de las cuestiones que se proponen.</p>`,
+        items: [
+          { label: "A. El subgénero periodístico al que pertenece el texto es:", options: ["Una crónica.", "Un editorial.", "Un artículo de opinión."], correctIndex: 1 },
+          { label: "B. ‘Es necesario alejarse de lógicas individualistas’ es una oración según su modalidad:", options: ["Expresiva o exclamativa.", "Imperativa o exhortativa.", "Enunciativa afirmativa."], correctIndex: 2 },
+          { label: "C. La función del lenguaje que predomina en la secuencia citada es:", options: ["Referencial.", "Poética.", "Fática."], correctIndex: 0 },
+          { label: "D. La palabra ‘provocando’ es:", options: ["Un verbo en participio.", "Un verbo en gerundio.", "Un verbo en infinitivo."], correctIndex: 1 },
+          { label: "E. ‘En Sevilla, el pleno del Ayuntamiento ha pedido esa tasa’ es una oración:", options: ["Transitiva.", "Impersonal.", "Pasiva."], correctIndex: 0 },
+        ],
+      },
+      {
+        type: "question",
+        id: "q8",
+        number: 8,
+        title: "Funciones sintácticas",
+        points: 5,
+        kind: "openList",
+        promptHtml: `<p>Escribe la función sintáctica de las palabras o expresiones marcadas en negrita.</p>`,
+        items: [
+          { label: "A. Los turistas son también víctimas", solution: "<strong>Atributo</strong>." },
+          { label: "B. ...se llegó a acosarlos en calles y terrazas", solution: "<strong>CCL</strong> (complemento circunstancial de lugar)." },
+          { label: "C. Los movimientos antituristificación / ...la necesidad de crear marcos políticos propios", solution: "<strong>Sujeto</strong> / <strong>CD</strong> (complemento directo)." },
+          { label: "D. La experiencia de la visita empeora", solution: "<strong>Complemento del nombre</strong>." },
+        ],
+      },
+      {
+        type: "question",
+        id: "q9",
+        number: 9,
+        title: "Características gramaticales",
+        points: 5,
+        kind: "openList",
+        promptHtml: `<p>Localiza en el texto la palabra o expresión que se ajuste a cada característica.</p>`,
+        items: [
+          { label: "A. Dos sustantivos propios que sean topónimos", solution: "Por ejemplo: <strong>Andalucía, Sevilla, Barcelona, Málaga o Canarias</strong>." },
+          { label: "B. Dos palabras derivadas", solution: "Por ejemplo: <strong>antituristificación, antinmigratoria, manifestaciones, planificación</strong>." },
+          { label: "C. Un sintagma adjetival con estructura Adjetivo + preposición + sintagma nominal", solution: "Por ejemplo: <strong>responsables de esta situación</strong> o <strong>apropiables por la política</strong>." },
+          { label: "D. Dos infinitivos", solution: "Por ejemplo: <strong>acosar, incrementar, destinar, evitar</strong>." },
+          { label: "E. Una palabra de la familia léxica de turismo", solution: "Por ejemplo: <strong>turistas, turística o antituristificación</strong>." },
+        ],
+      },
+      {
+        type: "reading",
+        id: "reading-poema",
+        title: "Texto base · Conocimiento literario",
+        html: `
+          <div class="poem">
+            <p><strong>Un soneto me manda hacer Violante</strong></p>
+            <p>Un soneto me manda hacer Violante<br>que en mi vida me he visto en tanto aprieto;<br>catorce versos dicen que es soneto;<br>burla burlando van los tres delante.</p>
+            <p>Yo pensé que no hallara consonante,<br>y estoy a la mitad de otro cuarteto;<br>mas si me veo en el primer terceto,<br>no hay cosa en los cuartetos que me espante.</p>
+            <p>Por el primer terceto voy entrando,<br>y parece que entré con pie derecho,<br>pues fin con este verso le voy dando.</p>
+            <p>Ya estoy en el segundo, y aun sospecho<br>que voy los trece versos acabando;<br>contad si son catorce, y está hecho.</p>
+            <p class='meta'>Lope de Vega</p>
+          </div>
+        `,
+      },
+      {
+        type: "question",
+        id: "q10",
+        number: 10,
+        title: "Cómputo silábico y arte del verso",
+        points: 5,
+        kind: "multiChoiceGroup",
+        pointsPerItem: 2.5,
+        includeInSummary: true,
+        promptHtml: `<p>Marca la opción correcta de las siguientes cuestiones.</p>`,
+        items: [
+          { label: "A. Según su cómputo silábico, los versos del poema son:", options: ["Octosílabos.", "Heptasílabos.", "Endecasílabos."], correctIndex: 2 },
+          { label: "B. Los versos del poema son:", options: ["De arte menor.", "De arte mayor.", "De una medida intermedia."], correctIndex: 1 },
+        ],
+      },
+      {
+        type: "question",
+        id: "q11",
+        number: 11,
+        title: "Composición poética y características",
+        points: 5,
+        kind: "openText",
+        promptHtml: `<p>¿Cómo se llama la composición poética que acabas de leer? ¿Qué características tiene esta composición?</p>`,
+        openLabel: "Tu explicación",
+        solutionHtml: `<p>Es un <strong>soneto</strong>: una composición formada por <strong>catorce versos endecasílabos</strong>, de <strong>arte mayor</strong>, distribuidos en <strong>dos cuartetos y dos tercetos</strong>.</p>`,
+      },
+      {
+        type: "reading",
+        id: "reading-english",
+        title: "Texto base · Lengua extranjera (inglés)",
+        html: `
+          <p><strong>The ‘girl math’ trend: Can it be harmful?</strong></p>
+          <p>If you’re familiar with TikTok trends, you’ve probably heard of “girl math.” Essentially, girls have been posting videos justifying excessive spending, with captions saying it’s “girl math,” or that it “doesn’t count.”</p>
+          <p>Mostly, the trend shows women buying items that are worth, for example, 100 dollars, and using the logic that it technically costs 10 dollars per wear if worn 10 times — therefore, the purchase wasn’t actually 100 dollars. Other videos introduce ideas like “cash doesn’t count,” or even saying that some of their purchases “pay themselves” after a few uses.</p>
+          <p>There’s definitely something satisfying about going to brunch with your friends and paying with cash; not seeing the dollar amount go down in your bank account is something that many appreciate. However, rather than viewing cash as something that “isn’t real” or “doesn’t count,” it might be better to reframe the narrative. Instead, think: “I made a responsible decision by using cash instead of my card today.”</p>
+          <p>The issue with this trend doesn't seem to lie within the jokes themselves, but in the tendency to associate irresponsible financial decisions with girls. Why is it that, within the context of this trend, a girl managing her finances suggests carelessness? Perhaps this trend shouldn’t have been called “girl math,” but instead should reflect the fact that all people are capable of making irresponsible decisions with their money.</p>
+          <p class='meta'>Texto adaptado de www.theaggie.org</p>
+          <div class="vocab-card">
+            <strong>Vocabulario:</strong>
+            <ul>
+              <li><strong>Captions</strong>: letreros</li>
+              <li><strong>Wear</strong>: puesta (cada vez que se lleva puesta una ropa)</li>
+              <li><strong>Reframing</strong>: replantear</li>
+              <li><strong>Issue</strong>: problema</li>
+              <li><strong>Frame</strong>: marco / esquema</li>
+            </ul>
+          </div>
+        `,
+      },
+      {
+        type: "question",
+        id: "q12",
+        number: 12,
+        title: "True or false + frase justificativa",
+        points: 5,
+        kind: "booleanGroupWithJustification",
+        includeInSummary: false,
+        promptHtml: `<p>Indica si las siguientes afirmaciones son verdaderas (T) o falsas (F) y escribe la frase del texto que justifica tu respuesta.</p>`,
+        items: [
+          { label: "“Girl math” is just another way of referring to excessive spending.", correct: true, solution: "[...] girls have been posting videos justifying excessive spending, with captions saying it’s ‘girl math,’ or that it ‘doesn’t count.’" },
+          { label: "According to ‘girl math’, spending cash is as if you didn’t spend at all.", correct: true, solution: "Other videos introduce ideas like ‘cash doesn’t count’..." },
+          { label: "The writer admits that the temptation to use girl math is there when you pay cash.", correct: true, solution: "There’s definitely something satisfying about going to brunch with your friends and paying with cash; not seeing the dollar amount go down in your bank account is something that many appreciate." },
+          { label: "The writer sees a problem in joking about finances.", correct: false, solution: "The issue with this trend doesn’t seem to lie within the jokes themselves, but in the tendency to associate irresponsible financial decisions with girls." },
+          { label: "The name ‘girl math’ suggests that girls can’t manage their finances.", correct: true, solution: "Why is it that, within the context of this trend, a girl managing her finances suggests carelessness?" },
+        ],
+      },
+      {
+        type: "question",
+        id: "q13",
+        number: 13,
+        title: "Reading comprehension in English",
+        points: 5,
+        kind: "multiChoiceGroup",
+        pointsPerItem: 1,
+        includeInSummary: true,
+        promptHtml: `<p>Marca la respuesta que mejor se ajuste a lo expresado en el texto.</p>`,
+        items: [
+          { label: "A. ‘Girl math’…", options: ["is about girls encouraging each other to spend money.", "doesn’t count on TikTok.", "is a popular trend on TikTok."], correctIndex: 2 },
+          { label: "B. According to girl math...", options: ["the frequent use of an item purchased cancels the money spent on its purchase.", "you need to wear the same clothes ten times.", "one hundred dollars is the same as ten dollars."], correctIndex: 0 },
+          { label: "C. People…", options: ["should consider that cash isn’t real.", "should be responsible about their financial decisions.", "should go to brunch with their friends more often."], correctIndex: 1 },
+          { label: "D. Calling this trend ‘girl math’ is dangerous because…", options: ["girls may become more careless with their finances.", "it may create the impression that girls are irresponsible with money.", "jokes can lead to irresponsibility."], correctIndex: 1 },
+          { label: "E. The name ‘girl math’…", options: ["is unfair because everybody can make irresponsible financial decisions, not only girls.", "reflects the fact that all people are capable of making irresponsible decisions with their money.", "suggests carelessness."], correctIndex: 0 },
+        ],
+      },
+      {
+        type: "question",
+        id: "q14",
+        number: 14,
+        title: "Writing in English",
+        points: 10,
+        kind: "openText",
+        promptHtml: `
+          <p>Escribe un texto en inglés de entre 50 y 70 palabras en el que des tu opinión sobre la supuesta vagancia de los andaluces. Puedes usar oraciones condicionales y verbos modales (<em>shouldn’t, could, must…</em>) para expresar tu opinión.</p>
+          <p class='meta'>Expresiones que pueden ayudarte: <em>laziness / siesta / unwillingness to work / prejudice / stereotype / warm weather</em>.</p>
+        `,
+        openLabel: "Write your answer here",
+        solutionHtml: `<p><strong>Solución oficial:</strong> Respuesta libre.</p>`,
+      },
+      {
+        type: "question",
+        id: "q15-24",
+        number: "15-24",
+        title: "Conocimiento de la lengua extranjera · test",
+        points: 20,
+        kind: "multiChoiceGroup",
+        pointsPerItem: 2,
+        includeInSummary: true,
+        promptHtml: `<p>Elige en cada caso la opción que consideres más correcta.</p>`,
+        items: [
+          { label: "15. Antonio’s birthday is…", options: ["the December 10th.", "in December 10th.", "on December 10th."], correctIndex: 2 },
+          { label: "16. For the carbonara, Rafa…", options: ["used to a dozen egg yolks.", "used a dozen egg yolks.", "got used to a dozen egg yolks."], correctIndex: 1 },
+          { label: "17. Álvaro … the Holy Week and the Feria.", options: ["is loving", "loves", "be loving"], correctIndex: 1 },
+          { label: "18. It’s just a possibility, but Arturo...", options: ["may present a radio show.", "must present a radio show.", "shouldn’t present a radio show."], correctIndex: 0 },
+          { label: "19. In summer, we...", options: ["go waterpolo.", "do waterpolo.", "play waterpolo"], correctIndex: 2 },
+          { label: "20. If you don’t come, we… miss you.", options: ["will", "would", "will have"], correctIndex: 0 },
+          { label: "21. ...How....", options: ["are you feeling now?", "does she feeling now?", "does you feel now?"], correctIndex: 0 },
+          { label: "22. Spain won the World Cup fifteen years…", options: ["early.", "ago.", "last."], correctIndex: 1 },
+          { label: "23. We … read any poetry in class …", options: ["haven’t/already.", "have/just.", "haven’t/yet."], correctIndex: 2 },
+          { label: "24. Maths is … subject at school.", options: ["the most difficult", "the very difficult", "the more difficult"], correctIndex: 0 },
+        ],
+      },
+    ],
+  }
+
+  ,"2025-06-ct": {
+    id: "2025-06-ct",
+    title: "Convocatoria junio 2025 · Ámbito científico-tecnológico",
+    subtitle: "Prueba interactiva basada en el modelo oficial, con apoyo visual para las gráficas y el problema de la compra.",
+    sourceLinks: [
+      {
+        label: "Archivo oficial de convocatorias anteriores",
+        url: "https://www.juntadeandalucia.es/educacion/portales/web/educacion-permanente/servicios/pruebas/obtencion-titulo-eso/sobre-las-pruebas/modelos-de-convocatorias-anteriores",
+      },
+      {
+        label: "ZIP oficial junio 2025 (copia local)",
+        url: "data/exam-packs/2025-06/zip/Convocatoria%20junio%202025.zip",
+      },
+      {
+        label: "PDF del examen (copia local)",
+        url: "data/exam-packs/2025-06/extracted/Convocatoria%20junio%202025/CT_ESPA_junio.pdf",
+      },
+      {
+        label: "PDF del solucionario (copia local)",
+        url: "data/exam-packs/2025-06/extracted/Convocatoria%20junio%202025/CT_ESPA_soluciones_junio.pdf",
+      },
+      {
+        label: "Notas de extracción y apoyo visual",
+        url: "content/exams/2025-06-ct-notes.md",
+      },
+    ],
+    introHtml: "<p>Examen oficial de junio de 2025 del ámbito científico-tecnológico. Mantiene la estructura original por bloques y añade apoyo visual en los dos gráficos centrales y en la lista de la compra del problema final.</p><ul><li><strong>A.</strong> Conceptos básicos (15 puntos)</li><li><strong>B.</strong> Comprensión y análisis de un documento escrito (20 puntos)</li><li><strong>C.</strong> Comprensión y análisis de información gráfica (30 puntos)</li><li><strong>D.</strong> Expresión escrita (15 puntos)</li><li><strong>E.</strong> Resolución de un problema (20 puntos)</li></ul><p><strong>Corrección automática:</strong> 30 puntos de ejercicios cerrados (1, 2, 3, 4, 5 y 9). Los otros 70 puntos quedan para comparación manual con la solución oficial.</p>",
+    sections: [
+      {
+        type: "question",
+        id: "q1",
+        number: 1,
+        title: "Conceptos básicos sobre energía",
+        points: 5,
+        kind: "multiChoiceGroup",
+        includeInSummary: true,
+        pointsPerItem: 1,
+        promptHtml: "<p>Completa las afirmaciones sobre la energía eligiendo el término correcto en cada caso.</p>",
+        items: [
+          { label: "Las fuentes de energía que se agotan con el tiempo son...", options: ["renovables", "no renovables"], correctIndex: 1 },
+          { label: "Un ejemplo de esas fuentes es...", options: ["los combustibles fósiles", "la biomasa"], correctIndex: 0 },
+          { label: "Para fomentar la sostenibilidad adecuada debemos hablar de sostenibilidad...", options: ["económica", "ecológica"], correctIndex: 1 },
+          { label: "Debemos fomentar el reciclaje y el uso de recursos...", options: ["renovables", "no renovables"], correctIndex: 0 },
+          { label: "Las fuentes de energía no renovables son...", options: ["más contaminantes", "menos contaminantes"], correctIndex: 0 },
+        ],
+      },
+      {
+        type: "question",
+        id: "q2",
+        number: 2,
+        title: "Salud y enfermedad · verdadero o falso",
+        points: 5,
+        kind: "booleanGroup",
+        includeInSummary: true,
+        pointsPerItem: 1,
+        promptHtml: "<p>Contesta verdadero [V] o falso [F] a las siguientes afirmaciones sobre salud y enfermedad.</p>",
+        items: [
+          { label: "Las infecciones víricas como la gripe se tratan con antibióticos.", correct: false },
+          { label: "Todas las bacterias son perjudiciales para la salud porque provocan infecciones.", correct: false },
+          { label: "Los leucocitos o glóbulos blancos nos defienden contra las infecciones.", correct: true },
+          { label: "Las vacunas pueden estar fabricadas a partir de los microorganismos causantes de la enfermedad frente a la que inmunizan.", correct: true },
+          { label: "La inmunidad ante ciertas enfermedades puede adquirirse de forma natural, por ejemplo al pasar una infección.", correct: true },
+        ],
+      },
+      {
+        type: "question",
+        id: "q3",
+        number: 3,
+        title: "Geosfera, atmósfera e hidrosfera",
+        points: 5,
+        kind: "multiChoiceGroup",
+        includeInSummary: true,
+        pointsPerItem: 1,
+        promptHtml: "<p>Selecciona en cada caso la respuesta correcta.</p>",
+        items: [
+          { label: "A. El manto es:", options: ["Una de las capas de la atmósfera.", "Una de las capas de la geosfera.", "La parte líquida de la hidrosfera."], correctIndex: 1 },
+          { label: "B. La atmósfera está formada principalmente por:", options: ["Nitrógeno y oxígeno.", "Oxígeno y gases nobles.", "Oxígeno y dióxido de carbono."], correctIndex: 0 },
+          { label: "C. Los anticiclones y borrascas se forman por:", options: ["El aire frío que siempre asciende cuando el caliente desciende.", "Variaciones en la temperatura del agua terrestre.", "Variaciones en la presión atmosférica."], correctIndex: 2 },
+          { label: "D. La hidrosfera es la parte de la Tierra formada por:", options: ["Agua.", "Aire.", "Hierro y níquel."], correctIndex: 0 },
+          { label: "E. La propiedad fundamental del agua que ha hecho posible la vida en la Tierra es:", options: ["El agua no cambia fácilmente de temperatura.", "El agua es un disolvente universal.", "La densidad del agua líquida es mayor que la del agua sólida."], correctIndex: 1 },
+        ],
+      },
+      {
+        type: "reading",
+        id: "reading-rinon",
+        title: "Texto base · Trasplante de riñón de cerdo modificado genéticamente",
+        html: "<p><strong>Logran trasplantar por primera vez un riñón de cerdo modificado genéticamente a un paciente de 62 años</strong></p><p>El paciente se recupera bien y podrá recibir pronto el alta médica, según el comunicado emitido por el Massachusetts General Hospital, responsable de la operación que marca un \"hito importante\" en las donaciones de órganos.</p><p>Un hospital de Boston ha anunciado que ha logrado, por primera vez en el mundo, trasplantar el riñón de un cerdo modificado genéticamente a un paciente de 62 años afectado de una enfermedad renal en etapa terminal.</p><p>La operación tuvo lugar el 16 de marzo y duró cuatro horas. Según el centro, el procedimiento marca un hito importante en la búsqueda de proporcionar órganos más fácilmente a los pacientes.</p><p>En 2022, un equipo de cirujanos ya consiguió trasplantar un corazón de cerdo, también editado genéticamente, a un humano de 57 años. Fue la primera vez que un cerdo se utilizaba como donante de órganos.</p><p>El riñón del cerdo fue editado con 69 genomas mediante tecnología CRISPR-Cas9, eliminando genes porcinos dañinos y añadiendo genes humanos para hacerlo compatible con un cuerpo humano. Además, los científicos desactivaron retrovirus endógenos del cerdo para minimizar posibles infecciones.</p><p>El cerdo donante fue proporcionado por eGenesis, especializada en trasplantes y modificación de organismos animales para hacerlos compatibles con los humanos, en un proceso conocido como xenotrasplante.</p><p>Richard Slayman, aquejado de diabetes tipo 2 e hipertensión, ya había recibido un riñón humano en 2018, pero cinco años después tuvo problemas, volvió a diálisis y sufrió complicaciones vasculares.</p><p>El hospital recuerda que el riñón es el órgano más demandado en las unidades de trasplante de EEUU y que, de media, 17 personas mueren cada día sin haber conseguido un trasplante.</p><p class='meta'>Artículo adaptado de <em>www.publico.es</em>, 21 de marzo de 2024.</p>",
+      },
+      {
+        type: "question",
+        id: "q4",
+        number: 4,
+        title: "Comprensión del artículo · verdadero o falso",
+        points: 5,
+        kind: "booleanGroup",
+        includeInSummary: true,
+        pointsPerItem: 1,
+        promptHtml: "<p>Basándote en la información del texto indica si las siguientes afirmaciones son verdaderas [V] o falsas [F].</p>",
+        items: [
+          { label: "El primer trasplante de un órgano porcino a un humano fue el de un riñón en 2022.", correct: false },
+          { label: "El trasplante a Richard Slayman se realizó para evitar el uso de la tecnología CRISPR-Cas9.", correct: false },
+          { label: "La modificación genética del riñón supuso eliminar genes porcinos y añadir genes humanos.", correct: true },
+          { label: "El trasplante fue necesario para solucionar las complicaciones con su riñón humano trasplantado en 2018.", correct: true },
+          { label: "eGenesis está especializada exclusivamente en modificaciones genéticas humanas.", correct: false },
+        ],
+      },
+      {
+        type: "question",
+        id: "q5",
+        number: 5,
+        title: "Comprensión del artículo · opción correcta",
+        points: 5,
+        kind: "multiChoiceGroup",
+        includeInSummary: true,
+        pointsPerItem: 1,
+        promptHtml: "<p>Selecciona en cada caso la respuesta correcta basándote en la información del artículo.</p>",
+        items: [
+          { label: "A. ¿Qué técnica fue utilizada para hacer compatible el riñón de cerdo con el cuerpo humano?", options: ["Edición genética para eliminar genes humanos perjudiciales y evitar infecciones.", "Edición genética para eliminar genes porcinos dañinos y añadir genes humanos.", "Modificación de células madre humanas para adaptarse a órganos porcinos."], correctIndex: 1 },
+          { label: "B. ¿Por qué este trasplante marca un hito en la medicina?", options: ["Porque representa un avance en la disponibilidad de órganos para trasplantes a humanos.", "Porque representa el primer trasplante de cerdo a humano.", "Porque demuestra que los órganos de cerdo son superiores a los de humanos."], correctIndex: 0 },
+          { label: "C. ¿Qué problemas previos de salud tenía Richard Slayman?", options: ["Insuficiencia cardíaca, hipertensión y trasplante fallido de corazón.", "Diabetes tipo 2, hipertensión y problemas vasculares derivados de la diálisis.", "Diabetes tipo 2, hipertensión y trasplante de corazón."], correctIndex: 1 },
+          { label: "D. ¿Qué consiguieron los científicos al desactivar retrovirus endógenos en el riñón del cerdo?", options: ["Minimizar el riesgo de infecciones durante el proceso.", "Eliminar el riesgo de rechazo del órgano trasplantado.", "Evitar la toma de medicamentos inmunosupresores."], correctIndex: 0 },
+          { label: "E. ¿Cuántos pacientes en EEUU mueren de media al día esperando un trasplante?", options: ["1.400", "17", "100.000"], correctIndex: 1 },
+        ],
+      },
+      {
+        type: "question",
+        id: "q6",
+        number: 6,
+        title: "Función de los riñones e insuficiencia renal",
+        points: 5,
+        kind: "openText",
+        promptHtml: "<p>Explica cuál es la función de los riñones y qué le podría ocurrir a una persona con una insuficiencia renal.</p>",
+        openLabel: "Tu explicación",
+        solutionHtml: "<p>Los riñones se encargan de <strong>filtrar la sangre</strong> para eliminar sustancias tóxicas y desechos, que se expulsan en forma de orina.</p><p>Si hay insuficiencia renal, el riñón no filtra bien, se acumulan sustancias tóxicas en el organismo y, en los casos graves, puede llegar a producirse la muerte. En esos casos puede ser necesaria la <strong>hemodiálisis</strong> o el <strong>trasplante</strong>.</p>",
+      },
+      {
+        type: "question",
+        id: "q7",
+        number: 7,
+        title: "Ventajas e inconvenientes del trasplante",
+        points: 5,
+        kind: "openText",
+        promptHtml: "<p>Explica las ventajas y los inconvenientes que, a tu juicio, tiene el trasplante de órganos para el receptor.</p>",
+        openLabel: "Tu respuesta",
+        solutionHtml: "<p>Entre las <strong>ventajas</strong>, el trasplante puede prolongar la vida, mejorar su calidad y reducir la dependencia de tratamientos muy invasivos.</p><p>Entre los <strong>inconvenientes</strong>, el solucionario destaca las complicaciones de una cirugía de gran envergadura, los efectos secundarios de la medicación, el posible rechazo del órgano y la escasez de donantes, que alarga las listas de espera.</p>",
+      },
+      {
+        type: "reading",
+        id: "reading-grafico1",
+        title: "Apoyo visual · Gráfico 1 (movimiento del animal)",
+        html: "<p>Usa esta imagen del examen para responder a las cuestiones 8, 9 y 10.</p><figure style='margin:1rem 0;'><img src='content/exams/img/2025-06-ct-page-4.png' alt='Página del examen con la gráfica espacio-tiempo del movimiento del animal' style='max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;' /><figcaption style='font-size:.95rem;color:#5c677d;margin-top:.5rem;'>Gráfico 1 del examen original: movimiento de un animal.</figcaption></figure>",
+      },
+      {
+        type: "question",
+        id: "q8",
+        number: 8,
+        title: "Preguntas sobre la gráfica espacio-tiempo",
+        points: 5,
+        kind: "openList",
+        promptHtml: "<p>Contesta a las siguientes preguntas que se pueden deducir del gráfico 1.</p><figure style='margin:1rem 0;'><img src='content/exams/img/2025-06-ct-page-4.png' alt='Página del examen con la gráfica espacio-tiempo del movimiento del animal' style='max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;' /></figure>",
+        items: [
+          { label: "A. ¿Cuánto tiempo se ha estado moviendo el animal?", solution: "<strong>70 segundos</strong> en total." },
+          { label: "B. ¿Cuánto se ha llegado a alejar de su posición de inicio?", solution: "<strong>100 metros</strong>." },
+          { label: "C. ¿Ha retrocedido en algún momento?", solution: "Sí, <strong>entre los 30 y 50 segundos</strong>." },
+          { label: "D. ¿En qué tramo ha ido más deprisa?", solution: "En el <strong>primer tramo, de 0 a 20 segundos</strong>." },
+          { label: "E. ¿Ha estado parado en algún momento?", solution: "Sí, <strong>entre los 20 y 30 segundos</strong> y <strong>entre los 80 y 90 segundos</strong>." },
+        ],
+      },
+      {
+        type: "question",
+        id: "q9",
+        number: 9,
+        title: "Descripción correcta del movimiento",
+        points: 5,
+        kind: "multiChoiceGroup",
+        includeInSummary: true,
+        pointsPerItem: 5,
+        promptHtml: "<p>Señala la afirmación que mejor describa el movimiento del animal indicado por la gráfica.</p><figure style='margin:1rem 0;'><img src='content/exams/img/2025-06-ct-page-4.png' alt='Página del examen con la gráfica espacio-tiempo del movimiento del animal' style='max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;' /></figure>",
+        items: [
+          {
+            label: "Elige la opción correcta.",
+            options: [
+              "El animal empieza a alejarse del punto de partida aumentando su velocidad. Luego va a velocidad constante durante 10 segundos y retrocede. Posteriormente se vuelve a alejar hasta que se para de nuevo.",
+              "El animal se aleja del punto de partida con velocidad constante. Se para durante 10 segundos y retrocede. Luego vuelve a alejarse hasta que detiene su movimiento, permaneciendo parado los 10 últimos segundos.",
+              "El animal siempre se aleja del punto de partida a distintas velocidades durante todo el recorrido.",
+              "El animal se aleja y se acerca en varias ocasiones, pero siempre se mueve al mismo ritmo y nunca se para."
+            ],
+            correctIndex: 1,
+          }
+        ],
+      },
+      {
+        type: "question",
+        id: "q10",
+        number: 10,
+        title: "Espacio total recorrido",
+        points: 5,
+        kind: "openText",
+        promptHtml: "<p>Calcula, a la vista de la información de la gráfica, cuánto espacio ha recorrido en total el animal.</p><figure style='margin:1rem 0;'><img src='content/exams/img/2025-06-ct-page-4.png' alt='Página del examen con la gráfica espacio-tiempo del movimiento del animal' style='max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;' /></figure>",
+        openLabel: "Desarrolla el cálculo",
+        solutionHtml: "<p>Según el solucionario: <strong>100 + 0 + 40 + 20 + 20 + 0 = 180 m</strong>. En total el animal ha recorrido <strong>180 metros</strong>.</p>",
+      },
+      {
+        type: "reading",
+        id: "reading-grafico2",
+        title: "Apoyo visual · Gráfico 2 (reacción química)",
+        html: "<p>Usa esta imagen del examen para responder a las cuestiones 11, 12 y 13.</p><figure style='margin:1rem 0;'><img src='content/exams/img/2025-06-ct-page-5.png' alt='Página del examen con el gráfico sobre reacciones químicas' style='max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;' /><figcaption style='font-size:.95rem;color:#5c677d;margin-top:.5rem;'>Gráfico 2 del examen original: reacción química y conservación de la masa.</figcaption></figure>",
+      },
+      {
+        type: "question",
+        id: "q11",
+        number: 11,
+        title: "Ley o propiedad representada",
+        points: 5,
+        kind: "openText",
+        promptHtml: "<p>¿Qué ley o propiedad de las reacciones químicas representa la imagen?</p><figure style='margin:1rem 0;'><img src='content/exams/img/2025-06-ct-page-5.png' alt='Página del examen con el gráfico sobre reacciones químicas' style='max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;' /></figure>",
+        openLabel: "Tu respuesta",
+        solutionHtml: "<p>Representa la <strong>ley de conservación de la masa</strong> (ley de Lavoisier): la suma de las masas de los reactivos es igual a la suma de las masas de los productos.</p>",
+      },
+      {
+        type: "question",
+        id: "q12",
+        number: 12,
+        title: "Tabla de reactivos y productos",
+        points: 6,
+        kind: "openList",
+        promptHtml: "<p>Completa la tabla aplicando la propiedad representada en la imagen.</p><figure style='margin:1rem 0;'><img src='content/exams/img/2025-06-ct-page-5.png' alt='Página del examen con el gráfico sobre reacciones químicas' style='max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;' /></figure>",
+        items: [
+          { label: "Fila 1 · Nitrógeno (g)", solution: "<strong>56</strong>" },
+          { label: "Fila 2 · Amoniaco (g)", solution: "<strong>34</strong>" },
+          { label: "Fila 3 · Hidrógeno (g)", solution: "<strong>27</strong>" },
+        ],
+      },
+      {
+        type: "question",
+        id: "q13",
+        number: 13,
+        title: "Ajuste estequiométrico",
+        points: 4,
+        kind: "openList",
+        promptHtml: "<p>Rellena los huecos del ajuste estequiométrico de la reacción anterior.</p><figure style='margin:1rem 0;'><img src='content/exams/img/2025-06-ct-page-5.png' alt='Página del examen con el gráfico sobre reacciones químicas' style='max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;' /></figure>",
+        items: [
+          { label: "Coeficiente delante de H₂", solution: "<strong>3</strong>" },
+          { label: "Coeficiente delante de NH₃", solution: "<strong>2</strong>" },
+        ],
+        noteHtml: "<p class='meta'>La reacción ajustada queda: <strong>3 H₂ + N₂ → 2 NH₃</strong>.</p>",
+      },
+      {
+        type: "question",
+        id: "q14",
+        number: 14,
+        title: "Texto sobre dieta equilibrada",
+        points: 15,
+        kind: "openText",
+        promptHtml: "<p>Redacta un texto de un mínimo de 150 palabras donde hables de las características de una dieta equilibrada: por qué es importante, qué rasgos debe tener y qué consejos generales darías.</p>",
+        openLabel: "Tu redacción",
+        noteHtml: "<p>Se valora la presentación, la ortografía, la estructura, la coherencia y la cohesión del texto.</p>",
+        solutionHtml: "<p>La solución oficial insiste en que una dieta equilibrada ayuda a mantener la salud y prevenir enfermedades como obesidad, diabetes o problemas cardiovasculares.</p><p>Debe ser <strong>completa</strong>, <strong>variada</strong> y ajustada a proporciones adecuadas. Recomienda respetar la pirámide alimentaria, consumir fruta y verdura a diario, legumbres varias veces por semana, lácteos diarios, más pescado que carne, agua suficiente, aceite de oliva y moderación con sal, azúcar y grasas animales, junto con ejercicio físico.</p>",
+      },
+      {
+        type: "reading",
+        id: "reading-compra",
+        title: "Apoyo visual · Problema de la compra",
+        html: "<p>Usa esta imagen del examen para responder a las cuestiones 15, 16 y 17.</p><figure style='margin:1rem 0;'><img src='content/exams/img/2025-06-ct-page-6.png' alt='Página del examen con la lista de la compra' style='max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;' /><figcaption style='font-size:.95rem;color:#5c677d;margin-top:.5rem;'>Lista de la compra del problema final.</figcaption></figure>",
+      },
+      {
+        type: "question",
+        id: "q15",
+        number: 15,
+        title: "Peso total de la compra",
+        points: 10,
+        kind: "openText",
+        promptHtml: "<p>¿Cuánto pesará la bolsa con toda la compra si el paquete de galletas es de 200 gramos?</p><figure style='margin:1rem 0;'><img src='content/exams/img/2025-06-ct-page-6.png' alt='Página del examen con la lista de la compra' style='max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;' /></figure>",
+        openLabel: "Desarrolla el cálculo",
+        solutionHtml: "<p>Según el solucionario: <code>2,5 + 1,75 + 0,25 + 0,375 + 0,2 = 5,075 kg</code>.</p><p>Por tanto, la compra pesa <strong>5,075 kg</strong>.</p>",
+      },
+      {
+        type: "question",
+        id: "q16",
+        number: 16,
+        title: "Coste total de la compra",
+        points: 5,
+        kind: "openText",
+        promptHtml: "<p>Si el kilogramo de manzanas está a 1,75 €, el de naranjas a 2,15 €, el de pimientos a 2,90 €, el de mortadela a 6,90 € y el paquete de galletas cuesta 3,75 €, ¿a cuánto asciende la compra completa?</p><figure style='margin:1rem 0;'><img src='content/exams/img/2025-06-ct-page-6.png' alt='Página del examen con la lista de la compra' style='max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;' /></figure>",
+        openLabel: "Escribe el cálculo",
+        solutionHtml: "<p><code>2,5 · 1,75 + 1,75 · 2,15 + 0,25 · 2,90 + 0,375 · 6,90 + 3,75 = 15,20 €</code></p><p>El coste total es <strong>15,20 €</strong>.</p>",
+      },
+      {
+        type: "question",
+        id: "q17",
+        number: 17,
+        title: "Descuento del 5 %",
+        points: 5,
+        kind: "openText",
+        promptHtml: "<p>Con un vale promocional del 5 % de descuento, ¿por cuánto le saldrá la compra a Raúl?</p><figure style='margin:1rem 0;'><img src='content/exams/img/2025-06-ct-page-6.png' alt='Página del examen con la lista de la compra' style='max-width:100%;height:auto;border:1px solid #d8dee9;border-radius:12px;' /></figure>",
+        openLabel: "Calcula el precio final",
+        solutionHtml: "<p>Descuento: <code>5 % de 15,20 = 0,76 €</code>.</p><p>Precio final: <code>15,20 - 0,76 = 14,44 €</code>.</p><p>La compra sale por <strong>14,44 €</strong>.</p>",
+      },
+    ],
   }
 
 };
